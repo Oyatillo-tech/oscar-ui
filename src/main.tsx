@@ -5,7 +5,12 @@ import { AuthProvider } from './context/AuthContext.tsx';
 
 import './index.css'
 import App from './App.tsx'
-
+// ✅ Telegram WebApp ready - ENG AVVAL
+const tg = (window as any).Telegram?.WebApp;
+if (tg) {
+  tg.ready();
+  tg.expand(); // to'liq ekran
+}
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>

@@ -118,6 +118,7 @@ import { ProductCard } from "@/features/products/ProductCard";
 import { useCategoryStore } from "@/store/categoryStore";
 import { useProductStore } from "@/store/productStore";
 import { useI18nStore } from "@/store/i18nStore";
+import { useAuth } from "@/context/AuthContext";
 
 export function Home() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -135,9 +136,25 @@ export function Home() {
     ? products.filter((p) => p.categoryKey === selectedCategory)
     : products;
 
+  // isVip
+  const { user } = useAuth();
+  const isVip = user?.isVip || false;
+  const isTelegram = !!(window as any).Telegram?.WebApp;
+
   return (
     <div className="min-h-screen pb-[104px] bg-slate-50 w-full">
       <Header />
+
+      {isTelegram && isVip && (
+        <div className="container max-w-2xl mx-auto px-4 pt-2">
+          <button
+            className="w-full bg-gradient-to-r from-yellow-400 to-amber-500 text-white font-bold py-3 rounded-2xl shadow-lg shadow-yellow-200"
+            onClick={() => alert("VIP sahifasi")}
+          >
+            ⭐ VIP KIRISH
+          </button>
+        </div>
+      )}
 
       <main className="container pt-3 md:pt-5 max-w-2xl mx-auto pb-6">
 
