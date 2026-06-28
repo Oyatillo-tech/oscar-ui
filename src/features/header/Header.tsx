@@ -76,10 +76,12 @@ export function Header() {
       navigate("/signin");  // ✅ SignIn sahifasiga yo'naltirish
     }
   };
+  const isTelegram = !!(window as any).Telegram?.WebApp;
+
 
   return (
     <>
-      <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">
+      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">
         <div className="container flex h-16 items-center justify-between px-4 max-w-2xl mx-auto">
           <Link to="/" className="flex items-center gap-2">
             <img src="/image.png" alt="Oscar" className="w-full h-[35px]" />
@@ -92,8 +94,8 @@ export function Header() {
                   key={l}
                   onClick={() => setLang(l)}
                   className={`px-2.5 py-1 rounded-full text-[11px] font-bold uppercase transition-all ${lang === l
-                      ? 'bg-white text-primary shadow-sm'
-                      : 'text-slate-500 hover:text-slate-700'
+                    ? 'bg-white text-primary shadow-sm'
+                    : 'text-slate-500 hover:text-slate-700'
                     }`}
                 >
                   {l}
@@ -123,9 +125,13 @@ export function Header() {
             <button
               onClick={handleAuthClick}
               className={`flex items-center justify-center p-2 rounded-full ${user?.isVip
-                  ? 'bg-amber-50 text-amber-700 hover:bg-amber-100'
-                  : 'bg-primary/10 text-primary hover:bg-primary/20'
+                ? 'bg-amber-50 text-amber-700 hover:bg-amber-100'
+                : 'bg-primary/10 text-primary hover:bg-primary/20'
                 }`}
+              style={{
+                display: isTelegram ? 'flex' : 'flex', // Telegramda ham ko'rsatish
+                zIndex: isTelegram ? 9999 : 'auto',
+              }}
             >
               {user?.isVip ? (
                 <LogOut className="w-5 h-5" />
