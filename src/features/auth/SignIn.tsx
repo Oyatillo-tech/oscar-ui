@@ -61,7 +61,7 @@ export function SignIn() {
                                     {t('signin.email')}
                                 </label>
                                 <Input
-                                    type="email"
+                                    type="login"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                     placeholder={t('signin.email_placeholder')}

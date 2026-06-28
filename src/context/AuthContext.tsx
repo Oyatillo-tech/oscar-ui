@@ -11,6 +11,7 @@ import { doc, getDoc } from "firebase/firestore";
 interface AuthUser {
     uid: string;
     email?: string;
+    login?: string;
     username: string;
     isVip: boolean;
     isGuest: boolean;
@@ -19,18 +20,10 @@ interface AuthUser {
 interface AuthContextType {
     user: AuthUser | null;
     loading: boolean;
-    signIn: (email: string, password: string) => Promise<void>;
+    signIn: (login: string, password: string) => Promise<void>;
     signOut: () => Promise<void>;
 }
 
-// const TEST_VIP_USER = {
-//     uid: "test_vip_001",
-//     email: "test@oscar.uz",
-//     username: "test_vip",
-//     password: "test123",
-//     isVip: true,
-//     isGuest: false,
-// };
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export function AuthProvider({ children }: { children: ReactNode }) {
@@ -41,18 +34,24 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         const unsubscribe = onAuthStateChanged(auth, async (firebaseUser: User | null) => {
             if (firebaseUser) {
                 try {
-                    const userDoc = await getDoc(doc(db, "vip_users", firebaseUser.uid));
+                    // 🔥 Firestore dan VIP holatni tekshirish (uid bo'yicha)
+                    const userDoc = await getDoc(doc(db, "VIP_Clients", firebaseUser.uid));
+
                     if (userDoc.exists()) {
+                        const data = userDoc.data();
                         setUser({
                             uid: firebaseUser.uid,
                             email: firebaseUser.email || "",
-                            username: userDoc.data().username,
+                            login: data.login || "",
+                            username: data.username || data.login || "VIP User",
                             isVip: true,
                             isGuest: false,
                         });
                     } else {
                         setUser({
                             uid: "guest",
+                            email: "",
+                            login: "guest",
                             username: "Mehmon",
                             isVip: false,
                             isGuest: true,
@@ -62,18 +61,61 @@ export function AuthProvider({ children }: { children: ReactNode }) {
                     console.error("User data error:", error);
                     setUser({
                         uid: "guest",
+                        email: "",
+                        login: "guest",
                         username: "Mehmon",
                         isVip: false,
                         isGuest: true,
                     });
                 }
             } else {
-                setUser({
-                    uid: "guest",
-                    username: "Mehmon",
-                    isVip: false,
-                    isGuest: true,
-                });
+                // 🔥 Telegram foydalanuvchisini tekshirish (Firebase auth yo'q bo'lsa)
+                const tg = (window as any).Telegram?.WebApp;
+                const tgUser = tg?.initDataUnsafe?.user;
+
+                if (tgUser) {
+                    try {
+                        const userDoc = await getDoc(doc(db, "VIP_Clients", String(tgUser.id)));
+                        if (userDoc.exists()) {
+                            const data = userDoc.data();
+                            setUser({
+                                uid: String(tgUser.id),
+                                email: "",
+                                login: data.login || "",
+                                username: data.username || data.login || "VIP User",
+                                isVip: true,
+                                isGuest: false,
+                            });
+                        } else {
+                            setUser({
+                                uid: "guest",
+                                email: "",
+                                login: "guest",
+                                username: "Mehmon",
+                                isVip: false,
+                                isGuest: true,
+                            });
+                        }
+                    } catch (error) {
+                        setUser({
+                            uid: "guest",
+                            email: "",
+                            login: "guest",
+                            username: "Mehmon",
+                            isVip: false,
+                            isGuest: true,
+                        });
+                    }
+                } else {
+                    setUser({
+                        uid: "guest",
+                        email: "",
+                        login: "guest",
+                        username: "Mehmon",
+                        isVip: false,
+                        isGuest: true,
+                    });
+                }
             }
             setLoading(false);
         });
@@ -81,18 +123,26 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         return () => unsubscribe();
     }, []);
 
-    const signIn = async (email: string, password: string) => {
+    const signIn = async (login: string, password: string) => {
+        // 🔥 Firebase Auth email + password bilan login qilish
+        // login -> email sifatida ishlatiladi (masalan: vip_1@gmail.com)
+        const email = login.includes("@") ? login : `${login}@oscar.uz`;
         const userCredential = await signInWithEmailAndPassword(auth, email, password);
-        const userDoc = await getDoc(doc(db, "vip_users", userCredential.user.uid));
+        const firebaseUser = userCredential.user;
+
+        // Firestore dan VIP holatni tekshirish
+        const userDoc = await getDoc(doc(db, "VIP_Clients", firebaseUser.uid));
 
         if (!userDoc.exists()) {
             throw new Error("VIP user not found");
         }
 
+        const data = userDoc.data();
         setUser({
-            uid: userCredential.user.uid,
-            email: userCredential.user.email || "",
-            username: userDoc.data().username,
+            uid: firebaseUser.uid,
+            email: firebaseUser.email || "",
+            login: data.login || login,
+            username: data.username || data.login || "VIP User",
             isVip: true,
             isGuest: false,
         });
@@ -102,6 +152,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         await firebaseSignOut(auth);
         setUser({
             uid: "guest",
+            email: "",
+            login: "guest",
             username: "Mehmon",
             isVip: false,
             isGuest: true,
@@ -122,7 +174,6 @@ export function useAuth() {
     }
     return context;
 }
-
 
 
 // ======================================= TEST ===========================================================
