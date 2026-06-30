@@ -18,7 +18,7 @@ export function ProductDetail() {
   const USD_TO_UZS = useSettingsStore((s) => s.usdRate);
   const t = useI18nStore((s) => s.t);
   const lang = useI18nStore((s) => s.lang);
-  
+
   // Force native scroll-to-top immediately upon route hydration
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -29,7 +29,7 @@ export function ProductDetail() {
 
   const displayName = product ? (product.nameI18n?.[lang] || product.name) : '';
   const displayDescription = product ? (product.descriptionI18n?.[lang] || product.description) : '';
-  
+
   const [unit, setUnit] = useState<'item' | 'box'>('item');
   const [quantity, setQuantity] = useState(1);
 
@@ -47,29 +47,30 @@ export function ProductDetail() {
     );
   }
 
+
   // E-commerce math
   const hasBox = typeof product.itemsPerBox === 'number' && product.itemsPerBox > 1;
   const itemsPerBox = product.itemsPerBox || 1;
-  
-  const baseItemPrice = product.pricePiece || 0;
-  const baseBoxPrice = product.priceBox || (baseItemPrice * USD_TO_UZS * itemsPerBox);
-  
+
+  const baseItemPrice = product.pricePiece || 0; // USD
+  const baseBoxPriceUSD = product.priceBox || (baseItemPrice * itemsPerBox); // USD
+
   const currentItemPriceUSD = getEffectivePrice(product, baseItemPrice);
-  const currentBoxPriceUZS = getEffectivePrice(product, baseBoxPrice);
-  
+  const currentBoxPriceUSD = getEffectivePrice(product, baseBoxPriceUSD);
+
   const itemPriceUZS = Math.round(currentItemPriceUSD * USD_TO_UZS);
-  const currentBoxPriceUSD = parseFloat((currentBoxPriceUZS / USD_TO_UZS).toFixed(2));
-  
-  const activePrice = unit === 'item' ? currentItemPriceUSD : currentBoxPriceUZS;
-  const activeOriginalPrice = unit === 'item' ? baseItemPrice : baseBoxPrice;
-  const totalPrice = unit === 'item' ? parseFloat((activePrice * quantity).toFixed(2)) : (activePrice * quantity);
-  
+  const currentBoxPriceUZS = Math.round(currentBoxPriceUSD * USD_TO_UZS);
+
+  const activePrice = unit === 'item' ? currentItemPriceUSD : currentBoxPriceUSD;
+  const activeOriginalPrice = unit === 'item' ? baseItemPrice : baseBoxPriceUSD;
+  const totalPrice = parseFloat((activePrice * quantity).toFixed(2));
+
   const hasDiscount = isDiscountActive(product);
   const discountPercent = product.discount || 0;
 
   // Stock logic
   const maxAllowedQuantity: number = 999999;
-  
+
   const handleQuantityChange = (delta: number) => {
     const newQty = quantity + delta;
     if (newQty >= 1 && newQty <= maxAllowedQuantity) {
@@ -88,7 +89,7 @@ export function ProductDetail() {
 
   const handleAddToCart = () => {
     if (quantity > maxAllowedQuantity || quantity < 1) return;
-    
+
     addItem({
       productId: product.id,
       name: displayName,
@@ -116,43 +117,43 @@ export function ProductDetail() {
       <main className="max-w-2xl mx-auto">
         {/* Swipeable Carousel Container */}
         <div className="w-full relative bg-[#ffffff] rounded-b-3xl overflow-hidden pb-8">
-           <div className="flex w-full overflow-x-auto snap-x snap-mandatory no-scrollbar relative z-10">
-              
-              {/* Slide 1: Dominant Product Image */}
-              <div className="w-full flex-[0_0_100%] snap-start relative aspect-square flex items-center justify-center pt-8 pb-4 px-8">
-                {hasDiscount && (
-                   <div className="absolute top-10 right-4 bg-red-500 text-white font-bold px-4 py-1.5 rounded-full shadow-lg z-10">
-                     -{discountPercent}%
-                   </div>
-                )}
-                <img
-                  src={product.image}
-                  alt={displayName}
-                  className="w-full h-full object-contain max-w-[100%] transition-transform duration-700 hover:scale-105"
-                  onError={(e) => { e.currentTarget.style.display='none'; e.currentTarget.nextElementSibling?.classList.remove('hidden') }}
-                />
-              </div>
+          <div className="flex w-full overflow-x-auto snap-x snap-mandatory no-scrollbar relative z-10">
 
-              {/* Slide 2: Product Description */}
-              <div className="w-full flex-[0_0_100%] snap-start relative aspect-square flex flex-col justify-center p-8 bg-[#f8f9fa]">
-                 <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-6 shadow-sm border border-slate-100 h-full overflow-y-auto no-scrollbar">
-                    <h3 className="font-bold text-slate-800 text-lg mb-3 flex items-center gap-2">
-                      <span className="w-2 h-6 bg-primary rounded-full inline-block"></span>
-                      {t('product.description')}
-                    </h3>
-                    <p className="text-slate-600 leading-relaxed text-[15px]">
-                      {displayDescription}
-                    </p>
-                 </div>
-              </div>
+            {/* Slide 1: Dominant Product Image */}
+            <div className="w-full flex-[0_0_100%] snap-start relative aspect-square flex items-center justify-center pt-8 pb-4 px-8">
+              {hasDiscount && (
+                <div className="absolute top-10 right-4 bg-red-500 text-white font-bold px-4 py-1.5 rounded-full shadow-lg z-10">
+                  -{discountPercent}%
+                </div>
+              )}
+              <img
+                src={product.image}
+                alt={displayName}
+                className="w-full h-full object-contain max-w-[100%] transition-transform duration-700 hover:scale-105"
+                onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.nextElementSibling?.classList.remove('hidden') }}
+              />
+            </div>
 
-           </div>
-           
-           {/* Carousel Indicators */}
-           <div className="absolute bottom-10 left-0 right-0 flex justify-center gap-2 z-20 pointer-events-none">
-              <div className="w-2.5 h-2.5 rounded-full bg-slate-300"></div>
-              <div className="w-2.5 h-2.5 rounded-full bg-slate-300"></div>
-           </div>
+            {/* Slide 2: Product Description */}
+            <div className="w-full flex-[0_0_100%] snap-start relative aspect-square flex flex-col justify-center p-8 bg-[#f8f9fa]">
+              <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-6 shadow-sm border border-slate-100 h-full overflow-y-auto no-scrollbar">
+                <h3 className="font-bold text-slate-800 text-lg mb-3 flex items-center gap-2">
+                  <span className="w-2 h-6 bg-primary rounded-full inline-block"></span>
+                  {t('product.description')}
+                </h3>
+                <p className="text-slate-600 leading-relaxed text-[15px]">
+                  {displayDescription}
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Carousel Indicators */}
+          <div className="absolute bottom-10 left-0 right-0 flex justify-center gap-2 z-20 pointer-events-none">
+            <div className="w-2.5 h-2.5 rounded-full bg-slate-300"></div>
+            <div className="w-2.5 h-2.5 rounded-full bg-slate-300"></div>
+          </div>
         </div>
 
         {/* Product Info Board */}
@@ -164,15 +165,14 @@ export function ProductDetail() {
             <div className="flex flex-col gap-1 mb-2">
               {hasDiscount && (
                 <div className="text-sm font-semibold text-slate-400 line-through">
-                  {unit === 'item' ? `${(baseItemPrice * USD_TO_UZS).toLocaleString("uz-UZ")} ${lang === 'uz' ? "so'm" : (lang === 'ru' ? 'сум' : 'sum')}` : `${baseBoxPrice.toLocaleString("uz-UZ")} ${lang === 'uz' ? "so'm" : (lang === 'ru' ? 'сум' : 'sum')}`}
-                </div>
+                  {unit === 'item' ? `${(baseItemPrice * USD_TO_UZS).toLocaleString("uz-UZ")} ${lang === 'uz' ? "so'm" : (lang === 'ru' ? 'сум' : 'sum')}` : `${(baseBoxPriceUSD * USD_TO_UZS).toLocaleString("uz-UZ")} ${lang === 'uz' ? "so'm" : (lang === 'ru' ? 'сум' : 'sum')}`}                </div>
               )}
               <div className="text-3xl font-extrabold text-slate-900 tracking-tight">
                 {unit === 'item' ? `${itemPriceUZS.toLocaleString("uz-UZ")} ${lang === 'uz' ? "so'm" : (lang === 'ru' ? 'сум' : 'sum')}` : `${currentBoxPriceUZS.toLocaleString("uz-UZ")} ${lang === 'uz' ? "so'm" : (lang === 'ru' ? 'сум' : 'sum')}`}
               </div>
               <div className="text-sm font-medium text-slate-500">
-                {unit === 'item' 
-                  ? `≈ $${currentItemPriceUSD}` 
+                {unit === 'item'
+                  ? `≈ $${currentItemPriceUSD}`
                   : `≈ $${currentBoxPriceUSD}`}
               </div>
             </div>
@@ -196,7 +196,7 @@ export function ProductDetail() {
                   )}
                 >
                   <div className="flex items-center gap-2 mb-1">
-                    <Package className={cn("w-4 h-4", unit === 'item' ? "text-primary" : "text-slate-500")} /> 
+                    <Package className={cn("w-4 h-4", unit === 'item' ? "text-primary" : "text-slate-500")} />
                     <span className={cn("font-semibold", unit === 'item' ? "text-slate-900" : "text-slate-600")}>{t('product.item')}</span>
                   </div>
                   <span className="text-lg font-bold text-slate-900">{itemPriceUZS.toLocaleString("uz-UZ")} <span className="text-sm font-semibold">{lang === 'uz' ? "so'm" : (lang === 'ru' ? 'сум' : 'sum')}</span></span>
@@ -212,7 +212,7 @@ export function ProductDetail() {
                 >
                   <div className="flex items-center justify-between w-full mb-1">
                     <div className="flex items-center gap-2">
-                      <Box className={cn("w-4 h-4", unit === 'box' ? "text-primary" : "text-slate-500")} /> 
+                      <Box className={cn("w-4 h-4", unit === 'box' ? "text-primary" : "text-slate-500")} />
                       <span className={cn("font-semibold", unit === 'box' ? "text-slate-900" : "text-slate-600")}>{t('product.box')}</span>
                     </div>
                   </div>
@@ -225,30 +225,30 @@ export function ProductDetail() {
 
           {/* Settings & Quantity */}
           <div className="flex justify-center pt-2">
-             <div className="space-y-1.5 flex flex-row justify-between items-center w-full">
-                <span className="text-xl font-semibold text-slate-500">{t('product.quantity')}</span>
-                <div className="flex items-center bg-slate-100 rounded-full h-[52px] p-1.5 border border-slate-200/60 shadow-inner min-w-[150px]">
-                  <button
-                    onClick={() => handleQuantityChange(-1)}
-                    disabled={quantity <= 1}
-                    className="w-10 h-10 flex items-center justify-center bg-slate-200/80 text-slate-700 disabled:opacity-40 hover:bg-slate-300 active:scale-90 rounded-full transition-all duration-200 flex-shrink-0"
-                  >
-                    <Minus className="w-5 h-5" />
-                  </button>
-                  <span className="flex-1 text-center text-xl font-extrabold text-slate-900 select-none">{quantity}</span>
-                  <button
-                    onClick={() => handleQuantityChange(1)}
-                    disabled={quantity >= maxAllowedQuantity}
-                    className="w-10 h-10 flex items-center justify-center bg-slate-200/80 text-slate-700 disabled:opacity-40 hover:bg-slate-300 active:scale-90 rounded-full transition-all duration-200 flex-shrink-0"
-                  >
-                    <Plus className="w-5 h-5" />
-                  </button>
-                </div>
-             </div>
+            <div className="space-y-1.5 flex flex-row justify-between items-center w-full">
+              <span className="text-xl font-semibold text-slate-500">{t('product.quantity')}</span>
+              <div className="flex items-center bg-slate-100 rounded-full h-[52px] p-1.5 border border-slate-200/60 shadow-inner min-w-[150px]">
+                <button
+                  onClick={() => handleQuantityChange(-1)}
+                  disabled={quantity <= 1}
+                  className="w-10 h-10 flex items-center justify-center bg-slate-200/80 text-slate-700 disabled:opacity-40 hover:bg-slate-300 active:scale-90 rounded-full transition-all duration-200 flex-shrink-0"
+                >
+                  <Minus className="w-5 h-5" />
+                </button>
+                <span className="flex-1 text-center text-xl font-extrabold text-slate-900 select-none">{quantity}</span>
+                <button
+                  onClick={() => handleQuantityChange(1)}
+                  disabled={quantity >= maxAllowedQuantity}
+                  className="w-10 h-10 flex items-center justify-center bg-slate-200/80 text-slate-700 disabled:opacity-40 hover:bg-slate-300 active:scale-90 rounded-full transition-all duration-200 flex-shrink-0"
+                >
+                  <Plus className="w-5 h-5" />
+                </button>
+              </div>
+            </div>
           </div>
 
           <div className="pt-2 border-t border-slate-50">
-             {/* Description moved to Swipeable Carousel Slide 2 */}
+            {/* Description moved to Swipeable Carousel Slide 2 */}
           </div>
         </div>
 
@@ -273,15 +273,15 @@ export function ProductDetail() {
       <div className="fixed bottom-[calc(4rem+env(safe-area-inset-bottom))] left-0 right-0 py-4 px-5 bg-white border-t border-slate-200/60 shadow-[0_-10px_40px_rgb(0,0,0,0.05)] max-w-2xl mx-auto z-30">
         <div className="flex items-center gap-4">
           <div className="flex-1 min-w-0">
-             <p className="text-xs font-semibold text-slate-500 mb-0.5">{t('cart.total')} ({quantity} {unit === 'item' ? t('product.item') : t('product.box')})</p>
-             <p className="text-xl font-extrabold text-slate-900 truncate">
-               {unit === 'item' ? `${(totalPrice * USD_TO_UZS).toLocaleString("uz-UZ")} ${lang === 'uz' ? "so'm" : (lang === 'ru' ? 'сум' : 'sum')}` : `${totalPrice.toLocaleString("uz-UZ")} ${lang === 'uz' ? "so'm" : (lang === 'ru' ? 'сум' : 'sum')}`}
-             </p>
-             <p className="text-xs font-medium text-slate-500 mt-0.5">
-               {unit === 'item' ? `≈ $${totalPrice}` : `≈ $${parseFloat((currentBoxPriceUSD * quantity).toFixed(2))}`}
-             </p>
+            <p className="text-xs font-semibold text-slate-500 mb-0.5">{t('cart.total')} ({quantity} {unit === 'item' ? t('product.item') : t('product.box')})</p>
+            <p className="text-xl font-extrabold text-slate-900 truncate">
+              {`${(totalPrice * USD_TO_UZS).toLocaleString("uz-UZ")} ${lang === 'uz' ? "so'm" : (lang === 'ru' ? 'сум' : 'sum')}`}
+            </p>
+            <p className="text-xs font-medium text-slate-500 mt-0.5">
+              {`≈ $${totalPrice}`}
+            </p>
           </div>
-          <Button 
+          <Button
             className="flex-[1.5] h-14 rounded-2xl text-lg font-semibold flex gap-2 active:scale-95 transition-all shadow-lg shadow-primary/25"
             onClick={handleAddToCart}
             disabled={maxAllowedQuantity === 0}
