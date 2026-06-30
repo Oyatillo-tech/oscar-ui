@@ -1,3 +1,4 @@
+import { formatUZS } from "@/lib/utils";
 import { ShoppingCart } from "lucide-react";
 import { Link } from "react-router-dom";
 import { resolveI18n, type Product } from "@/store/productStore";
@@ -83,12 +84,12 @@ export function ProductCard({ product }: ProductCardProps) {
           <div className="absolute right-1 bottom-1 w-[60px] h-[60px] sm:w-[72px] sm:h-[72px] bg-yellow-400 rounded-full flex flex-col items-center justify-center shadow-lg z-20 p-1 border-2 border-white">
             {hasDiscount && (
               <span className="text-gray-500 line-through text-[9px] sm:text-[10px] font-semibold leading-none mb-0.5 truncate max-w-full px-1">
-                {originalPriceUZS.toLocaleString("uz-UZ")}
+                {formatUZS(originalPriceUZS)}
               </span>
             )}
             
             <span className="text-black font-black italic text-[11px] sm:text-[14px] text-center leading-none tracking-tight truncate max-w-full px-1">
-              {computedPriceUZS.toLocaleString("uz-UZ")}
+              {formatUZS(computedPriceUZS)}
             </span>
             <span className="text-black font-bold text-[8px] italic sm:text-[9px] mt-0.5 leading-none">
               {lang === 'uz' ? "so'm" : (lang === 'ru' ? 'сум' : 'sum')}

@@ -1,3 +1,4 @@
+import { formatUZS } from "@/lib/utils";
 import { Link } from "react-router-dom";
 import { useProductStore } from "@/store/productStore";
 import { isDiscountActive, getEffectivePrice } from "@/utils/discount";
@@ -57,10 +58,10 @@ export function DiscountCarousel() {
                 <div className="flex flex-col gap-0.5 pt-1">
                   <div className="flex items-center gap-2">
                     <p className="font-extrabold text-red-600 text-base md:text-lg tracking-tight leading-none">
-                      {useBoxPrice ? `${discountedPriceUzs.toLocaleString("uz-UZ")} ${lang === 'uz' ? "so'm" : (lang === 'ru' ? 'сум' : 'sum')}` : `$${discountedPriceUsd}`}
+                      {useBoxPrice ? `${formatUZS(discountedPriceUzs)} ${lang === 'uz' ? "so'm" : (lang === 'ru' ? 'сум' : 'sum')}` : `$${discountedPriceUsd}`}
                     </p>
                     <p className="font-semibold text-slate-400 text-xs md:text-sm line-through leading-none">
-                      {useBoxPrice ? `${originalPriceUzs.toLocaleString("uz-UZ")} ${lang === 'uz' ? "so'm" : (lang === 'ru' ? 'сум' : 'sum')}` : `$${originalPriceUsd}`}
+                      {useBoxPrice ? `${formatUZS(originalPriceUzs)} ${lang === 'uz' ? "so'm" : (lang === 'ru' ? 'сум' : 'sum')}` : `$${originalPriceUsd}`}
                     </p>
                   </div>
                   <p className="font-semibold text-slate-400 text-[11px] leading-none tracking-wide mt-1">

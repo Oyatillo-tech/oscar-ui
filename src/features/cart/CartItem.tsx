@@ -1,3 +1,4 @@
+import { formatUZS } from "@/lib/utils";
 import { Minus, Plus, Trash2 } from "lucide-react";
 import { type CartItem as CartItemType, useCartStore } from "@/store/cartStore";
 import { useProductStore } from "@/store/productStore";
@@ -42,7 +43,7 @@ export function CartItem({ item }: CartItemProps) {
           
           <div className="flex flex-col gap-0.5">
              <div className="text-slate-900 font-extrabold text-[15px] tracking-tight">
-               {item.unit === 'item' ? `$${item.price}` : `${item.price.toLocaleString("uz-UZ")} UZS`}
+               {item.unit === 'item' ? `$${item.price}` : `${formatUZS(item.price)} UZS`}
              </div>
              
              <div className="flex items-center mt-1 flex-wrap gap-1.5">

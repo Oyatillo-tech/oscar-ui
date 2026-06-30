@@ -459,7 +459,7 @@
 //         </p>
 //         <div className="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 w-full max-w-sm mb-8">
 //           <p className="text-sm text-slate-500 font-medium mb-1">{t('checkout.success_amount')}</p>
-//           <p className="text-2xl font-black text-slate-800">{finalTotalUZS.toLocaleString("uz-UZ")} so'm</p>
+//           <p className="text-2xl font-black text-slate-800">{formatUZS(finalTotalUZS)} so'm</p>
 //         </div>
 //         <Button
 //           onClick={() => navigate("/")}
@@ -522,7 +522,7 @@
 //                   {item.quantity} x {item.name} ({item.unit === 'box' ? t('checkout.box') : t('checkout.item')})
 //                 </span>
 //                 <span className="font-medium text-slate-800 whitespace-nowrap">
-//                   {item.unit === 'item' ? `$${(item.quantity * item.price).toFixed(2)}` : `${(item.quantity * item.price).toLocaleString("uz-UZ")} UZS`}
+//                   {item.unit === 'item' ? `$${(item.quantity * item.price).toFixed(2)}` : `${formatUZS((item.quantity * item.price))} UZS`}
 //                 </span>
 //               </div>
 //             ))}
@@ -530,7 +530,7 @@
 //           <div className="pt-4 border-t flex flex-col gap-2 font-bold text-sm">
 //             <div className="flex justify-between items-center text-slate-600 font-medium">
 //               <span>{t('checkout.products')}:</span>
-//               <span>{totalUZS.toLocaleString("uz-UZ")} so'm ≈ ${totalUSD.toFixed(2)}</span>
+//               <span>{formatUZS(totalUZS)} so'm ≈ ${totalUSD.toFixed(2)}</span>
 //             </div>
 
 //             <div className="flex justify-between items-start text-slate-600 font-medium pb-2 border-b border-dashed border-slate-200">
@@ -546,7 +546,7 @@
 //                       </span>
 //                       {deliveryFeeData.distanceKm !== null && (
 //                         <span className="text-xs text-slate-400 line-through mt-0.5 font-normal">
-//                           ~~{(calculateDeliveryFee(deliveryFeeData.distanceKm, 0).fee).toLocaleString("uz-UZ")} so'm ≈ ${(calculateDeliveryFee(deliveryFeeData.distanceKm, 0).fee / USD_TO_UZS).toFixed(2)}~~
+//                           ~~{(calculateDeliveryFee(deliveryFeeData.distanceKm,formatUZS( 0).fee))} so'm ≈ ${(calculateDeliveryFee(deliveryFeeData.distanceKm, 0).fee / USD_TO_UZS).toFixed(2)}~~
 //                         </span>
 //                       )}
 //                     </>
@@ -556,7 +556,7 @@
 //                     ) : (
 //                       <>
 //                         <span className="text-slate-800">
-//                           {deliveryFeeData.fee.toLocaleString("uz-UZ")} so'm ≈ ${parseFloat((deliveryFeeData.fee / USD_TO_UZS).toFixed(2))}
+//                           {formatUZS(deliveryFeeData.fee)} so'm ≈ ${parseFloat((deliveryFeeData.fee / USD_TO_UZS).toFixed(2))}
 //                         </span>
 //                         <span className="text-xs text-slate-500 font-normal mt-0.5">
 //                           {t('checkout.distance')}: ~{deliveryFeeData.distanceKm.toFixed(1)} km
@@ -571,7 +571,7 @@
 //             <div className="flex justify-between items-center mt-2">
 //               <span>{t('checkout.total')}:</span>
 //               <div className="flex flex-col items-end">
-//                 <span className="text-primary text-xl font-black">{finalTotalUZSWithDelivery.toLocaleString("uz-UZ")} so'm</span>
+//                 <span className="text-primary text-xl font-black">{formatUZS(finalTotalUZSWithDelivery)} so'm</span>
 //                 <span className="text-xs text-slate-500 font-semibold uppercase tracking-wider mt-0.5">≈ ${finalTotalUSDWithDelivery.toFixed(2)}</span>
 //               </div>
 //             </div>
@@ -824,6 +824,7 @@
 // src/pages/Checkout
 
 import { useState, useEffect, useRef, useCallback } from "react";
+import { formatUZS } from "@/lib/utils";
 import { useNavigate } from "react-router-dom";
 import { ChevronLeft, Loader2, CheckCircle2, MapPin, ChevronDown, Navigation, X, Truck, Store } from "lucide-react";
 import { useCartStore } from "@/store/cartStore";
@@ -1291,7 +1292,7 @@ export default function Checkout() {
         </p>
         <div className="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 w-full max-w-sm mb-8">
           <p className="text-sm text-slate-500 font-medium mb-1">{t('checkout.success_amount')}</p>
-          <p className="text-2xl font-black text-slate-800">{finalTotalUZS.toLocaleString("uz-UZ")} so'm</p>
+          <p className="text-2xl font-black text-slate-800">{formatUZS(finalTotalUZS)} so'm</p>
         </div>
         <Button
           onClick={() => {
@@ -1338,7 +1339,7 @@ export default function Checkout() {
                   {item.quantity} x {item.name} ({item.unit === 'box' ? t('checkout.box') : t('checkout.item')})
                 </span>
                 <span className="font-medium text-slate-800 whitespace-nowrap">
-                  {item.unit === 'item' ? `$${(item.quantity * item.price).toFixed(2)}` : `${(item.quantity * item.price).toLocaleString("uz-UZ")} UZS`}
+                  {item.unit === 'item' ? `$${(item.quantity * item.price).toFixed(2)}` : `${formatUZS((item.quantity * item.price))} UZS`}
                 </span>
               </div>
             ))}
@@ -1346,7 +1347,7 @@ export default function Checkout() {
           <div className="pt-4 border-t flex flex-col gap-2 font-bold text-sm">
             <div className="flex justify-between items-center text-slate-600 font-medium">
               <span>{t('checkout.products')}:</span>
-              <span>{totalUZS.toLocaleString("uz-UZ")} so'm ≈ ${totalUSD.toFixed(2)}</span>
+              <span>{formatUZS(totalUZS)} so'm ≈ ${totalUSD.toFixed(2)}</span>
             </div>
 
             <div className="flex justify-between items-start text-slate-600 font-medium pb-2 border-b border-dashed border-slate-200">
@@ -1362,7 +1363,7 @@ export default function Checkout() {
                       </span>
                       {deliveryFeeData.distanceKm !== null && (
                         <span className="text-xs text-slate-400 line-through mt-0.5 font-normal">
-                          ~~{(calculateDeliveryFee(deliveryFeeData.distanceKm, 0).fee).toLocaleString("uz-UZ")} so'm ≈ ${(calculateDeliveryFee(deliveryFeeData.distanceKm, 0).fee / USD_TO_UZS).toFixed(2)}~~
+                          ~~{formatUZS(calculateDeliveryFee(deliveryFeeData.distanceKm, 0).fee)} so'm ≈ ${(calculateDeliveryFee(deliveryFeeData.distanceKm, 0).fee / USD_TO_UZS).toFixed(2)}~~
                         </span>
                       )}
                     </>
@@ -1372,7 +1373,7 @@ export default function Checkout() {
                     ) : (
                       <>
                         <span className="text-slate-800">
-                          {deliveryFeeData.fee.toLocaleString("uz-UZ")} so'm ≈ ${parseFloat((deliveryFeeData.fee / USD_TO_UZS).toFixed(2))}
+                          {formatUZS(deliveryFeeData.fee)} so'm ≈ ${parseFloat((deliveryFeeData.fee / USD_TO_UZS).toFixed(2))}
                         </span>
                         <span className="text-xs text-slate-500 font-normal mt-0.5">
                           {t('checkout.distance')}: ~{deliveryFeeData.distanceKm.toFixed(1)} km
@@ -1387,7 +1388,7 @@ export default function Checkout() {
             <div className="flex justify-between items-center mt-2">
               <span>{t('checkout.total')}:</span>
               <div className="flex flex-col items-end">
-                <span className="text-primary text-xl font-black">{finalTotalUZSWithDelivery.toLocaleString("uz-UZ")} so'm</span>
+                <span className="text-primary text-xl font-black">{formatUZS(finalTotalUZSWithDelivery)} so'm</span>
                 <span className="text-xs text-slate-500 font-semibold uppercase tracking-wider mt-0.5">≈ ${finalTotalUSDWithDelivery.toFixed(2)}</span>
               </div>
             </div>

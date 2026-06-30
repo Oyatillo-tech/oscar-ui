@@ -1,3 +1,4 @@
+import { formatUZS } from "@/lib/utils";
 import { useState, useEffect } from "react";
 import { Search, X, PackageOpen } from "lucide-react";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
@@ -79,7 +80,7 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
                   <div className="flex-1 min-w-0 py-1">
                     <h4 className="font-semibold text-slate-800 text-sm truncate">{product.name}</h4>
                     <p className="font-bold text-primary text-sm mt-0.5">
-                      {product.priceBox > 0 ? `${product.priceBox.toLocaleString("uz-UZ")} so'm` : `$${product.pricePiece}`}
+                      {product.priceBox > 0 ? `${formatUZS(product.priceBox)} so'm` : `$${product.pricePiece}`}
                     </p>
                   </div>
                 </Link>

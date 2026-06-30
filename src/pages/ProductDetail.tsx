@@ -6,7 +6,7 @@ import { useProductStore } from "@/store/productStore";
 import { useCartStore } from "@/store/cartStore";
 import { Button } from "@/components/ui/button";
 import { ProductCard } from "@/features/products/ProductCard";
-import { cn } from "@/lib/utils";
+import { cn, formatUZS } from "@/lib/utils";
 import { isDiscountActive, getEffectivePrice } from "@/utils/discount";
 import { useSettingsStore } from "@/store/settingsStore";
 import { useI18nStore } from "@/store/i18nStore";
@@ -165,10 +165,10 @@ export function ProductDetail() {
             <div className="flex flex-col gap-1 mb-2">
               {hasDiscount && (
                 <div className="text-sm font-semibold text-slate-400 line-through">
-                  {unit === 'item' ? `${(baseItemPrice * USD_TO_UZS).toLocaleString("uz-UZ")} ${lang === 'uz' ? "so'm" : (lang === 'ru' ? 'сум' : 'sum')}` : `${(baseBoxPriceUSD * USD_TO_UZS).toLocaleString("uz-UZ")} ${lang === 'uz' ? "so'm" : (lang === 'ru' ? 'сум' : 'sum')}`}                </div>
+                  {unit === 'item' ? `${formatUZS((baseItemPrice * USD_TO_UZS))} ${lang === 'uz' ? "so'm" : (lang === 'ru' ? 'сум' : 'sum')}` : `${formatUZS((baseBoxPriceUSD * USD_TO_UZS))} ${lang === 'uz' ? "so'm" : (lang === 'ru' ? 'сум' : 'sum')}`}                </div>
               )}
               <div className="text-3xl font-extrabold text-slate-900 tracking-tight">
-                {unit === 'item' ? `${itemPriceUZS.toLocaleString("uz-UZ")} ${lang === 'uz' ? "so'm" : (lang === 'ru' ? 'сум' : 'sum')}` : `${currentBoxPriceUZS.toLocaleString("uz-UZ")} ${lang === 'uz' ? "so'm" : (lang === 'ru' ? 'сум' : 'sum')}`}
+                {unit === 'item' ? `${formatUZS(itemPriceUZS)} ${lang === 'uz' ? "so'm" : (lang === 'ru' ? 'сум' : 'sum')}` : `${formatUZS(currentBoxPriceUZS)} ${lang === 'uz' ? "so'm" : (lang === 'ru' ? 'сум' : 'sum')}`}
               </div>
               <div className="text-sm font-medium text-slate-500">
                 {unit === 'item'
@@ -199,7 +199,7 @@ export function ProductDetail() {
                     <Package className={cn("w-4 h-4", unit === 'item' ? "text-primary" : "text-slate-500")} />
                     <span className={cn("font-semibold", unit === 'item' ? "text-slate-900" : "text-slate-600")}>{t('product.item')}</span>
                   </div>
-                  <span className="text-lg font-bold text-slate-900">{itemPriceUZS.toLocaleString("uz-UZ")} <span className="text-sm font-semibold">{lang === 'uz' ? "so'm" : (lang === 'ru' ? 'сум' : 'sum')}</span></span>
+                  <span className="text-lg font-bold text-slate-900">{formatUZS(itemPriceUZS)} <span className="text-sm font-semibold">{lang === 'uz' ? "so'm" : (lang === 'ru' ? 'сум' : 'sum')}</span></span>
                   <span className="text-xs font-medium text-slate-500 mt-0.5">≈ ${currentItemPriceUSD}</span>
                 </button>
 
@@ -216,7 +216,7 @@ export function ProductDetail() {
                       <span className={cn("font-semibold", unit === 'box' ? "text-slate-900" : "text-slate-600")}>{t('product.box')}</span>
                     </div>
                   </div>
-                  <span className="text-lg font-bold text-slate-900">{currentBoxPriceUZS.toLocaleString("uz-UZ")} <span className="text-sm font-semibold">UZS</span></span>
+                  <span className="text-lg font-bold text-slate-900">{formatUZS(currentBoxPriceUZS)} <span className="text-sm font-semibold">UZS</span></span>
                   <span className="text-xs font-medium text-slate-500 mt-0.5">≈ ${currentBoxPriceUSD}</span>
                 </button>
               </div>
@@ -275,7 +275,7 @@ export function ProductDetail() {
           <div className="flex-1 min-w-0">
             <p className="text-xs font-semibold text-slate-500 mb-0.5">{t('cart.total')} ({quantity} {unit === 'item' ? t('product.item') : t('product.box')})</p>
             <p className="text-xl font-extrabold text-slate-900 truncate">
-              {`${(totalPrice * USD_TO_UZS).toLocaleString("uz-UZ")} ${lang === 'uz' ? "so'm" : (lang === 'ru' ? 'сум' : 'sum')}`}
+              {`${formatUZS((totalPrice * USD_TO_UZS))} ${lang === 'uz' ? "so'm" : (lang === 'ru' ? 'сум' : 'sum')}`}
             </p>
             <p className="text-xs font-medium text-slate-500 mt-0.5">
               {`≈ $${totalPrice}`}

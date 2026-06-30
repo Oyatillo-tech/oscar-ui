@@ -491,8 +491,8 @@
     "1": {
       "id": 1,
       "image": "",
-      "pricePiece": 0.3,
-      "priceBox": 9,
+      "pricePiece": 3.0,
+      "priceBox": 90,
       "boxCapacity": 30,
       "name": {
         "uz": "Suyultiruvchi 0,5 (380ml)",
@@ -508,8 +508,8 @@
     "2": {
       "id": 2,
       "image": "",
-      "pricePiece": 0.32,
-      "priceBox": 6.4,
+      "pricePiece": 3.2,
+      "priceBox": 64.0,
       "boxCapacity": 20,
       "name": {
         "uz": "Suyultiruvchi 0,6 (414ml)",
@@ -525,8 +525,8 @@
     "3": {
       "id": 3,
       "image": "",
-      "pricePiece": 0.36,
-      "priceBox": 5.4,
+      "pricePiece": 3.6,
+      "priceBox": 54.0,
       "boxCapacity": 15,
       "name": {
         "uz": "Suyultiruvchi 0,7 (520ml)",
@@ -542,8 +542,8 @@
     "4": {
       "id": 4,
       "image": "",
-      "pricePiece": 0.46,
-      "priceBox": 6.9,
+      "pricePiece": 4.6,
+      "priceBox": 69.0,
       "boxCapacity": 15,
       "name": {
         "uz": "Suyultiruvchi 0,9 (697ml)",
@@ -559,8 +559,8 @@
     "5": {
       "id": 5,
       "image": "",
-      "pricePiece": 0.62,
-      "priceBox": 12.4,
+      "pricePiece": 6.2,
+      "priceBox": 124.0,
       "boxCapacity": 20,
       "name": {
         "uz": "Suyultiruvchi 1,0 (907ml)",
@@ -576,8 +576,8 @@
     "6": {
       "id": 6,
       "image": "",
-      "pricePiece": 1.9,
-      "priceBox": 5.7,
+      "pricePiece": 19.0,
+      "priceBox": 57.0,
       "boxCapacity": 3,
       "name": {
         "uz": "Suyultiruvchi 3,5l",
@@ -593,8 +593,8 @@
     "7": {
       "id": 7,
       "image": "",
-      "pricePiece": 4.8,
-      "priceBox": 4.8,
+      "pricePiece": 48.0,
+      "priceBox": 48.0,
       "boxCapacity": 1,
       "name": {
         "uz": "Suyultiruvchi 10l",
@@ -610,8 +610,8 @@
     "8": {
       "id": 8,
       "image": "",
-      "pricePiece": 1.55,
-      "priceBox": 23.25,
+      "pricePiece": 15.5,
+      "priceBox": 232.5,
       "boxCapacity": 15,
       "name": {
         "uz": "Suyultiruvchi Bordo",
@@ -627,8 +627,8 @@
     "9": {
       "id": 9,
       "image": "",
-      "pricePiece": 3.7,
-      "priceBox": 22.2,
+      "pricePiece": 37.0,
+      "priceBox": 222.0,
       "boxCapacity": 6,
       "name": {
         "uz": "Oskar emali bordo rang 2.4kg",
@@ -644,8 +644,8 @@
     "10": {
       "id": 10,
       "image": "",
-      "pricePiece": 3.7,
-      "priceBox": 22.2,
+      "pricePiece": 37.0,
+      "priceBox": 222.0,
       "boxCapacity": 6,
       "name": {
         "uz": "Oskar emali oq 2.4kg",
@@ -661,8 +661,8 @@
     "11": {
       "id": 11,
       "image": "",
-      "pricePiece": 3.7,
-      "priceBox": 22.2,
+      "pricePiece": 37.0,
+      "priceBox": 222.0,
       "boxCapacity": 6,
       "name": {
         "uz": "Oskar emali moviy 2.4kg",
@@ -678,8 +678,8 @@
     "12": {
       "id": 12,
       "image": "",
-      "pricePiece": 3.7,
-      "priceBox": 22.2,
+      "pricePiece": 37.0,
+      "priceBox": 222.0,
       "boxCapacity": 6,
       "name": {
         "uz": "Oskar emali sariq 2.4kg",
@@ -695,8 +695,8 @@
     "13": {
       "id": 13,
       "image": "",
-      "pricePiece": 3.7,
-      "priceBox": 22.2,
+      "pricePiece": 37.0,
+      "priceBox": 222.0,
       "boxCapacity": 6,
       "name": {
         "uz": "Oskar emali och yashil 2.4kg",
@@ -712,8 +712,8 @@
     "14": {
       "id": 14,
       "image": "",
-      "pricePiece": 3.7,
-      "priceBox": 22.2,
+      "pricePiece": 37.0,
+      "priceBox": 222.0,
       "boxCapacity": 6,
       "name": {
         "uz": "Oskar emali qizil 2.4kg",
@@ -729,8 +729,8 @@
     "15": {
       "id": 15,
       "image": "",
-      "pricePiece": 3.7,
-      "priceBox": 22.2,
+      "pricePiece": 37.0,
+      "priceBox": 222.0,
       "boxCapacity": 6,
       "name": {
         "uz": "Oskar emali kulrang 2.4kg",
@@ -746,8 +746,8 @@
     "16": {
       "id": 16,
       "image": "",
-      "pricePiece": 3.7,
-      "priceBox": 22.2,
+      "pricePiece": 37.0,
+      "priceBox": 222.0,
       "boxCapacity": 6,
       "name": {
         "uz": "Oskar emali to'q ko'k 2.4kg",
@@ -763,8 +763,8 @@
     "17": {
       "id": 17,
       "image": "",
-      "pricePiece": 3.7,
-      "priceBox": 22.2,
+      "pricePiece": 37.0,
+      "priceBox": 222.0,
       "boxCapacity": 6,
       "name": {
         "uz": "Oskar emali qora 2.4kg",
@@ -780,8 +780,8 @@
     "18": {
       "id": 18,
       "image": "",
-      "pricePiece": 3.7,
-      "priceBox": 22.2,
+      "pricePiece": 37.0,
+      "priceBox": 222.0,
       "boxCapacity": 6,
       "name": {
         "uz": "Oskar emali sariq-jigarrang 2.4kg",
@@ -797,8 +797,8 @@
     "19": {
       "id": 19,
       "image": "",
-      "pricePiece": 6.7,
-      "priceBox": 40.2,
+      "pricePiece": 67.0,
+      "priceBox": 402.0,
       "boxCapacity": 6,
       "name": {
         "uz": "Oskar emali shokolad 2.4kg",
@@ -814,8 +814,8 @@
     "20": {
       "id": 20,
       "image": "",
-      "pricePiece": 1.35,
-      "priceBox": 16.2,
+      "pricePiece": 13.5,
+      "priceBox": 162.0,
       "boxCapacity": 12,
       "name": {
         "uz": "Oskar emali bordo rang 0.7kg",
@@ -831,8 +831,8 @@
     "21": {
       "id": 21,
       "image": "",
-      "pricePiece": 1.35,
-      "priceBox": 16.2,
+      "pricePiece": 13.5,
+      "priceBox": 162.0,
       "boxCapacity": 12,
       "name": {
         "uz": "Oskar emali oq 0.7kg",
@@ -848,8 +848,8 @@
     "22": {
       "id": 22,
       "image": "",
-      "pricePiece": 1.35,
-      "priceBox": 16.2,
+      "pricePiece": 13.5,
+      "priceBox": 162.0,
       "boxCapacity": 12,
       "name": {
         "uz": "Oskar emali moviy 0.7kg",
@@ -865,8 +865,8 @@
     "23": {
       "id": 23,
       "image": "",
-      "pricePiece": 1.35,
-      "priceBox": 16.2,
+      "pricePiece": 13.5,
+      "priceBox": 162.0,
       "boxCapacity": 12,
       "name": {
         "uz": "Oskar emali sariq 0.7kg",
@@ -882,8 +882,8 @@
     "24": {
       "id": 24,
       "image": "",
-      "pricePiece": 1.35,
-      "priceBox": 16.2,
+      "pricePiece": 13.5,
+      "priceBox": 162.0,
       "boxCapacity": 12,
       "name": {
         "uz": "Oskar emali och yashil 0.7kg",
@@ -899,8 +899,8 @@
     "25": {
       "id": 25,
       "image": "",
-      "pricePiece": 1.35,
-      "priceBox": 16.2,
+      "pricePiece": 13.5,
+      "priceBox": 162.0,
       "boxCapacity": 12,
       "name": {
         "uz": "Oskar emali qizil 0.7kg",
@@ -916,8 +916,8 @@
     "26": {
       "id": 26,
       "image": "",
-      "pricePiece": 1.35,
-      "priceBox": 16.2,
+      "pricePiece": 13.5,
+      "priceBox": 162.0,
       "boxCapacity": 12,
       "name": {
         "uz": "Oskar emali kulrang 0.7kg",
@@ -933,8 +933,8 @@
     "27": {
       "id": 27,
       "image": "",
-      "pricePiece": 1.35,
-      "priceBox": 16.2,
+      "pricePiece": 13.5,
+      "priceBox": 162.0,
       "boxCapacity": 12,
       "name": {
         "uz": "Oskar emali to'q ko'k 0.7kg",
@@ -950,8 +950,8 @@
     "28": {
       "id": 28,
       "image": "",
-      "pricePiece": 1.35,
-      "priceBox": 16.2,
+      "pricePiece": 13.5,
+      "priceBox": 162.0,
       "boxCapacity": 12,
       "name": {
         "uz": "Oskar emali qora 0.7kg",
@@ -967,8 +967,8 @@
     "29": {
       "id": 29,
       "image": "",
-      "pricePiece": 1.35,
-      "priceBox": 16.2,
+      "pricePiece": 13.5,
+      "priceBox": 162.0,
       "boxCapacity": 12,
       "name": {
         "uz": "Oskar emali sariq-jigarrang 0.7kg",
@@ -984,8 +984,8 @@
     "30": {
       "id": 30,
       "image": "",
-      "pricePiece": 2.35,
-      "priceBox": 28.2,
+      "pricePiece": 23.5,
+      "priceBox": 282.0,
       "boxCapacity": 12,
       "name": {
         "uz": "Oskar emali shokolad 0.7kg",
@@ -1001,8 +1001,8 @@
     "31": {
       "id": 31,
       "image": "",
-      "pricePiece": 2.35,
-      "priceBox": 28.2,
+      "pricePiece": 23.5,
+      "priceBox": 282.0,
       "boxCapacity": 12,
       "name": {
         "uz": "Universal emali qora 0.7kg",
@@ -1018,8 +1018,8 @@
     "32": {
       "id": 32,
       "image": "",
-      "pricePiece": 3.7,
-      "priceBox": 22.2,
+      "pricePiece": 37.0,
+      "priceBox": 222.0,
       "boxCapacity": 6,
       "name": {
         "uz": "X-tra emali bordo rang 2.4kg",
@@ -1035,8 +1035,8 @@
     "33": {
       "id": 33,
       "image": "",
-      "pricePiece": 3.7,
-      "priceBox": 22.2,
+      "pricePiece": 37.0,
+      "priceBox": 222.0,
       "boxCapacity": 6,
       "name": {
         "uz": "X-tra emali oq 2.4kg",
@@ -1052,8 +1052,8 @@
     "34": {
       "id": 34,
       "image": "",
-      "pricePiece": 3.7,
-      "priceBox": 22.2,
+      "pricePiece": 37.0,
+      "priceBox": 222.0,
       "boxCapacity": 6,
       "name": {
         "uz": "X-tra emali moviy 2.4kg",
@@ -1069,8 +1069,8 @@
     "35": {
       "id": 35,
       "image": "",
-      "pricePiece": 3.7,
-      "priceBox": 22.2,
+      "pricePiece": 37.0,
+      "priceBox": 222.0,
       "boxCapacity": 6,
       "name": {
         "uz": "X-tra emali sariq 2.4kg",
@@ -1086,8 +1086,8 @@
     "36": {
       "id": 36,
       "image": "",
-      "pricePiece": 3.7,
-      "priceBox": 22.2,
+      "pricePiece": 37.0,
+      "priceBox": 222.0,
       "boxCapacity": 6,
       "name": {
         "uz": "X-tra emali och yashil 2.4kg",
@@ -1103,8 +1103,8 @@
     "37": {
       "id": 37,
       "image": "",
-      "pricePiece": 3.7,
-      "priceBox": 22.2,
+      "pricePiece": 37.0,
+      "priceBox": 222.0,
       "boxCapacity": 6,
       "name": {
         "uz": "X-tra emali qizil 2.4kg",
@@ -1120,8 +1120,8 @@
     "38": {
       "id": 38,
       "image": "",
-      "pricePiece": 3.7,
-      "priceBox": 22.2,
+      "pricePiece": 37.0,
+      "priceBox": 222.0,
       "boxCapacity": 6,
       "name": {
         "uz": "X-tra emali pol (qizil-jigarrang) 2.4kg",
@@ -1137,8 +1137,8 @@
     "39": {
       "id": 39,
       "image": "",
-      "pricePiece": 3.7,
-      "priceBox": 22.2,
+      "pricePiece": 37.0,
+      "priceBox": 222.0,
       "boxCapacity": 6,
       "name": {
         "uz": "X-tra emali kulrang 2.4kg",
@@ -1154,8 +1154,8 @@
     "40": {
       "id": 40,
       "image": "",
-      "pricePiece": 3.7,
-      "priceBox": 22.2,
+      "pricePiece": 37.0,
+      "priceBox": 222.0,
       "boxCapacity": 6,
       "name": {
         "uz": "X-tra emali to'q ko'k 2.4kg",
@@ -1171,8 +1171,8 @@
     "41": {
       "id": 41,
       "image": "",
-      "pricePiece": 3.7,
-      "priceBox": 22.2,
+      "pricePiece": 37.0,
+      "priceBox": 222.0,
       "boxCapacity": 6,
       "name": {
         "uz": "X-tra emali qora 2.4kg",
@@ -1188,8 +1188,8 @@
     "42": {
       "id": 42,
       "image": "",
-      "pricePiece": 3.7,
-      "priceBox": 22.2,
+      "pricePiece": 37.0,
+      "priceBox": 222.0,
       "boxCapacity": 6,
       "name": {
         "uz": "X-tra emali shokolad 2.4kg",
@@ -1205,8 +1205,8 @@
     "43": {
       "id": 43,
       "image": "",
-      "pricePiece": 3.7,
-      "priceBox": 22.2,
+      "pricePiece": 37.0,
+      "priceBox": 222.0,
       "boxCapacity": 6,
       "name": {
         "uz": "X-tra emali yashil 2.4kg",
@@ -1222,8 +1222,8 @@
     "44": {
       "id": 44,
       "image": "",
-      "pricePiece": 1.35,
-      "priceBox": 16.2,
+      "pricePiece": 13.5,
+      "priceBox": 162.0,
       "boxCapacity": 12,
       "name": {
         "uz": "X-tra emali qora 0.7kg",
@@ -1239,8 +1239,8 @@
     "45": {
       "id": 45,
       "image": "",
-      "pricePiece": 1.35,
-      "priceBox": 16.2,
+      "pricePiece": 13.5,
+      "priceBox": 162.0,
       "boxCapacity": 12,
       "name": {
         "uz": "X-tra emali shokolad 0.7kg",
@@ -1256,8 +1256,8 @@
     "46": {
       "id": 46,
       "image": "",
-      "pricePiece": 1.35,
-      "priceBox": 16.2,
+      "pricePiece": 13.5,
+      "priceBox": 162.0,
       "boxCapacity": 12,
       "name": {
         "uz": "X-tra emali yashil 0.7kg",
@@ -1273,8 +1273,8 @@
     "47": {
       "id": 47,
       "image": "",
-      "pricePiece": 1.35,
-      "priceBox": 16.2,
+      "pricePiece": 13.5,
+      "priceBox": 162.0,
       "boxCapacity": 12,
       "name": {
         "uz": "X-tra emali bordo rang 0.7kg",
@@ -1290,8 +1290,8 @@
     "48": {
       "id": 48,
       "image": "",
-      "pricePiece": 1.35,
-      "priceBox": 16.2,
+      "pricePiece": 13.5,
+      "priceBox": 162.0,
       "boxCapacity": 12,
       "name": {
         "uz": "X-tra emali oq 0.7kg",
@@ -1307,8 +1307,8 @@
     "49": {
       "id": 49,
       "image": "",
-      "pricePiece": 1.35,
-      "priceBox": 16.2,
+      "pricePiece": 13.5,
+      "priceBox": 162.0,
       "boxCapacity": 12,
       "name": {
         "uz": "X-tra emali moviy 0.7kg",
@@ -1324,8 +1324,8 @@
     "50": {
       "id": 50,
       "image": "",
-      "pricePiece": 1.35,
-      "priceBox": 16.2,
+      "pricePiece": 13.5,
+      "priceBox": 162.0,
       "boxCapacity": 12,
       "name": {
         "uz": "X-tra emali sariq 0.7kg",
@@ -1341,8 +1341,8 @@
     "51": {
       "id": 51,
       "image": "",
-      "pricePiece": 1.35,
-      "priceBox": 16.2,
+      "pricePiece": 13.5,
+      "priceBox": 162.0,
       "boxCapacity": 12,
       "name": {
         "uz": "X-tra emali och yashil 0.7kg",
@@ -1358,8 +1358,8 @@
     "52": {
       "id": 52,
       "image": "",
-      "pricePiece": 1.35,
-      "priceBox": 16.2,
+      "pricePiece": 13.5,
+      "priceBox": 162.0,
       "boxCapacity": 12,
       "name": {
         "uz": "X-tra emali qizil 0.7kg",
@@ -1375,8 +1375,8 @@
     "53": {
       "id": 53,
       "image": "",
-      "pricePiece": 1.35,
-      "priceBox": 16.2,
+      "pricePiece": 13.5,
+      "priceBox": 162.0,
       "boxCapacity": 12,
       "name": {
         "uz": "X-tra emali pol (qizil-jigarrang) 0.7kg",
@@ -1392,8 +1392,8 @@
     "54": {
       "id": 54,
       "image": "",
-      "pricePiece": 1.35,
-      "priceBox": 16.2,
+      "pricePiece": 13.5,
+      "priceBox": 162.0,
       "boxCapacity": 12,
       "name": {
         "uz": "X-tra emali kulrang 0.7kg",
@@ -1409,8 +1409,8 @@
     "55": {
       "id": 55,
       "image": "",
-      "pricePiece": 1.35,
-      "priceBox": 16.2,
+      "pricePiece": 13.5,
+      "priceBox": 162.0,
       "boxCapacity": 12,
       "name": {
         "uz": "X-tra emali to'q ko'k 0.7kg",
@@ -1426,8 +1426,8 @@
     "56": {
       "id": 56,
       "image": "",
-      "pricePiece": 6.9,
-      "priceBox": 27.6,
+      "pricePiece": 69.0,
+      "priceBox": 276.0,
       "boxCapacity": 4,
       "name": {
         "uz": "OSCAR DELUXE oq",
@@ -1443,8 +1443,8 @@
     "57": {
       "id": 57,
       "image": "",
-      "pricePiece": 6.9,
-      "priceBox": 27.6,
+      "pricePiece": 69.0,
+      "priceBox": 276.0,
       "boxCapacity": 4,
       "name": {
         "uz": "OSCAR DELUXE sariq",
@@ -1460,8 +1460,8 @@
     "58": {
       "id": 58,
       "image": "",
-      "pricePiece": 6.9,
-      "priceBox": 27.6,
+      "pricePiece": 69.0,
+      "priceBox": 276.0,
       "boxCapacity": 4,
       "name": {
         "uz": "OSCAR DELUXE qizil",
@@ -1477,8 +1477,8 @@
     "59": {
       "id": 59,
       "image": "",
-      "pricePiece": 6.35,
-      "priceBox": 25.4,
+      "pricePiece": 63.5,
+      "priceBox": 254.0,
       "boxCapacity": 4,
       "name": {
         "uz": "OSCAR DELUXE moviy",
@@ -1494,8 +1494,8 @@
     "60": {
       "id": 60,
       "image": "",
-      "pricePiece": 6.35,
-      "priceBox": 25.4,
+      "pricePiece": 63.5,
+      "priceBox": 254.0,
       "boxCapacity": 4,
       "name": {
         "uz": "OSCAR DELUXE yashil",
@@ -1511,8 +1511,8 @@
     "61": {
       "id": 61,
       "image": "",
-      "pricePiece": 6.35,
-      "priceBox": 25.4,
+      "pricePiece": 63.5,
+      "priceBox": 254.0,
       "boxCapacity": 4,
       "name": {
         "uz": "OSCAR DELUXE pol rang",
@@ -1528,8 +1528,8 @@
     "62": {
       "id": 62,
       "image": "",
-      "pricePiece": 6.35,
-      "priceBox": 25.4,
+      "pricePiece": 63.5,
+      "priceBox": 254.0,
       "boxCapacity": 4,
       "name": {
         "uz": "OSCAR DELUXE kulrang",
@@ -1545,8 +1545,8 @@
     "63": {
       "id": 63,
       "image": "",
-      "pricePiece": 6.35,
-      "priceBox": 25.4,
+      "pricePiece": 63.5,
+      "priceBox": 254.0,
       "boxCapacity": 4,
       "name": {
         "uz": "OSCAR DELUXE ko'k",
@@ -1562,8 +1562,8 @@
     "64": {
       "id": 64,
       "image": "",
-      "pricePiece": 6.35,
-      "priceBox": 25.4,
+      "pricePiece": 63.5,
+      "priceBox": 254.0,
       "boxCapacity": 4,
       "name": {
         "uz": "OSCAR DELUXE qora",
@@ -1579,8 +1579,8 @@
     "65": {
       "id": 65,
       "image": "",
-      "pricePiece": 6.35,
-      "priceBox": 25.4,
+      "pricePiece": 63.5,
+      "priceBox": 254.0,
       "boxCapacity": 4,
       "name": {
         "uz": "OSCAR DELUXE shokolad rang",
@@ -1596,8 +1596,8 @@
     "66": {
       "id": 66,
       "image": "",
-      "pricePiece": 1.15,
-      "priceBox": 34.5,
+      "pricePiece": 11.5,
+      "priceBox": 345.0,
       "boxCapacity": 30,
       "name": {
         "uz": "Universal lak 0,5",
@@ -1613,8 +1613,8 @@
     "67": {
       "id": 67,
       "image": "",
-      "pricePiece": 1.55,
-      "priceBox": 23.25,
+      "pricePiece": 15.5,
+      "priceBox": 232.5,
       "boxCapacity": 15,
       "name": {
         "uz": "Universal lak 0,7",
@@ -1630,8 +1630,8 @@
     "68": {
       "id": 68,
       "image": "",
-      "pricePiece": 2.05,
-      "priceBox": 24.6,
+      "pricePiece": 20.5,
+      "priceBox": 246.0,
       "boxCapacity": 12,
       "name": {
         "uz": "Lak 0,8 j/b (temir banka)",
@@ -1647,8 +1647,8 @@
     "69": {
       "id": 69,
       "image": "",
-      "pricePiece": 2.6,
-      "priceBox": 31.2,
+      "pricePiece": 26.0,
+      "priceBox": 312.0,
       "boxCapacity": 12,
       "name": {
         "uz": "Oskar Yaxta laki 0,8 j/b (temir banka)",
@@ -1664,8 +1664,8 @@
     "70": {
       "id": 70,
       "image": "",
-      "pricePiece": 6,
-      "priceBox": 24,
+      "pricePiece": 60,
+      "priceBox": 240,
       "boxCapacity": 4,
       "name": {
         "uz": "Oskar Yaxta laki 2,5 j/b (temir banka)",
@@ -1681,8 +1681,8 @@
     "71": {
       "id": 71,
       "image": "",
-      "pricePiece": 5.5,
-      "priceBox": 22,
+      "pricePiece": 55.0,
+      "priceBox": 220,
       "boxCapacity": 4,
       "name": {
         "uz": "Ekstra lak 2,5 j/b (temir banka)",
@@ -1698,8 +1698,8 @@
     "72": {
       "id": 72,
       "image": "",
-      "pricePiece": 0.5,
-      "priceBox": 7.5,
+      "pricePiece": 5.0,
+      "priceBox": 75.0,
       "boxCapacity": 15,
       "name": {
         "uz": "Bitum lak 0,7l",
@@ -1715,8 +1715,8 @@
     "73": {
       "id": 73,
       "image": "",
-      "pricePiece": 4.5,
-      "priceBox": 13.5,
+      "pricePiece": 45.0,
+      "priceBox": 135.0,
       "boxCapacity": 3,
       "name": {
         "uz": "Bitum lak 4l",
@@ -1732,8 +1732,8 @@
     "74": {
       "id": 74,
       "image": "",
-      "pricePiece": 5,
-      "priceBox": 10,
+      "pricePiece": 50,
+      "priceBox": 100,
       "boxCapacity": 2,
       "name": {
         "uz": "Travertin lak 2,5kg",
@@ -1749,8 +1749,8 @@
     "75": {
       "id": 75,
       "image": "",
-      "pricePiece": 8.95,
-      "priceBox": 8.95,
+      "pricePiece": 89.5,
+      "priceBox": 89.5,
       "boxCapacity": 1,
       "name": {
         "uz": "Travertin lak 5kg",
@@ -1766,8 +1766,8 @@
     "76": {
       "id": 76,
       "image": "",
-      "pricePiece": 16.5,
-      "priceBox": 16.5,
+      "pricePiece": 165.0,
+      "priceBox": 165.0,
       "boxCapacity": 1,
       "name": {
         "uz": "Travertin lak 10kg",
@@ -1783,8 +1783,8 @@
     "77": {
       "id": 77,
       "image": "",
-      "pricePiece": 7,
-      "priceBox": 21,
+      "pricePiece": 70,
+      "priceBox": 210,
       "boxCapacity": 3,
       "name": {
         "uz": "Olifa (bochka)",
@@ -1800,8 +1800,8 @@
     "78": {
       "id": 78,
       "image": "",
-      "pricePiece": 5.5,
-      "priceBox": 16.5,
+      "pricePiece": 55.0,
+      "priceBox": 165.0,
       "boxCapacity": 3,
       "name": {
         "uz": "Olifa 2l",
@@ -1817,8 +1817,8 @@
     "79": {
       "id": 79,
       "image": "",
-      "pricePiece": 1.3,
-      "priceBox": 19.5,
+      "pricePiece": 13.0,
+      "priceBox": 195.0,
       "boxCapacity": 15,
       "name": {
         "uz": "Olifa 0,7",
@@ -1834,8 +1834,8 @@
     "80": {
       "id": 80,
       "image": "",
-      "pricePiece": 2.1,
-      "priceBox": 31.5,
+      "pricePiece": 21.0,
+      "priceBox": 315.0,
       "boxCapacity": 15,
       "name": {
         "uz": "BORDO olifa",
@@ -1851,8 +1851,8 @@
     "81": {
       "id": 81,
       "image": "",
-      "pricePiece": 0.51,
-      "priceBox": 51,
+      "pricePiece": 5.1,
+      "priceBox": 510,
       "boxCapacity": 100,
       "name": {
         "uz": "Serpyanka burchak 2.0m",
@@ -1868,8 +1868,8 @@
     "82": {
       "id": 82,
       "image": "",
-      "pricePiece": 0.58,
-      "priceBox": 58,
+      "pricePiece": 5.8,
+      "priceBox": 580,
       "boxCapacity": 100,
       "name": {
         "uz": "Serpyanka burchak 2.4m",
@@ -1885,8 +1885,8 @@
     "83": {
       "id": 83,
       "image": "",
-      "pricePiece": 0.7,
-      "priceBox": 70,
+      "pricePiece": 7.0,
+      "priceBox": 700,
       "boxCapacity": 100,
       "name": {
         "uz": "Serpyanka burchak 2.7m",
@@ -1902,8 +1902,8 @@
     "84": {
       "id": 84,
       "image": "",
-      "pricePiece": 0.42,
-      "priceBox": 5.04,
+      "pricePiece": 4.2,
+      "priceBox": 50.4,
       "boxCapacity": 12,
       "name": {
         "uz": "Shpatlyovka oq 0,350kg",
@@ -1919,8 +1919,8 @@
     "85": {
       "id": 85,
       "image": "",
-      "pricePiece": 0.42,
-      "priceBox": 5.04,
+      "pricePiece": 4.2,
+      "priceBox": 50.4,
       "boxCapacity": 12,
       "name": {
         "uz": "Shpatlyovka dub (eman) 0,350kg",
@@ -1936,8 +1936,8 @@
     "86": {
       "id": 86,
       "image": "",
-      "pricePiece": 0.42,
-      "priceBox": 5.04,
+      "pricePiece": 4.2,
+      "priceBox": 50.4,
       "boxCapacity": 12,
       "name": {
         "uz": "Shpatlyovka yong'oq 0,350kg",
@@ -1953,8 +1953,8 @@
     "87": {
       "id": 87,
       "image": "",
-      "pricePiece": 0.42,
-      "priceBox": 5.04,
+      "pricePiece": 4.2,
+      "priceBox": 50.4,
       "boxCapacity": 12,
       "name": {
         "uz": "Shpatlyovka qarag'ay 0,350kg",
@@ -1970,8 +1970,8 @@
     "88": {
       "id": 88,
       "image": "",
-      "pricePiece": 0.67,
-      "priceBox": 5.36,
+      "pricePiece": 6.7,
+      "priceBox": 53.6,
       "boxCapacity": 8,
       "name": {
         "uz": "Shpatlyovka oq 0,800kg",
@@ -1987,8 +1987,8 @@
     "89": {
       "id": 89,
       "image": "",
-      "pricePiece": 0.67,
-      "priceBox": 5.36,
+      "pricePiece": 6.7,
+      "priceBox": 53.6,
       "boxCapacity": 8,
       "name": {
         "uz": "Shpatlyovka dub (eman) 0,800kg",
@@ -2004,8 +2004,8 @@
     "90": {
       "id": 90,
       "image": "",
-      "pricePiece": 0.67,
-      "priceBox": 5.36,
+      "pricePiece": 6.7,
+      "priceBox": 53.6,
       "boxCapacity": 8,
       "name": {
         "uz": "Shpatlyovka yong'oq 0,800kg",
@@ -2021,8 +2021,8 @@
     "91": {
       "id": 91,
       "image": "",
-      "pricePiece": 0.67,
-      "priceBox": 5.36,
+      "pricePiece": 6.7,
+      "priceBox": 53.6,
       "boxCapacity": 8,
       "name": {
         "uz": "Shpatlyovka qarag'ay 0,800kg",
@@ -2038,8 +2038,8 @@
     "92": {
       "id": 92,
       "image": "",
-      "pricePiece": 1.05,
-      "priceBox": 4.2,
+      "pricePiece": 10.5,
+      "priceBox": 42.0,
       "boxCapacity": 4,
       "name": {
         "uz": "Shpatlyovka oq 1,300kg",
@@ -2055,8 +2055,8 @@
     "93": {
       "id": 93,
       "image": "",
-      "pricePiece": 1.05,
-      "priceBox": 4.2,
+      "pricePiece": 10.5,
+      "priceBox": 42.0,
       "boxCapacity": 4,
       "name": {
         "uz": "Shpatlyovka dub (eman) 1,300kg",
@@ -2072,8 +2072,8 @@
     "94": {
       "id": 94,
       "image": "",
-      "pricePiece": 1.05,
-      "priceBox": 4.2,
+      "pricePiece": 10.5,
+      "priceBox": 42.0,
       "boxCapacity": 4,
       "name": {
         "uz": "Shpatlyovka yong'oq 1,300kg",
@@ -2089,8 +2089,8 @@
     "95": {
       "id": 95,
       "image": "",
-      "pricePiece": 1.05,
-      "priceBox": 4.2,
+      "pricePiece": 10.5,
+      "priceBox": 42.0,
       "boxCapacity": 4,
       "name": {
         "uz": "Shpatlyovka qarag'ay 1,300kg",
@@ -2106,8 +2106,8 @@
     "96": {
       "id": 96,
       "image": "",
-      "pricePiece": 0.68,
-      "priceBox": 8.16,
+      "pricePiece": 6.8,
+      "priceBox": 81.6,
       "boxCapacity": 12,
       "name": {
         "uz": "Choklar uchun fuga oq 1kg",
@@ -2123,8 +2123,8 @@
     "97": {
       "id": 97,
       "image": "",
-      "pricePiece": 1.2,
-      "priceBox": 14.4,
+      "pricePiece": 12.0,
+      "priceBox": 144.0,
       "boxCapacity": 12,
       "name": {
         "uz": "Choklar uchun fuga qora 0.8kg",
@@ -2140,8 +2140,8 @@
     "98": {
       "id": 98,
       "image": "",
-      "pricePiece": 1.38,
-      "priceBox": 16.56,
+      "pricePiece": 13.8,
+      "priceBox": 165.6,
       "boxCapacity": 12,
       "name": {
         "uz": "Choklar uchun fuga qizil-jigarrang 1kg",
@@ -2157,8 +2157,8 @@
     "99": {
       "id": 99,
       "image": "",
-      "pricePiece": 1.38,
-      "priceBox": 16.56,
+      "pricePiece": 13.8,
+      "priceBox": 165.6,
       "boxCapacity": 12,
       "name": {
         "uz": "Choklar uchun fuga kulrang 1kg",
@@ -2174,8 +2174,8 @@
     "100": {
       "id": 100,
       "image": "",
-      "pricePiece": 1.38,
-      "priceBox": 16.56,
+      "pricePiece": 13.8,
+      "priceBox": 165.6,
       "boxCapacity": 12,
       "name": {
         "uz": "Choklar uchun fuga shokolad 1kg",
@@ -2191,8 +2191,8 @@
     "101": {
       "id": 101,
       "image": "",
-      "pricePiece": 2.1,
-      "priceBox": 6.3,
+      "pricePiece": 21.0,
+      "priceBox": 63.0,
       "boxCapacity": 3,
       "name": {
         "uz": "Choklar uchun fuga oq 4kg",
@@ -2208,8 +2208,8 @@
     "102": {
       "id": 102,
       "image": "",
-      "pricePiece": 3.65,
-      "priceBox": 10.95,
+      "pricePiece": 36.5,
+      "priceBox": 109.5,
       "boxCapacity": 3,
       "name": {
         "uz": "Choklar uchun fuga qora 3.5kg",
@@ -2225,8 +2225,8 @@
     "103": {
       "id": 103,
       "image": "",
-      "pricePiece": 4.6,
-      "priceBox": 13.8,
+      "pricePiece": 46.0,
+      "priceBox": 138.0,
       "boxCapacity": 3,
       "name": {
         "uz": "Choklar uchun fuga qizil-jigarrang 4kg",
@@ -2242,8 +2242,8 @@
     "104": {
       "id": 104,
       "image": "",
-      "pricePiece": 4.6,
-      "priceBox": 13.8,
+      "pricePiece": 46.0,
+      "priceBox": 138.0,
       "boxCapacity": 3,
       "name": {
         "uz": "Choklar uchun fuga kulrang 4kg",
@@ -2259,8 +2259,8 @@
     "105": {
       "id": 105,
       "image": "",
-      "pricePiece": 4.6,
-      "priceBox": 13.8,
+      "pricePiece": 46.0,
+      "priceBox": 138.0,
       "boxCapacity": 3,
       "name": {
         "uz": "Choklar uchun fuga shokolad 4kg",
@@ -2276,8 +2276,8 @@
     "106": {
       "id": 106,
       "image": "",
-      "pricePiece": 0.7,
-      "priceBox": 2.1,
+      "pricePiece": 7.0,
+      "priceBox": 21.0,
       "boxCapacity": 3,
       "name": {
         "uz": "Antimoroz (sovuqqa qarshi) 4l",
@@ -2293,8 +2293,8 @@
     "107": {
       "id": 107,
       "image": "",
-      "pricePiece": 1.9,
-      "priceBox": 1.9,
+      "pricePiece": 19.0,
+      "priceBox": 19.0,
       "boxCapacity": 1,
       "name": {
         "uz": "Antimoroz (sovuqqa qarshi) 12kg",
@@ -2310,8 +2310,8 @@
     "108": {
       "id": 108,
       "image": "",
-      "pricePiece": 17.5,
-      "priceBox": 17.5,
+      "pricePiece": 175.0,
+      "priceBox": 175.0,
       "boxCapacity": 1,
       "name": {
         "uz": "Antimoroz (sovuqqa qarshi) 12kg (kalsiy nitrat)",
@@ -2327,8 +2327,8 @@
     "109": {
       "id": 109,
       "image": "",
-      "pricePiece": 3.3,
-      "priceBox": 3.3,
+      "pricePiece": 33.0,
+      "priceBox": 33.0,
       "boxCapacity": 1,
       "name": {
         "uz": "Antimoroz (sovuqqa qarshi) 20kg",
@@ -2344,8 +2344,8 @@
     "110": {
       "id": 110,
       "image": "",
-      "pricePiece": 2.8,
-      "priceBox": 5.6,
+      "pricePiece": 28.0,
+      "priceBox": 56.0,
       "boxCapacity": 2,
       "name": {
         "uz": "Betonokontakt 4kg",
@@ -2361,8 +2361,8 @@
     "111": {
       "id": 111,
       "image": "",
-      "pricePiece": 7.8,
-      "priceBox": 7.8,
+      "pricePiece": 78.0,
+      "priceBox": 78.0,
       "boxCapacity": 1,
       "name": {
         "uz": "Betonokontakt 12kg",
@@ -2378,8 +2378,8 @@
     "112": {
       "id": 112,
       "image": "",
-      "pricePiece": 0.54,
-      "priceBox": 8.1,
+      "pricePiece": 5.4,
+      "priceBox": 81.0,
       "boxCapacity": 15,
       "name": {
         "uz": "Suyuq shisha 0,7",
@@ -2395,8 +2395,8 @@
     "113": {
       "id": 113,
       "image": "",
-      "pricePiece": 2.3,
-      "priceBox": 4.6,
+      "pricePiece": 23.0,
+      "priceBox": 46.0,
       "boxCapacity": 2,
       "name": {
         "uz": "Suyuq shisha 4 l (blok)",
@@ -2412,8 +2412,8 @@
     "114": {
       "id": 114,
       "image": "",
-      "pricePiece": 0.77,
-      "priceBox": 7.7,
+      "pricePiece": 7.7,
+      "priceBox": 77.0,
       "boxCapacity": 10,
       "name": {
         "uz": "Suyuq shisha 1l",
@@ -2429,8 +2429,8 @@
     "115": {
       "id": 115,
       "image": "",
-      "pricePiece": 2.4,
-      "priceBox": 4.8,
+      "pricePiece": 24.0,
+      "priceBox": 48.0,
       "boxCapacity": 2,
       "name": {
         "uz": "Suyuq shisha 4 l (karobka)",
@@ -2446,8 +2446,8 @@
     "116": {
       "id": 116,
       "image": "",
-      "pricePiece": 0.15,
-      "priceBox": 30,
+      "pricePiece": 1.5,
+      "priceBox": 300,
       "boxCapacity": 200,
       "name": {
         "uz": "Katta devor qog'ozi shpateli",
@@ -2463,8 +2463,8 @@
     "117": {
       "id": 117,
       "image": "",
-      "pricePiece": 0.13,
-      "priceBox": 32.5,
+      "pricePiece": 1.3,
+      "priceBox": 325.0,
       "boxCapacity": 250,
       "name": {
         "uz": "Kichik devor qog'ozi shpateli",
@@ -2480,8 +2480,8 @@
     "118": {
       "id": 118,
       "image": "",
-      "pricePiece": 2,
-      "priceBox": 24,
+      "pricePiece": 20,
+      "priceBox": 240,
       "boxCapacity": 12,
       "name": {
         "uz": "Klin (gayka) 1mm",
@@ -2497,8 +2497,8 @@
     "119": {
       "id": 119,
       "image": "",
-      "pricePiece": 2.35,
-      "priceBox": 28.2,
+      "pricePiece": 23.5,
+      "priceBox": 282.0,
       "boxCapacity": 12,
       "name": {
         "uz": "Zajim (bolt) 1mm",
@@ -2514,8 +2514,8 @@
     "120": {
       "id": 120,
       "image": "",
-      "pricePiece": 2.6,
-      "priceBox": 5.2,
+      "pricePiece": 26.0,
+      "priceBox": 52.0,
       "boxCapacity": 2,
       "name": {
         "uz": "UNIVERSAL emulsiyasi 4kg ichki",
@@ -2531,8 +2531,8 @@
     "121": {
       "id": 121,
       "image": "",
-      "pricePiece": 2.65,
-      "priceBox": 5.3,
+      "pricePiece": 26.5,
+      "priceBox": 53.0,
       "boxCapacity": 2,
       "name": {
         "uz": "UNIVERSAL emulsiyasi 4kg fasad",
@@ -2548,8 +2548,8 @@
     "122": {
       "id": 122,
       "image": "",
-      "pricePiece": 8,
-      "priceBox": 8,
+      "pricePiece": 80,
+      "priceBox": 80,
       "boxCapacity": 1,
       "name": {
         "uz": "UNIVERSAL emulsiyasi 14kg ichki",
@@ -2565,8 +2565,8 @@
     "123": {
       "id": 123,
       "image": "",
-      "pricePiece": 8.2,
-      "priceBox": 8.2,
+      "pricePiece": 82.0,
+      "priceBox": 82.0,
       "boxCapacity": 1,
       "name": {
         "uz": "UNIVERSAL emulsiyasi 14kg fasad",
@@ -2582,8 +2582,8 @@
     "124": {
       "id": 124,
       "image": "",
-      "pricePiece": 5.1,
-      "priceBox": 5.1,
+      "pricePiece": 51.0,
+      "priceBox": 51.0,
       "boxCapacity": 1,
       "name": {
         "uz": "Oskar emulsiyasi ichki 7kg",
@@ -2599,8 +2599,8 @@
     "125": {
       "id": 125,
       "image": "",
-      "pricePiece": 5.3,
-      "priceBox": 5.3,
+      "pricePiece": 53.0,
+      "priceBox": 53.0,
       "boxCapacity": 1,
       "name": {
         "uz": "Oskar emulsiyasi fasad 7kg",
@@ -2616,8 +2616,8 @@
     "126": {
       "id": 126,
       "image": "",
-      "pricePiece": 6.5,
-      "priceBox": 6.5,
+      "pricePiece": 65.0,
+      "priceBox": 65.0,
       "boxCapacity": 1,
       "name": {
         "uz": "Oskar emulsiyasi ichki 10kg",
@@ -2633,8 +2633,8 @@
     "127": {
       "id": 127,
       "image": "",
-      "pricePiece": 6.8,
-      "priceBox": 6.8,
+      "pricePiece": 68.0,
+      "priceBox": 68.0,
       "boxCapacity": 1,
       "name": {
         "uz": "Oskar emulsiyasi fasad 10kg",
@@ -2650,8 +2650,8 @@
     "128": {
       "id": 128,
       "image": "",
-      "pricePiece": 12.35,
-      "priceBox": 12.35,
+      "pricePiece": 123.5,
+      "priceBox": 123.5,
       "boxCapacity": 1,
       "name": {
         "uz": "Oskar emulsiyasi ichki 20kg",
@@ -2667,8 +2667,8 @@
     "129": {
       "id": 129,
       "image": "",
-      "pricePiece": 13,
-      "priceBox": 13,
+      "pricePiece": 130,
+      "priceBox": 130,
       "boxCapacity": 1,
       "name": {
         "uz": "Oskar emulsiyasi fasad 20kg",
@@ -2684,8 +2684,8 @@
     "130": {
       "id": 130,
       "image": "",
-      "pricePiece": 1.5,
-      "priceBox": 54,
+      "pricePiece": 15.0,
+      "priceBox": 540,
       "boxCapacity": 36,
       "name": {
         "uz": "Shisha tola folga 4.8cm",
@@ -2701,8 +2701,8 @@
     "131": {
       "id": 131,
       "image": "",
-      "pricePiece": 2.8,
-      "priceBox": 50.4,
+      "pricePiece": 28.0,
+      "priceBox": 504.0,
       "boxCapacity": 18,
       "name": {
         "uz": "Shisha tola folga 9.6cm",
@@ -2718,8 +2718,8 @@
     "132": {
       "id": 132,
       "image": "",
-      "pricePiece": 0.85,
-      "priceBox": 51,
+      "pricePiece": 8.5,
+      "priceBox": 510,
       "boxCapacity": 60,
       "name": {
         "uz": "Alyuminiy folga 22m",
@@ -2735,8 +2735,8 @@
     "133": {
       "id": 133,
       "image": "",
-      "pricePiece": 0.65,
-      "priceBox": 39,
+      "pricePiece": 6.5,
+      "priceBox": 390,
       "boxCapacity": 60,
       "name": {
         "uz": "Alyuminiy folga 16m qog'ozli",
@@ -2752,8 +2752,8 @@
     "134": {
       "id": 134,
       "image": "",
-      "pricePiece": 0.08,
-      "priceBox": 21.12,
+      "pricePiece": 0.8,
+      "priceBox": 211.2,
       "boxCapacity": 264,
       "name": {
         "uz": "Ikki tomonlama skotch 1,0 x 10",
@@ -2769,8 +2769,8 @@
     "135": {
       "id": 135,
       "image": "",
-      "pricePiece": 0.01,
-      "priceBox": 1.8,
+      "pricePiece": 0.1,
+      "priceBox": 18.0,
       "boxCapacity": 180,
       "name": {
         "uz": "Ikki tomonlama skotch 1,5 x 10",
@@ -2786,8 +2786,8 @@
     "136": {
       "id": 136,
       "image": "",
-      "pricePiece": 0.17,
-      "priceBox": 22.44,
+      "pricePiece": 1.7,
+      "priceBox": 224.4,
       "boxCapacity": 132,
       "name": {
         "uz": "Ikki tomonlama skotch 2,0 x 10",
@@ -2803,8 +2803,8 @@
     "137": {
       "id": 137,
       "image": "",
-      "pricePiece": 0.37,
-      "priceBox": 22.2,
+      "pricePiece": 3.7,
+      "priceBox": 222.0,
       "boxCapacity": 60,
       "name": {
         "uz": "Ikki tomonlama skotch 4,4 x 10",
@@ -2820,8 +2820,8 @@
     "138": {
       "id": 138,
       "image": "",
-      "pricePiece": 0.15,
-      "priceBox": 27,
+      "pricePiece": 1.5,
+      "priceBox": 270,
       "boxCapacity": 180,
       "name": {
         "uz": "SACA ikki tomonlama skotch 10mm x 5",
@@ -2837,8 +2837,8 @@
     "139": {
       "id": 139,
       "image": "",
-      "pricePiece": 0.2,
-      "priceBox": 32,
+      "pricePiece": 2.0,
+      "priceBox": 320,
       "boxCapacity": 160,
       "name": {
         "uz": "SACA ikki tomonlama skotch 12mm x 5",
@@ -2854,8 +2854,8 @@
     "140": {
       "id": 140,
       "image": "",
-      "pricePiece": 0.26,
-      "priceBox": 33.8,
+      "pricePiece": 2.6,
+      "priceBox": 338.0,
       "boxCapacity": 130,
       "name": {
         "uz": "SACA ikki tomonlama skotch 15mm x 5",
@@ -2871,8 +2871,8 @@
     "141": {
       "id": 141,
       "image": "",
-      "pricePiece": 0.36,
-      "priceBox": 36,
+      "pricePiece": 3.6,
+      "priceBox": 360,
       "boxCapacity": 100,
       "name": {
         "uz": "SACA ikki tomonlama skotch 22mm x 5",
@@ -2888,8 +2888,8 @@
     "142": {
       "id": 142,
       "image": "",
-      "pricePiece": 0.56,
-      "priceBox": 44.8,
+      "pricePiece": 5.6,
+      "priceBox": 448.0,
       "boxCapacity": 80,
       "name": {
         "uz": "SACA ikki tomonlama skotch 30mm x 5",
@@ -2905,8 +2905,8 @@
     "143": {
       "id": 143,
       "image": "",
-      "pricePiece": 0.66,
-      "priceBox": 39.6,
+      "pricePiece": 6.6,
+      "priceBox": 396.0,
       "boxCapacity": 60,
       "name": {
         "uz": "SACA ikki tomonlama skotch 40mm x 5",
@@ -2922,8 +2922,8 @@
     "144": {
       "id": 144,
       "image": "",
-      "pricePiece": 0.76,
-      "priceBox": 38,
+      "pricePiece": 7.6,
+      "priceBox": 380,
       "boxCapacity": 50,
       "name": {
         "uz": "SACA ikki tomonlama skotch 50mm x 5",
@@ -2939,8 +2939,8 @@
     "145": {
       "id": 145,
       "image": "",
-      "pricePiece": 0.14,
-      "priceBox": 30.8,
+      "pricePiece": 1.4,
+      "priceBox": 308.0,
       "boxCapacity": 220,
       "name": {
         "uz": "M3 ikki tomonlama skotch 0,8mm x 1,5m",
@@ -2956,8 +2956,8 @@
     "146": {
       "id": 146,
       "image": "",
-      "pricePiece": 0.17,
-      "priceBox": 51,
+      "pricePiece": 1.7,
+      "priceBox": 510,
       "boxCapacity": 300,
       "name": {
         "uz": "M3 ikki tomonlama skotch 10mm x 1,5m",
@@ -2973,8 +2973,8 @@
     "147": {
       "id": 147,
       "image": "",
-      "pricePiece": 0.2,
-      "priceBox": 22,
+      "pricePiece": 2.0,
+      "priceBox": 220,
       "boxCapacity": 110,
       "name": {
         "uz": "M3 ikki tomonlama skotch 15mm x 1,5m",
@@ -2990,8 +2990,8 @@
     "148": {
       "id": 148,
       "image": "",
-      "pricePiece": 0.24,
-      "priceBox": 20.4,
+      "pricePiece": 2.4,
+      "priceBox": 204.0,
       "boxCapacity": 85,
       "name": {
         "uz": "M3 ikki tomonlama skotch 20mm x 1,5m",
@@ -3007,8 +3007,8 @@
     "149": {
       "id": 149,
       "image": "",
-      "pricePiece": 0.35,
-      "priceBox": 17.5,
+      "pricePiece": 3.5,
+      "priceBox": 175.0,
       "boxCapacity": 50,
       "name": {
         "uz": "M3 ikki tomonlama skotch 30mm x 1,5m",
@@ -3024,8 +3024,8 @@
     "150": {
       "id": 150,
       "image": "",
-      "pricePiece": 0.48,
-      "priceBox": 21.6,
+      "pricePiece": 4.8,
+      "priceBox": 216.0,
       "boxCapacity": 45,
       "name": {
         "uz": "M3 ikki tomonlama skotch 40mm x 1,5m",
@@ -3041,8 +3041,8 @@
     "151": {
       "id": 151,
       "image": "",
-      "pricePiece": 0.25,
-      "priceBox": 75,
+      "pricePiece": 2.5,
+      "priceBox": 750,
       "boxCapacity": 300,
       "name": {
         "uz": "M3 ikki tomonlama skotch 10mm x 3,0m",
@@ -3058,8 +3058,8 @@
     "152": {
       "id": 152,
       "image": "",
-      "pricePiece": 0.38,
-      "priceBox": 32.3,
+      "pricePiece": 3.8,
+      "priceBox": 323.0,
       "boxCapacity": 85,
       "name": {
         "uz": "M3 ikki tomonlama skotch 20mm x 3,0m",
@@ -3075,8 +3075,8 @@
     "153": {
       "id": 153,
       "image": "",
-      "pricePiece": 0.52,
-      "priceBox": 26,
+      "pricePiece": 5.2,
+      "priceBox": 260,
       "boxCapacity": 50,
       "name": {
         "uz": "M3 ikki tomonlama skotch 30mm x 3,0m",
@@ -3092,8 +3092,8 @@
     "154": {
       "id": 154,
       "image": "",
-      "pricePiece": 0.68,
-      "priceBox": 30.6,
+      "pricePiece": 6.8,
+      "priceBox": 306.0,
       "boxCapacity": 45,
       "name": {
         "uz": "M3 ikki tomonlama skotch 40mm x 3,0m",
@@ -3109,8 +3109,8 @@
     "155": {
       "id": 155,
       "image": "",
-      "pricePiece": 0.55,
-      "priceBox": 22,
+      "pricePiece": 5.5,
+      "priceBox": 220,
       "boxCapacity": 40,
       "name": {
         "uz": "Ikki tomonlama matolik lenta 2 x 10",
@@ -3126,8 +3126,8 @@
     "156": {
       "id": 156,
       "image": "",
-      "pricePiece": 0.95,
-      "priceBox": 19,
+      "pricePiece": 9.5,
+      "priceBox": 190,
       "boxCapacity": 20,
       "name": {
         "uz": "Ikki tomonlama matolik lenta 4 x 10",
@@ -3143,8 +3143,8 @@
     "157": {
       "id": 157,
       "image": "",
-      "pricePiece": 0.29,
-      "priceBox": 97.44,
+      "pricePiece": 2.9,
+      "priceBox": 974.4,
       "boxCapacity": 336,
       "name": {
         "uz": "WASHI skotch 2.5cm x 10m",
@@ -3160,8 +3160,8 @@
     "158": {
       "id": 158,
       "image": "",
-      "pricePiece": 0.52,
-      "priceBox": 87.36,
+      "pricePiece": 5.2,
+      "priceBox": 873.6,
       "boxCapacity": 168,
       "name": {
         "uz": "WASHI skotch 5.0cm x 10m",
@@ -3177,8 +3177,8 @@
     "159": {
       "id": 159,
       "image": "",
-      "pricePiece": 0.7,
-      "priceBox": 21,
+      "pricePiece": 7.0,
+      "priceBox": 210,
       "boxCapacity": 30,
       "name": {
         "uz": "Choklar uchun lenta 45 to'q rang",
@@ -3194,8 +3194,8 @@
     "160": {
       "id": 160,
       "image": "",
-      "pricePiece": 0.75,
-      "priceBox": 22.5,
+      "pricePiece": 7.5,
+      "priceBox": 225.0,
       "boxCapacity": 30,
       "name": {
         "uz": "Choklar uchun lenta 45 oq",
@@ -3211,8 +3211,8 @@
     "161": {
       "id": 161,
       "image": "",
-      "pricePiece": 1.12,
-      "priceBox": 11.2,
+      "pricePiece": 11.2,
+      "priceBox": 112.0,
       "boxCapacity": 10,
       "name": {
         "uz": "Choklar uchun lenta 90 to'q rang",
@@ -3228,8 +3228,8 @@
     "162": {
       "id": 162,
       "image": "",
-      "pricePiece": 1.24,
-      "priceBox": 12.4,
+      "pricePiece": 12.4,
+      "priceBox": 124.0,
       "boxCapacity": 10,
       "name": {
         "uz": "Choklar uchun lenta 90 oq",
@@ -3245,8 +3245,8 @@
     "163": {
       "id": 163,
       "image": "",
-      "pricePiece": 0.55,
-      "priceBox": 16.5,
+      "pricePiece": 5.5,
+      "priceBox": 165.0,
       "boxCapacity": 30,
       "name": {
         "uz": "Choklar uchun lenta 45 (qog'oz)",
@@ -3262,8 +3262,8 @@
     "164": {
       "id": 164,
       "image": "",
-      "pricePiece": 1.05,
-      "priceBox": 10.5,
+      "pricePiece": 10.5,
+      "priceBox": 105.0,
       "boxCapacity": 10,
       "name": {
         "uz": "Choklar uchun lenta 90 (qog'oz)",
@@ -3279,8 +3279,8 @@
     "165": {
       "id": 165,
       "image": "",
-      "pricePiece": 0.22,
-      "priceBox": 15.84,
+      "pricePiece": 2.2,
+      "priceBox": 158.4,
       "boxCapacity": 72,
       "name": {
         "uz": "Bo'yoqchi skotch 4,5 x 10",
@@ -3296,8 +3296,8 @@
     "166": {
       "id": 166,
       "image": "",
-      "pricePiece": 0.3,
-      "priceBox": 21.6,
+      "pricePiece": 3.0,
+      "priceBox": 216.0,
       "boxCapacity": 72,
       "name": {
         "uz": "Bo'yoqchi skotch 4,5 x 15",
@@ -3313,8 +3313,8 @@
     "167": {
       "id": 167,
       "image": "",
-      "pricePiece": 0.34,
-      "priceBox": 24.48,
+      "pricePiece": 3.4,
+      "priceBox": 244.8,
       "boxCapacity": 72,
       "name": {
         "uz": "Bo'yoqchi skotch 4,5 x 20",
@@ -3330,8 +3330,8 @@
     "168": {
       "id": 168,
       "image": "",
-      "pricePiece": 0.42,
-      "priceBox": 30.24,
+      "pricePiece": 4.2,
+      "priceBox": 302.4,
       "boxCapacity": 72,
       "name": {
         "uz": "Bo'yoqchi skotch 4,5 x 25",
@@ -3347,8 +3347,8 @@
     "169": {
       "id": 169,
       "image": "",
-      "pricePiece": 0.51,
-      "priceBox": 36.72,
+      "pricePiece": 5.1,
+      "priceBox": 367.2,
       "boxCapacity": 72,
       "name": {
         "uz": "Bo'yoqchi skotch 4,5 x 30",
@@ -3364,8 +3364,8 @@
     "170": {
       "id": 170,
       "image": "",
-      "pricePiece": 0.64,
-      "priceBox": 46.08,
+      "pricePiece": 6.4,
+      "priceBox": 460.8,
       "boxCapacity": 72,
       "name": {
         "uz": "Bo'yoqchi skotch 4,5 x 40",
@@ -3381,8 +3381,8 @@
     "171": {
       "id": 171,
       "image": "",
-      "pricePiece": 0.76,
-      "priceBox": 45.6,
+      "pricePiece": 7.6,
+      "priceBox": 456.0,
       "boxCapacity": 60,
       "name": {
         "uz": "Bo'yoqchi skotch 4.8 x 40",
@@ -3398,8 +3398,8 @@
     "172": {
       "id": 172,
       "image": "",
-      "pricePiece": 1.1,
-      "priceBox": 66,
+      "pricePiece": 11.0,
+      "priceBox": 660,
       "boxCapacity": 60,
       "name": {
         "uz": "Bo'yoqchi skotch 5.0 x 50",
@@ -3415,8 +3415,8 @@
     "173": {
       "id": 173,
       "image": "",
-      "pricePiece": 0.56,
-      "priceBox": 26.88,
+      "pricePiece": 5.6,
+      "priceBox": 268.8,
       "boxCapacity": 48,
       "name": {
         "uz": "Bo'yoqchi skotch 6.0 x 20",
@@ -3432,8 +3432,8 @@
     "174": {
       "id": 174,
       "image": "",
-      "pricePiece": 1.06,
-      "priceBox": 50.88,
+      "pricePiece": 10.6,
+      "priceBox": 508.8,
       "boxCapacity": 48,
       "name": {
         "uz": "Bo'yoqchi skotch 6.0 x 40",
@@ -3449,8 +3449,8 @@
     "175": {
       "id": 175,
       "image": "",
-      "pricePiece": 0.72,
-      "priceBox": 25.92,
+      "pricePiece": 7.2,
+      "priceBox": 259.2,
       "boxCapacity": 36,
       "name": {
         "uz": "Bo'yoqchi skotch 8.0 x 20",
@@ -3466,8 +3466,8 @@
     "176": {
       "id": 176,
       "image": "",
-      "pricePiece": 1.35,
-      "priceBox": 48.6,
+      "pricePiece": 13.5,
+      "priceBox": 486.0,
       "boxCapacity": 36,
       "name": {
         "uz": "Bo'yoqchi skotch 8.0 x 40",
@@ -3483,8 +3483,8 @@
     "177": {
       "id": 177,
       "image": "",
-      "pricePiece": 2.06,
-      "priceBox": 49.44,
+      "pricePiece": 20.6,
+      "priceBox": 494.4,
       "boxCapacity": 24,
       "name": {
         "uz": "Bo'yoqchi skotch 12.0 x 40",
@@ -3500,8 +3500,8 @@
     "178": {
       "id": 178,
       "image": "",
-      "pricePiece": 27,
-      "priceBox": 16200,
+      "pricePiece": 270,
+      "priceBox": 162000,
       "boxCapacity": 600,
       "name": {
         "uz": "Bo'yoqchi skotch 0,6 (AQSH)",
@@ -3517,8 +3517,8 @@
     "179": {
       "id": 179,
       "image": "",
-      "pricePiece": 27,
-      "priceBox": 11988,
+      "pricePiece": 270,
+      "priceBox": 119880,
       "boxCapacity": 444,
       "name": {
         "uz": "Bo'yoqchi skotch 0,8 (AQSH)",
@@ -3534,8 +3534,8 @@
     "180": {
       "id": 180,
       "image": "",
-      "pricePiece": 27,
-      "priceBox": 9720,
+      "pricePiece": 270,
+      "priceBox": 97200,
       "boxCapacity": 360,
       "name": {
         "uz": "Bo'yoqchi skotch 1,0 (AQSH)",
@@ -3551,8 +3551,8 @@
     "181": {
       "id": 181,
       "image": "",
-      "pricePiece": 27,
-      "priceBox": 6480,
+      "pricePiece": 270,
+      "priceBox": 64800,
       "boxCapacity": 240,
       "name": {
         "uz": "Bo'yoqchi skotch 1,5 (AQSH)",
@@ -3568,8 +3568,8 @@
     "182": {
       "id": 182,
       "image": "",
-      "pricePiece": 27,
-      "priceBox": 4860,
+      "pricePiece": 270,
+      "priceBox": 48600,
       "boxCapacity": 180,
       "name": {
         "uz": "Bo'yoqchi skotch 2,0 (AQSH)",
@@ -3585,8 +3585,8 @@
     "183": {
       "id": 183,
       "image": "",
-      "pricePiece": 27,
-      "priceBox": 3240,
+      "pricePiece": 270,
+      "priceBox": 32400,
       "boxCapacity": 120,
       "name": {
         "uz": "Bo'yoqchi skotch 3,0 (AQSH)",
@@ -3602,8 +3602,8 @@
     "184": {
       "id": 184,
       "image": "",
-      "pricePiece": 27,
-      "priceBox": 2592,
+      "pricePiece": 270,
+      "priceBox": 25920,
       "boxCapacity": 96,
       "name": {
         "uz": "Bo'yoqchi skotch 4,0 (AQSH)",
@@ -3619,8 +3619,8 @@
     "185": {
       "id": 185,
       "image": "",
-      "pricePiece": 27,
-      "priceBox": 1944,
+      "pricePiece": 270,
+      "priceBox": 19440,
       "boxCapacity": 72,
       "name": {
         "uz": "Bo'yoqchi skotch 5,0 (AQSH)",
@@ -3636,8 +3636,8 @@
     "186": {
       "id": 186,
       "image": "",
-      "pricePiece": 0.9,
-      "priceBox": 54,
+      "pricePiece": 9.0,
+      "priceBox": 540,
       "boxCapacity": 60,
       "name": {
         "uz": "Bo'yoqchi skotch 55 x 20 (sellofan)",
@@ -3653,8 +3653,8 @@
     "187": {
       "id": 187,
       "image": "",
-      "pricePiece": 1.5,
-      "priceBox": 45,
+      "pricePiece": 15.0,
+      "priceBox": 450,
       "boxCapacity": 30,
       "name": {
         "uz": "Bo'yoqchi skotch 150 x 20 (sellofan)",
@@ -3670,8 +3670,8 @@
     "188": {
       "id": 188,
       "image": "",
-      "pricePiece": 1.6,
-      "priceBox": 48,
+      "pricePiece": 16.0,
+      "priceBox": 480,
       "boxCapacity": 30,
       "name": {
         "uz": "Bo'yoqchi skotch 240 x 10 (sellofan)",
@@ -3687,8 +3687,8 @@
     "189": {
       "id": 189,
       "image": "",
-      "pricePiece": 0.9,
-      "priceBox": 90,
+      "pricePiece": 9.0,
+      "priceBox": 900,
       "boxCapacity": 100,
       "name": {
         "uz": "Xitoy sellofan skotch 55 x 20",
@@ -3704,8 +3704,8 @@
     "190": {
       "id": 190,
       "image": "",
-      "pricePiece": 1.3,
-      "priceBox": 65,
+      "pricePiece": 13.0,
+      "priceBox": 650,
       "boxCapacity": 50,
       "name": {
         "uz": "Xitoy sellofan skotch 110 x 20",
@@ -3721,8 +3721,8 @@
     "191": {
       "id": 191,
       "image": "",
-      "pricePiece": 1.5,
-      "priceBox": 75,
+      "pricePiece": 15.0,
+      "priceBox": 750,
       "boxCapacity": 50,
       "name": {
         "uz": "Xitoy sellofan skotch 150 x 20",
@@ -3738,8 +3738,8 @@
     "192": {
       "id": 192,
       "image": "",
-      "pricePiece": 1.65,
-      "priceBox": 82.5,
+      "pricePiece": 16.5,
+      "priceBox": 825.0,
       "boxCapacity": 50,
       "name": {
         "uz": "Xitoy sellofan skotch 180 x 20",
@@ -3755,8 +3755,8 @@
     "193": {
       "id": 193,
       "image": "",
-      "pricePiece": 2.05,
-      "priceBox": 61.5,
+      "pricePiece": 20.5,
+      "priceBox": 615.0,
       "boxCapacity": 30,
       "name": {
         "uz": "Xitoy sellofan skotch 240 x 20",
@@ -3772,8 +3772,8 @@
     "194": {
       "id": 194,
       "image": "",
-      "pricePiece": 0.85,
-      "priceBox": 13.6,
+      "pricePiece": 8.5,
+      "priceBox": 136.0,
       "boxCapacity": 16,
       "name": {
         "uz": "Signal lenta kichik (5cm)",
@@ -3789,8 +3789,8 @@
     "195": {
       "id": 195,
       "image": "",
-      "pricePiece": 1.35,
-      "priceBox": 16.2,
+      "pricePiece": 13.5,
+      "priceBox": 162.0,
       "boxCapacity": 12,
       "name": {
         "uz": "Signal lenta katta (STOP)",
@@ -3806,8 +3806,8 @@
     "196": {
       "id": 196,
       "image": "",
-      "pricePiece": 1.95,
-      "priceBox": 35.1,
+      "pricePiece": 19.5,
+      "priceBox": 351.0,
       "boxCapacity": 18,
       "name": {
         "uz": "Signal lenta katta (8cm)",
@@ -3823,8 +3823,8 @@
     "197": {
       "id": 197,
       "image": "",
-      "pricePiece": 3.7,
-      "priceBox": 88.8,
+      "pricePiece": 37.0,
+      "priceBox": 888.0,
       "boxCapacity": 24,
       "name": {
         "uz": "DUAFIX MDF yelimi 500ml",
@@ -3840,8 +3840,8 @@
     "198": {
       "id": 198,
       "image": "",
-      "pricePiece": 3.2,
-      "priceBox": 76.8,
+      "pricePiece": 32.0,
+      "priceBox": 768.0,
       "boxCapacity": 24,
       "name": {
         "uz": "DUAFIX MDF yelimi 400ml",
@@ -3857,8 +3857,8 @@
     "199": {
       "id": 199,
       "image": "",
-      "pricePiece": 1.6,
-      "priceBox": 38.4,
+      "pricePiece": 16.0,
+      "priceBox": 384.0,
       "boxCapacity": 24,
       "name": {
         "uz": "DUAFIX MDF yelimi 200ml",
@@ -3874,8 +3874,8 @@
     "200": {
       "id": 200,
       "image": "",
-      "pricePiece": 0.18,
-      "priceBox": 10.8,
+      "pricePiece": 1.8,
+      "priceBox": 108.0,
       "boxCapacity": 60,
       "name": {
         "uz": "Serpyanka (to'r lenta) 25",
@@ -3891,8 +3891,8 @@
     "201": {
       "id": 201,
       "image": "",
-      "pricePiece": 0.24,
-      "priceBox": 18,
+      "pricePiece": 2.4,
+      "priceBox": 180,
       "boxCapacity": 75,
       "name": {
         "uz": "Serpyanka (to'r lenta) 45",
@@ -3908,8 +3908,8 @@
     "202": {
       "id": 202,
       "image": "",
-      "pricePiece": 0.27,
-      "priceBox": 10.8,
+      "pricePiece": 2.7,
+      "priceBox": 108.0,
       "boxCapacity": 40,
       "name": {
         "uz": "Serpyanka (to'r lenta) 90",
@@ -3925,8 +3925,8 @@
     "203": {
       "id": 203,
       "image": "",
-      "pricePiece": 0.7,
-      "priceBox": 31.5,
+      "pricePiece": 7.0,
+      "priceBox": 315.0,
       "boxCapacity": 45,
       "name": {
         "uz": "Serpyanka (to'r lenta) 90/10",
@@ -3942,8 +3942,8 @@
     "204": {
       "id": 204,
       "image": "",
-      "pricePiece": 1.15,
-      "priceBox": 11.5,
+      "pricePiece": 11.5,
+      "priceBox": 115.0,
       "boxCapacity": 10,
       "name": {
         "uz": "Serpyanka (to'r lenta) 4cm x 90m",
@@ -3959,8 +3959,8 @@
     "205": {
       "id": 205,
       "image": "",
-      "pricePiece": 2.7,
-      "priceBox": 16.2,
+      "pricePiece": 27.0,
+      "priceBox": 162.0,
       "boxCapacity": 6,
       "name": {
         "uz": "Serpyanka (to'r lenta) 1m x 10m (5 x 5mm)",
@@ -3976,8 +3976,8 @@
     "206": {
       "id": 206,
       "image": "",
-      "pricePiece": 0.9,
-      "priceBox": 5.4,
+      "pricePiece": 9.0,
+      "priceBox": 54.0,
       "boxCapacity": 6,
       "name": {
         "uz": "Universal gruntovka (1x1) 1l",
@@ -3993,8 +3993,8 @@
     "207": {
       "id": 207,
       "image": "",
-      "pricePiece": 1.2,
-      "priceBox": 7.2,
+      "pricePiece": 12.0,
+      "priceBox": 72.0,
       "boxCapacity": 6,
       "name": {
         "uz": "Veromaks gruntovka (1x7) 1l",
@@ -4010,8 +4010,8 @@
     "208": {
       "id": 208,
       "image": "",
-      "pricePiece": 2.7,
-      "priceBox": 5.4,
+      "pricePiece": 27.0,
+      "priceBox": 54.0,
       "boxCapacity": 2,
       "name": {
         "uz": "Veromaks gruntovka 5l",
@@ -4027,8 +4027,8 @@
     "209": {
       "id": 209,
       "image": "",
-      "pricePiece": 2.6,
-      "priceBox": 7.8,
+      "pricePiece": 26.0,
+      "priceBox": 78.0,
       "boxCapacity": 3,
       "name": {
         "uz": "Veromaks gruntovka 3l",
@@ -4044,8 +4044,8 @@
     "210": {
       "id": 210,
       "image": "",
-      "pricePiece": 2.8,
-      "priceBox": 33.6,
+      "pricePiece": 28.0,
+      "priceBox": 336.0,
       "boxCapacity": 12,
       "name": {
         "uz": "01 Duafix fuga 2x Bright and white",
@@ -4061,8 +4061,8 @@
     "211": {
       "id": 211,
       "image": "",
-      "pricePiece": 2.8,
-      "priceBox": 33.6,
+      "pricePiece": 28.0,
+      "priceBox": 336.0,
       "boxCapacity": 12,
       "name": {
         "uz": "02 Duafix fuga 2x Mist and rain ash",
@@ -4078,8 +4078,8 @@
     "212": {
       "id": 212,
       "image": "",
-      "pricePiece": 2.8,
-      "priceBox": 33.6,
+      "pricePiece": 28.0,
+      "priceBox": 336.0,
       "boxCapacity": 12,
       "name": {
         "uz": "03 Duafix fuga 2x Space grey",
@@ -4095,8 +4095,8 @@
     "213": {
       "id": 213,
       "image": "",
-      "pricePiece": 2.8,
-      "priceBox": 33.6,
+      "pricePiece": 28.0,
+      "priceBox": 336.0,
       "boxCapacity": 12,
       "name": {
         "uz": "04 Duafix fuga 2x Khaki grey",
@@ -4112,8 +4112,8 @@
     "214": {
       "id": 214,
       "image": "",
-      "pricePiece": 2.8,
-      "priceBox": 33.6,
+      "pricePiece": 28.0,
+      "priceBox": 336.0,
       "boxCapacity": 12,
       "name": {
         "uz": "05 Duafix fuga 2x Smoky grey",
@@ -4129,8 +4129,8 @@
     "215": {
       "id": 215,
       "image": "",
-      "pricePiece": 2.8,
-      "priceBox": 33.6,
+      "pricePiece": 28.0,
+      "priceBox": 336.0,
       "boxCapacity": 12,
       "name": {
         "uz": "06 Duafix fuga 2x Galactic grey",
@@ -4146,8 +4146,8 @@
     "216": {
       "id": 216,
       "image": "",
-      "pricePiece": 2.8,
-      "priceBox": 33.6,
+      "pricePiece": 28.0,
+      "priceBox": 336.0,
       "boxCapacity": 12,
       "name": {
         "uz": "07 Duafix fuga 2x Quartz ash",
@@ -4163,8 +4163,8 @@
     "217": {
       "id": 217,
       "image": "",
-      "pricePiece": 2.8,
-      "priceBox": 33.6,
+      "pricePiece": 28.0,
+      "priceBox": 336.0,
       "boxCapacity": 12,
       "name": {
         "uz": "08 Duafix fuga 2x Titanium ash",
@@ -4180,8 +4180,8 @@
     "218": {
       "id": 218,
       "image": "",
-      "pricePiece": 2.8,
-      "priceBox": 33.6,
+      "pricePiece": 28.0,
+      "priceBox": 336.0,
       "boxCapacity": 12,
       "name": {
         "uz": "09 Duafix fuga 2x Light ash",
@@ -4197,8 +4197,8 @@
     "219": {
       "id": 219,
       "image": "",
-      "pricePiece": 2.8,
-      "priceBox": 33.6,
+      "pricePiece": 28.0,
+      "priceBox": 336.0,
       "boxCapacity": 12,
       "name": {
         "uz": "10 Duafix fuga 2x Silver gray",
@@ -4214,8 +4214,8 @@
     "220": {
       "id": 220,
       "image": "",
-      "pricePiece": 2.8,
-      "priceBox": 33.6,
+      "pricePiece": 28.0,
+      "priceBox": 336.0,
       "boxCapacity": 12,
       "name": {
         "uz": "11 Duafix fuga 2x Deep space silver",
@@ -4231,8 +4231,8 @@
     "221": {
       "id": 221,
       "image": "",
-      "pricePiece": 2.8,
-      "priceBox": 33.6,
+      "pricePiece": 28.0,
+      "priceBox": 336.0,
       "boxCapacity": 12,
       "name": {
         "uz": "12 Duafix fuga 2x Metal ash",
@@ -4248,8 +4248,8 @@
     "222": {
       "id": 222,
       "image": "",
-      "pricePiece": 2.8,
-      "priceBox": 33.6,
+      "pricePiece": 28.0,
+      "priceBox": 336.0,
       "boxCapacity": 12,
       "name": {
         "uz": "13 Duafix fuga 2x Beige",
@@ -4265,8 +4265,8 @@
     "223": {
       "id": 223,
       "image": "",
-      "pricePiece": 2.8,
-      "priceBox": 33.6,
+      "pricePiece": 28.0,
+      "priceBox": 336.0,
       "boxCapacity": 12,
       "name": {
         "uz": "14 Duafix fuga 2x Evaporated milk coffe",
@@ -4282,8 +4282,8 @@
     "224": {
       "id": 224,
       "image": "",
-      "pricePiece": 2.8,
-      "priceBox": 33.6,
+      "pricePiece": 28.0,
+      "priceBox": 336.0,
       "boxCapacity": 12,
       "name": {
         "uz": "15 Duafix fuga 2x Light coffe colour",
@@ -4299,8 +4299,8 @@
     "225": {
       "id": 225,
       "image": "",
-      "pricePiece": 2.8,
-      "priceBox": 33.6,
+      "pricePiece": 28.0,
+      "priceBox": 336.0,
       "boxCapacity": 12,
       "name": {
         "uz": "16 Duafix fuga 2x Champagne gold",
@@ -4316,8 +4316,8 @@
     "226": {
       "id": 226,
       "image": "",
-      "pricePiece": 2.8,
-      "priceBox": 33.6,
+      "pricePiece": 28.0,
+      "priceBox": 336.0,
       "boxCapacity": 12,
       "name": {
         "uz": "17 Duafix fuga 2x Shining gold",
@@ -4333,8 +4333,8 @@
     "227": {
       "id": 227,
       "image": "",
-      "pricePiece": 2.8,
-      "priceBox": 33.6,
+      "pricePiece": 28.0,
+      "priceBox": 336.0,
       "boxCapacity": 12,
       "name": {
         "uz": "18 Duafix fuga 2x Noble Silver",
@@ -4350,8 +4350,8 @@
     "228": {
       "id": 228,
       "image": "",
-      "pricePiece": 2.8,
-      "priceBox": 33.6,
+      "pricePiece": 28.0,
+      "priceBox": 336.0,
       "boxCapacity": 12,
       "name": {
         "uz": "19 Duafix fuga 2x Noble gold",
@@ -4367,8 +4367,8 @@
     "229": {
       "id": 229,
       "image": "",
-      "pricePiece": 2.8,
-      "priceBox": 33.6,
+      "pricePiece": 28.0,
+      "priceBox": 336.0,
       "boxCapacity": 12,
       "name": {
         "uz": "20 Duafix fuga 2x Pearl black",
@@ -4384,8 +4384,8 @@
     "230": {
       "id": 230,
       "image": "",
-      "pricePiece": 0.06,
-      "priceBox": 18,
+      "pricePiece": 0.6,
+      "priceBox": 180,
       "boxCapacity": 300,
       "name": {
         "uz": "Rozetka uchun ramka",
@@ -4401,8 +4401,8 @@
     "231": {
       "id": 231,
       "image": "",
-      "pricePiece": 0.33,
-      "priceBox": 8.25,
+      "pricePiece": 3.3,
+      "priceBox": 82.5,
       "boxCapacity": 25,
       "name": {
         "uz": "Bo'yoqchi krujkasi",
@@ -4418,8 +4418,8 @@
     "232": {
       "id": 232,
       "image": "",
-      "pricePiece": 0.2,
-      "priceBox": 10,
+      "pricePiece": 2.0,
+      "priceBox": 100,
       "boxCapacity": 50,
       "name": {
         "uz": "Valik uchun panjara",
@@ -4435,8 +4435,8 @@
     "233": {
       "id": 233,
       "image": "",
-      "pricePiece": 0.88,
-      "priceBox": 56.32,
+      "pricePiece": 8.8,
+      "priceBox": 563.2,
       "boxCapacity": 64,
       "name": {
         "uz": "To'plam: latok/valik/pichoq (kichik)",
@@ -4452,8 +4452,8 @@
     "234": {
       "id": 234,
       "image": "",
-      "pricePiece": 1.2,
-      "priceBox": 28.8,
+      "pricePiece": 12.0,
+      "priceBox": 288.0,
       "boxCapacity": 24,
       "name": {
         "uz": "DUAFIX suyuq mixlari",
@@ -4469,8 +4469,8 @@
     "235": {
       "id": 235,
       "image": "",
-      "pricePiece": 1.5,
-      "priceBox": 36,
+      "pricePiece": 15.0,
+      "priceBox": 360,
       "boxCapacity": 24,
       "name": {
         "uz": "Duafix montaj yelimi FIX",
@@ -4486,8 +4486,8 @@
     "236": {
       "id": 236,
       "image": "",
-      "pricePiece": 1.3,
-      "priceBox": 78,
+      "pricePiece": 13.0,
+      "priceBox": 780,
       "boxCapacity": 60,
       "name": {
         "uz": "Valik tayoqchasi 2m (metall)",
@@ -4503,8 +4503,8 @@
     "237": {
       "id": 237,
       "image": "",
-      "pricePiece": 1.65,
-      "priceBox": 49.5,
+      "pricePiece": 16.5,
+      "priceBox": 495.0,
       "boxCapacity": 30,
       "name": {
         "uz": "Valik tayoqchasi 3m (metall)",
@@ -4520,8 +4520,8 @@
     "238": {
       "id": 238,
       "image": "",
-      "pricePiece": 1.25,
-      "priceBox": 125,
+      "pricePiece": 12.5,
+      "priceBox": 1250,
       "boxCapacity": 100,
       "name": {
         "uz": "Valik tayoqchasi 1m (zanglamaydigan po'lat)",
@@ -4537,8 +4537,8 @@
     "239": {
       "id": 239,
       "image": "",
-      "pricePiece": 1.7,
-      "priceBox": 102,
+      "pricePiece": 17.0,
+      "priceBox": 1020,
       "boxCapacity": 60,
       "name": {
         "uz": "Valik tayoqchasi 2m (zanglamaydigan po'lat)",
@@ -4554,8 +4554,8 @@
     "240": {
       "id": 240,
       "image": "",
-      "pricePiece": 2.05,
-      "priceBox": 61.5,
+      "pricePiece": 20.5,
+      "priceBox": 615.0,
       "boxCapacity": 30,
       "name": {
         "uz": "Valik tayoqchasi 3m (zanglamaydigan po'lat)",
@@ -4571,8 +4571,8 @@
     "241": {
       "id": 241,
       "image": "",
-      "pricePiece": 0.97,
-      "priceBox": 29.1,
+      "pricePiece": 9.7,
+      "priceBox": 291.0,
       "boxCapacity": 30,
       "name": {
         "uz": "Valik 64",
@@ -4588,8 +4588,8 @@
     "242": {
       "id": 242,
       "image": "",
-      "pricePiece": 0.78,
-      "priceBox": 31.2,
+      "pricePiece": 7.8,
+      "priceBox": 312.0,
       "boxCapacity": 40,
       "name": {
         "uz": "Valik 55",
@@ -4605,8 +4605,8 @@
     "243": {
       "id": 243,
       "image": "",
-      "pricePiece": 0.72,
-      "priceBox": 28.8,
+      "pricePiece": 7.2,
+      "priceBox": 288.0,
       "boxCapacity": 40,
       "name": {
         "uz": "Valik 44",
@@ -4622,8 +4622,8 @@
     "244": {
       "id": 244,
       "image": "",
-      "pricePiece": 0.65,
-      "priceBox": 39,
+      "pricePiece": 6.5,
+      "priceBox": 390,
       "boxCapacity": 60,
       "name": {
         "uz": "Valik 38",
@@ -4639,8 +4639,8 @@
     "245": {
       "id": 245,
       "image": "",
-      "pricePiece": 0.31,
-      "priceBox": 62,
+      "pricePiece": 3.1,
+      "priceBox": 620,
       "boxCapacity": 200,
       "name": {
         "uz": "Valik 22",
@@ -4656,8 +4656,8 @@
     "246": {
       "id": 246,
       "image": "",
-      "pricePiece": 0.72,
-      "priceBox": 50.4,
+      "pricePiece": 7.2,
+      "priceBox": 504.0,
       "boxCapacity": 70,
       "name": {
         "uz": "Valik 22 (to'plam x5)",
@@ -4673,8 +4673,8 @@
     "247": {
       "id": 247,
       "image": "",
-      "pricePiece": 1.1,
-      "priceBox": 44,
+      "pricePiece": 11.0,
+      "priceBox": 440,
       "boxCapacity": 40,
       "name": {
         "uz": "Valik 64",
@@ -4690,8 +4690,8 @@
     "248": {
       "id": 248,
       "image": "",
-      "pricePiece": 0.9,
-      "priceBox": 45,
+      "pricePiece": 9.0,
+      "priceBox": 450,
       "boxCapacity": 50,
       "name": {
         "uz": "Valik 55",
@@ -4707,8 +4707,8 @@
     "249": {
       "id": 249,
       "image": "",
-      "pricePiece": 0.8,
-      "priceBox": 40,
+      "pricePiece": 8.0,
+      "priceBox": 400,
       "boxCapacity": 50,
       "name": {
         "uz": "Valik 44",
@@ -4724,8 +4724,8 @@
     "250": {
       "id": 250,
       "image": "",
-      "pricePiece": 0.75,
-      "priceBox": 37.5,
+      "pricePiece": 7.5,
+      "priceBox": 375.0,
       "boxCapacity": 50,
       "name": {
         "uz": "Valik 38",
@@ -4741,8 +4741,8 @@
     "251": {
       "id": 251,
       "image": "",
-      "pricePiece": 1.1,
-      "priceBox": 55,
+      "pricePiece": 11.0,
+      "priceBox": 550,
       "boxCapacity": 50,
       "name": {
         "uz": "Valik 38 (lak)",
@@ -4758,8 +4758,8 @@
     "252": {
       "id": 252,
       "image": "",
-      "pricePiece": 0.7,
-      "priceBox": 49,
+      "pricePiece": 7.0,
+      "priceBox": 490,
       "boxCapacity": 70,
       "name": {
         "uz": "Valik 22 (to'plam x3)",
@@ -4775,8 +4775,8 @@
     "253": {
       "id": 253,
       "image": "",
-      "pricePiece": 1.85,
-      "priceBox": 74,
+      "pricePiece": 18.5,
+      "priceBox": 740,
       "boxCapacity": 40,
       "name": {
         "uz": "Valik 64 Deluxe sochiq (yangi turi)",
@@ -4792,8 +4792,8 @@
     "254": {
       "id": 254,
       "image": "",
-      "pricePiece": 1.55,
-      "priceBox": 62,
+      "pricePiece": 15.5,
+      "priceBox": 620,
       "boxCapacity": 40,
       "name": {
         "uz": "Valik 64 Deluxe",
@@ -4809,8 +4809,8 @@
     "255": {
       "id": 255,
       "image": "",
-      "pricePiece": 1.45,
-      "priceBox": 58,
+      "pricePiece": 14.5,
+      "priceBox": 580,
       "boxCapacity": 40,
       "name": {
         "uz": "Valik 55 Deluxe",
@@ -4826,8 +4826,8 @@
     "256": {
       "id": 256,
       "image": "",
-      "pricePiece": 1.3,
-      "priceBox": 65,
+      "pricePiece": 13.0,
+      "priceBox": 650,
       "boxCapacity": 50,
       "name": {
         "uz": "Valik 44 Deluxe",
@@ -4843,8 +4843,8 @@
     "257": {
       "id": 257,
       "image": "",
-      "pricePiece": 1.2,
-      "priceBox": 21.6,
+      "pricePiece": 12.0,
+      "priceBox": 216.0,
       "boxCapacity": 18,
       "name": {
         "uz": "Valik 38 Deluxe",
@@ -4860,8 +4860,8 @@
     "258": {
       "id": 258,
       "image": "",
-      "pricePiece": 0.7,
-      "priceBox": 35,
+      "pricePiece": 7.0,
+      "priceBox": 350,
       "boxCapacity": 50,
       "name": {
         "uz": "Valik 22 Deluxe",
@@ -4877,8 +4877,8 @@
     "259": {
       "id": 259,
       "image": "",
-      "pricePiece": 0.29,
-      "priceBox": 11.6,
+      "pricePiece": 2.9,
+      "priceBox": 116.0,
       "boxCapacity": 40,
       "name": {
         "uz": "Devor qog'ozi uchun valik",
@@ -4894,8 +4894,8 @@
     "260": {
       "id": 260,
       "image": "",
-      "pricePiece": 1.2,
-      "priceBox": 30,
+      "pricePiece": 12.0,
+      "priceBox": 300,
       "boxCapacity": 25,
       "name": {
         "uz": "Burchaklar uchun valik",
@@ -4911,8 +4911,8 @@
     "261": {
       "id": 261,
       "image": "",
-      "pricePiece": 3.4,
-      "priceBox": 136,
+      "pricePiece": 34.0,
+      "priceBox": 1360,
       "boxCapacity": 40,
       "name": {
         "uz": "Shpatlyovka uchun valik 44mm",
@@ -4928,8 +4928,8 @@
     "262": {
       "id": 262,
       "image": "",
-      "pricePiece": 1.65,
-      "priceBox": 82.5,
+      "pricePiece": 16.5,
+      "priceBox": 825.0,
       "boxCapacity": 50,
       "name": {
         "uz": "Lak uchun valik 44mm",
@@ -4945,8 +4945,8 @@
     "263": {
       "id": 263,
       "image": "",
-      "pricePiece": 0.9,
-      "priceBox": 45,
+      "pricePiece": 9.0,
+      "priceBox": 450,
       "boxCapacity": 50,
       "name": {
         "uz": "Lak uchun valik 22mm",
@@ -4962,8 +4962,8 @@
     "264": {
       "id": 264,
       "image": "",
-      "pricePiece": 0.45,
-      "priceBox": 22.5,
+      "pricePiece": 4.5,
+      "priceBox": 225.0,
       "boxCapacity": 50,
       "name": {
         "uz": "Gidroizolyatsiya uchun valik 12mm",
@@ -4979,8 +4979,8 @@
     "265": {
       "id": 265,
       "image": "",
-      "pricePiece": 1.85,
-      "priceBox": 92.5,
+      "pricePiece": 18.5,
+      "priceBox": 925.0,
       "boxCapacity": 50,
       "name": {
         "uz": "Gidroizolyatsiya uchun valik 38mm",
@@ -4996,8 +4996,8 @@
     "266": {
       "id": 266,
       "image": "",
-      "pricePiece": 0.4,
-      "priceBox": 20,
+      "pricePiece": 4.0,
+      "priceBox": 200,
       "boxCapacity": 50,
       "name": {
         "uz": "Gubka valik 12mm (oq)",
@@ -5013,8 +5013,8 @@
     "267": {
       "id": 267,
       "image": "",
-      "pricePiece": 1.65,
-      "priceBox": 82.5,
+      "pricePiece": 16.5,
+      "priceBox": 825.0,
       "boxCapacity": 50,
       "name": {
         "uz": "Gubka valik 44mm (oq)",
@@ -5030,8 +5030,8 @@
     "268": {
       "id": 268,
       "image": "",
-      "pricePiece": 0.45,
-      "priceBox": 22.5,
+      "pricePiece": 4.5,
+      "priceBox": 225.0,
       "boxCapacity": 50,
       "name": {
         "uz": "Bo'yoqchi valigi 12mm",
@@ -5047,8 +5047,8 @@
     "269": {
       "id": 269,
       "image": "",
-      "pricePiece": 1.45,
-      "priceBox": 58,
+      "pricePiece": 14.5,
+      "priceBox": 580,
       "boxCapacity": 40,
       "name": {
         "uz": "Fasad valigi (SPONGE sariq)",
@@ -5064,8 +5064,8 @@
     "270": {
       "id": 270,
       "image": "",
-      "pricePiece": 2,
-      "priceBox": 100,
+      "pricePiece": 20,
+      "priceBox": 1000,
       "boxCapacity": 50,
       "name": {
         "uz": "PRO valik",
@@ -5081,8 +5081,8 @@
     "271": {
       "id": 271,
       "image": "",
-      "pricePiece": 7,
-      "priceBox": 105,
+      "pricePiece": 70,
+      "priceBox": 1050,
       "boxCapacity": 15,
       "name": {
         "uz": "Tikon valik 50cm",
@@ -5098,8 +5098,8 @@
     "272": {
       "id": 272,
       "image": "",
-      "pricePiece": 5.3,
-      "priceBox": 159,
+      "pricePiece": 53.0,
+      "priceBox": 1590,
       "boxCapacity": 30,
       "name": {
         "uz": "Mexli valik 50cm",
@@ -5115,8 +5115,8 @@
     "273": {
       "id": 273,
       "image": "",
-      "pricePiece": 0.47,
-      "priceBox": 338.4,
+      "pricePiece": 4.7,
+      "priceBox": 3384.0,
       "boxCapacity": 720,
       "name": {
         "uz": "Shchyotka 2.0\"",
@@ -5132,8 +5132,8 @@
     "274": {
       "id": 274,
       "image": "",
-      "pricePiece": 0.66,
-      "priceBox": 316.8,
+      "pricePiece": 6.6,
+      "priceBox": 3168.0,
       "boxCapacity": 480,
       "name": {
         "uz": "Shchyotka 3.0\"",
@@ -5149,8 +5149,8 @@
     "275": {
       "id": 275,
       "image": "",
-      "pricePiece": 0.86,
-      "priceBox": 344,
+      "pricePiece": 8.6,
+      "priceBox": 3440,
       "boxCapacity": 400,
       "name": {
         "uz": "Shchyotka 4.0\"",
@@ -5166,8 +5166,8 @@
     "276": {
       "id": 276,
       "image": "",
-      "pricePiece": 0.15,
-      "priceBox": 151.2,
+      "pricePiece": 1.5,
+      "priceBox": 1512.0,
       "boxCapacity": 1008,
       "name": {
         "uz": "Shchyotka 1.0\"",
@@ -5183,8 +5183,8 @@
     "277": {
       "id": 277,
       "image": "",
-      "pricePiece": 0.21,
-      "priceBox": 181.44,
+      "pricePiece": 2.1,
+      "priceBox": 1814.4,
       "boxCapacity": 864,
       "name": {
         "uz": "Shchyotka 1.5\"",
@@ -5200,8 +5200,8 @@
     "278": {
       "id": 278,
       "image": "",
-      "pricePiece": 0.3,
-      "priceBox": 180,
+      "pricePiece": 3.0,
+      "priceBox": 1800,
       "boxCapacity": 600,
       "name": {
         "uz": "Shchyotka 2.0\"",
@@ -5217,8 +5217,8 @@
     "279": {
       "id": 279,
       "image": "",
-      "pricePiece": 0.38,
-      "priceBox": 159.6,
+      "pricePiece": 3.8,
+      "priceBox": 1596.0,
       "boxCapacity": 420,
       "name": {
         "uz": "Shchyotka 2.5\"",
@@ -5234,8 +5234,8 @@
     "280": {
       "id": 280,
       "image": "",
-      "pricePiece": 0.47,
-      "priceBox": 169.2,
+      "pricePiece": 4.7,
+      "priceBox": 1692.0,
       "boxCapacity": 360,
       "name": {
         "uz": "Shchyotka 3.0\"",
@@ -5251,8 +5251,8 @@
     "281": {
       "id": 281,
       "image": "",
-      "pricePiece": 0.59,
-      "priceBox": 113.28,
+      "pricePiece": 5.9,
+      "priceBox": 1132.8,
       "boxCapacity": 192,
       "name": {
         "uz": "Shchyotka 4.0\"",
@@ -5268,8 +5268,8 @@
     "282": {
       "id": 282,
       "image": "",
-      "pricePiece": 0.13,
-      "priceBox": 156,
+      "pricePiece": 1.3,
+      "priceBox": 1560,
       "boxCapacity": 1200,
       "name": {
         "uz": "Shchyotka 1.0\"",
@@ -5285,8 +5285,8 @@
     "283": {
       "id": 283,
       "image": "",
-      "pricePiece": 0.15,
-      "priceBox": 144,
+      "pricePiece": 1.5,
+      "priceBox": 1440,
       "boxCapacity": 960,
       "name": {
         "uz": "Shchyotka 1.5\"",
@@ -5302,8 +5302,8 @@
     "284": {
       "id": 284,
       "image": "",
-      "pricePiece": 0.18,
-      "priceBox": 108,
+      "pricePiece": 1.8,
+      "priceBox": 1080,
       "boxCapacity": 600,
       "name": {
         "uz": "Shchyotka 2.0\"",
@@ -5319,8 +5319,8 @@
     "285": {
       "id": 285,
       "image": "",
-      "pricePiece": 0.22,
-      "priceBox": 92.4,
+      "pricePiece": 2.2,
+      "priceBox": 924.0,
       "boxCapacity": 420,
       "name": {
         "uz": "Shchyotka 2.5\"",
@@ -5336,8 +5336,8 @@
     "286": {
       "id": 286,
       "image": "",
-      "pricePiece": 0.26,
-      "priceBox": 93.6,
+      "pricePiece": 2.6,
+      "priceBox": 936.0,
       "boxCapacity": 360,
       "name": {
         "uz": "Shchyotka 3.0\"",
@@ -5353,8 +5353,8 @@
     "287": {
       "id": 287,
       "image": "",
-      "pricePiece": 0.35,
-      "priceBox": 84,
+      "pricePiece": 3.5,
+      "priceBox": 840,
       "boxCapacity": 240,
       "name": {
         "uz": "Shchyotka 4.0\"",
@@ -5370,8 +5370,8 @@
     "288": {
       "id": 288,
       "image": "",
-      "pricePiece": 0.19,
-      "priceBox": 18.24,
+      "pricePiece": 1.9,
+      "priceBox": 182.4,
       "boxCapacity": 96,
       "name": {
         "uz": "Xo'jalik skotchi 3.6cm x 25m",
@@ -5387,8 +5387,8 @@
     "289": {
       "id": 289,
       "image": "",
-      "pricePiece": 0.34,
-      "priceBox": 32.64,
+      "pricePiece": 3.4,
+      "priceBox": 326.4,
       "boxCapacity": 96,
       "name": {
         "uz": "Xo'jalik skotchi 3.6cm x 50m",
@@ -5404,8 +5404,8 @@
     "290": {
       "id": 290,
       "image": "",
-      "pricePiece": 0.49,
-      "priceBox": 47.04,
+      "pricePiece": 4.9,
+      "priceBox": 470.4,
       "boxCapacity": 96,
       "name": {
         "uz": "Xo'jalik skotchi 3.6cm x 75m",
@@ -5421,8 +5421,8 @@
     "291": {
       "id": 291,
       "image": "",
-      "pricePiece": 0.65,
-      "priceBox": 62.4,
+      "pricePiece": 6.5,
+      "priceBox": 624.0,
       "boxCapacity": 96,
       "name": {
         "uz": "Xo'jalik skotchi 3.6cm x 100m",
@@ -5438,8 +5438,8 @@
     "292": {
       "id": 292,
       "image": "",
-      "pricePiece": 0.96,
-      "priceBox": 92.16,
+      "pricePiece": 9.6,
+      "priceBox": 921.6,
       "boxCapacity": 96,
       "name": {
         "uz": "Xo'jalik skotchi 3.6cm x 150m",
@@ -5455,8 +5455,8 @@
     "293": {
       "id": 293,
       "image": "",
-      "pricePiece": 1.29,
-      "priceBox": 61.92,
+      "pricePiece": 12.9,
+      "priceBox": 619.2,
       "boxCapacity": 48,
       "name": {
         "uz": "Xo'jalik skotchi 3.6cm x 200m",
@@ -5472,8 +5472,8 @@
     "294": {
       "id": 294,
       "image": "",
-      "pricePiece": 1.59,
-      "priceBox": 76.32,
+      "pricePiece": 15.9,
+      "priceBox": 763.2,
       "boxCapacity": 48,
       "name": {
         "uz": "Xo'jalik skotchi 3.6cm x 250m",
@@ -5489,8 +5489,8 @@
     "295": {
       "id": 295,
       "image": "",
-      "pricePiece": 1.88,
-      "priceBox": 90.24,
+      "pricePiece": 18.8,
+      "priceBox": 902.4,
       "boxCapacity": 48,
       "name": {
         "uz": "Xo'jalik skotchi 3.6cm x 300m",
@@ -5506,8 +5506,8 @@
     "296": {
       "id": 296,
       "image": "",
-      "pricePiece": 0.47,
-      "priceBox": 33.84,
+      "pricePiece": 4.7,
+      "priceBox": 338.4,
       "boxCapacity": 72,
       "name": {
         "uz": "Xo'jalik skotchi 4.5cm x 50m",
@@ -5523,8 +5523,8 @@
     "297": {
       "id": 297,
       "image": "",
-      "pricePiece": 0.85,
-      "priceBox": 61.2,
+      "pricePiece": 8.5,
+      "priceBox": 612.0,
       "boxCapacity": 72,
       "name": {
         "uz": "Xo'jalik skotchi 4.5cm x 100m",
@@ -5540,8 +5540,8 @@
     "298": {
       "id": 298,
       "image": "",
-      "pricePiece": 1.24,
-      "priceBox": 89.28,
+      "pricePiece": 12.4,
+      "priceBox": 892.8,
       "boxCapacity": 72,
       "name": {
         "uz": "Xo'jalik skotchi 4.5cm x 150m",
@@ -5557,8 +5557,8 @@
     "299": {
       "id": 299,
       "image": "",
-      "pricePiece": 1.62,
-      "priceBox": 58.32,
+      "pricePiece": 16.2,
+      "priceBox": 583.2,
       "boxCapacity": 36,
       "name": {
         "uz": "Xo'jalik skotchi 4.5cm x 200m",
@@ -5574,8 +5574,8 @@
     "300": {
       "id": 300,
       "image": "",
-      "pricePiece": 2,
-      "priceBox": 56,
+      "pricePiece": 20,
+      "priceBox": 560,
       "boxCapacity": 28,
       "name": {
         "uz": "Xo'jalik skotchi 4.5cm x 250m",
@@ -5591,8 +5591,8 @@
     "301": {
       "id": 301,
       "image": "",
-      "pricePiece": 2.41,
-      "priceBox": 67.48,
+      "pricePiece": 24.1,
+      "priceBox": 674.8,
       "boxCapacity": 28,
       "name": {
         "uz": "Xo'jalik skotchi 4.5cm x 300m",
@@ -5608,8 +5608,8 @@
     "302": {
       "id": 302,
       "image": "",
-      "pricePiece": 0.32,
-      "priceBox": 19.2,
+      "pricePiece": 3.2,
+      "priceBox": 192.0,
       "boxCapacity": 60,
       "name": {
         "uz": "Xo'jalik skotchi 6.0cm x 25m",
@@ -5625,8 +5625,8 @@
     "303": {
       "id": 303,
       "image": "",
-      "pricePiece": 0.59,
-      "priceBox": 35.4,
+      "pricePiece": 5.9,
+      "priceBox": 354.0,
       "boxCapacity": 60,
       "name": {
         "uz": "Xo'jalik skotchi 6.0cm x 50m",
@@ -5642,8 +5642,8 @@
     "304": {
       "id": 304,
       "image": "",
-      "pricePiece": 0.86,
-      "priceBox": 51.6,
+      "pricePiece": 8.6,
+      "priceBox": 516.0,
       "boxCapacity": 60,
       "name": {
         "uz": "Xo'jalik skotchi 6.0cm x 75m",
@@ -5659,8 +5659,8 @@
     "305": {
       "id": 305,
       "image": "",
-      "pricePiece": 1.12,
-      "priceBox": 67.2,
+      "pricePiece": 11.2,
+      "priceBox": 672.0,
       "boxCapacity": 60,
       "name": {
         "uz": "Xo'jalik skotchi 6.0cm x 100m",
@@ -5676,8 +5676,8 @@
     "306": {
       "id": 306,
       "image": "",
-      "pricePiece": 1.65,
-      "priceBox": 99,
+      "pricePiece": 16.5,
+      "priceBox": 990,
       "boxCapacity": 60,
       "name": {
         "uz": "Xo'jalik skotchi 6.0cm x 150m",
@@ -5693,8 +5693,8 @@
     "307": {
       "id": 307,
       "image": "",
-      "pricePiece": 2.21,
-      "priceBox": 66.3,
+      "pricePiece": 22.1,
+      "priceBox": 663.0,
       "boxCapacity": 30,
       "name": {
         "uz": "Xo'jalik skotchi 6.0cm x 200m",
@@ -5710,8 +5710,8 @@
     "308": {
       "id": 308,
       "image": "",
-      "pricePiece": 2.73,
-      "priceBox": 81.9,
+      "pricePiece": 27.3,
+      "priceBox": 819.0,
       "boxCapacity": 30,
       "name": {
         "uz": "Xo'jalik skotchi 6.0cm x 250m",
@@ -5727,8 +5727,8 @@
     "309": {
       "id": 309,
       "image": "",
-      "pricePiece": 3.27,
-      "priceBox": 98.1,
+      "pricePiece": 32.7,
+      "priceBox": 981.0,
       "boxCapacity": 30,
       "name": {
         "uz": "Xo'jalik skotchi 6.0cm x 300m",
@@ -5744,8 +5744,8 @@
     "310": {
       "id": 310,
       "image": "",
-      "pricePiece": 0.7,
-      "priceBox": 70,
+      "pricePiece": 7.0,
+      "priceBox": 700,
       "boxCapacity": 100,
       "name": {
         "uz": "Andava qumqog'oz lipuchka to'rtburchak",
@@ -5761,8 +5761,8 @@
     "311": {
       "id": 311,
       "image": "",
-      "pricePiece": 1.2,
-      "priceBox": 120,
+      "pricePiece": 12.0,
+      "priceBox": 1200,
       "boxCapacity": 100,
       "name": {
         "uz": "Andava qumqog'oz lipuchka universal",
@@ -5778,8 +5778,8 @@
     "312": {
       "id": 312,
       "image": "",
-      "pricePiece": 3.05,
-      "priceBox": 146.4,
+      "pricePiece": 30.5,
+      "priceBox": 1464.0,
       "boxCapacity": 48,
       "name": {
         "uz": "Andava qumqog'oz dumaloq",
@@ -5795,8 +5795,8 @@
     "313": {
       "id": 313,
       "image": "",
-      "pricePiece": 0.7,
-      "priceBox": 70,
+      "pricePiece": 7.0,
+      "priceBox": 700,
       "boxCapacity": 100,
       "name": {
         "uz": "Qumqog'oz andava sariq qistirgich",
@@ -5812,8 +5812,8 @@
     "314": {
       "id": 314,
       "image": "",
-      "pricePiece": 1.15,
-      "priceBox": 115,
+      "pricePiece": 11.5,
+      "priceBox": 1150,
       "boxCapacity": 100,
       "name": {
         "uz": "Qumqog'oz andava universal qistirgich",
@@ -5829,8 +5829,8 @@
     "315": {
       "id": 315,
       "image": "",
-      "pricePiece": 0.25,
-      "priceBox": 12.5,
+      "pricePiece": 2.5,
+      "priceBox": 125.0,
       "boxCapacity": 50,
       "name": {
         "uz": "Qumqog'oz andava qora qistirgich",
@@ -5846,8 +5846,8 @@
     "316": {
       "id": 316,
       "image": "",
-      "pricePiece": 0.13,
-      "priceBox": 26,
+      "pricePiece": 1.3,
+      "priceBox": 260,
       "boxCapacity": 200,
       "name": {
         "uz": "Krestiklar (plitka oraliq) 1,5",
@@ -5863,8 +5863,8 @@
     "317": {
       "id": 317,
       "image": "",
-      "pricePiece": 0.13,
-      "priceBox": 26,
+      "pricePiece": 1.3,
+      "priceBox": 260,
       "boxCapacity": 200,
       "name": {
         "uz": "Krestiklar (plitka oraliq) 2,0",
@@ -5880,8 +5880,8 @@
     "318": {
       "id": 318,
       "image": "",
-      "pricePiece": 0.13,
-      "priceBox": 26,
+      "pricePiece": 1.3,
+      "priceBox": 260,
       "boxCapacity": 200,
       "name": {
         "uz": "Krestiklar (plitka oraliq) 2,5",
@@ -5897,8 +5897,8 @@
     "319": {
       "id": 319,
       "image": "",
-      "pricePiece": 0.13,
-      "priceBox": 26,
+      "pricePiece": 1.3,
+      "priceBox": 260,
       "boxCapacity": 200,
       "name": {
         "uz": "Krestiklar (plitka oraliq) 3,0",
@@ -5914,8 +5914,8 @@
     "320": {
       "id": 320,
       "image": "",
-      "pricePiece": 0.13,
-      "priceBox": 39,
+      "pricePiece": 1.3,
+      "priceBox": 390,
       "boxCapacity": 300,
       "name": {
         "uz": "Krestiklar (plitka oraliq) 4,0",
@@ -5931,8 +5931,8 @@
     "321": {
       "id": 321,
       "image": "",
-      "pricePiece": 0.6,
-      "priceBox": 24,
+      "pricePiece": 6.0,
+      "priceBox": 240,
       "boxCapacity": 40,
       "name": {
         "uz": "Nafis bo'yoqchi skotch 20mm x 25m",
@@ -5948,8 +5948,8 @@
     "322": {
       "id": 322,
       "image": "",
-      "pricePiece": 1.3,
-      "priceBox": 20.8,
+      "pricePiece": 13.0,
+      "priceBox": 208.0,
       "boxCapacity": 16,
       "name": {
         "uz": "Nafis bo'yoqchi skotch 50mm x 25m",
@@ -5965,8 +5965,8 @@
     "323": {
       "id": 323,
       "image": "",
-      "pricePiece": 1.9,
-      "priceBox": 22.8,
+      "pricePiece": 19.0,
+      "priceBox": 228.0,
       "boxCapacity": 12,
       "name": {
         "uz": "Asos issiqqa chidamli aerozol oq",
@@ -5982,8 +5982,8 @@
     "324": {
       "id": 324,
       "image": "",
-      "pricePiece": 1.9,
-      "priceBox": 22.8,
+      "pricePiece": 19.0,
+      "priceBox": 228.0,
       "boxCapacity": 12,
       "name": {
         "uz": "Issiqqa chidamli aerozol kulrang",
@@ -5999,8 +5999,8 @@
     "325": {
       "id": 325,
       "image": "",
-      "pricePiece": 1.9,
-      "priceBox": 22.8,
+      "pricePiece": 19.0,
+      "priceBox": 228.0,
       "boxCapacity": 12,
       "name": {
         "uz": "Asos issiqqa chidamli aerozol qora",
@@ -6016,8 +6016,8 @@
     "326": {
       "id": 326,
       "image": "",
-      "pricePiece": 1,
-      "priceBox": 20,
+      "pricePiece": 10,
+      "priceBox": 200,
       "boxCapacity": 20,
       "name": {
         "uz": "Asos devor qog'ozi yelimi 200g",
@@ -6033,8 +6033,8 @@
     "327": {
       "id": 327,
       "image": "",
-      "pricePiece": 1.4,
-      "priceBox": 28,
+      "pricePiece": 14.0,
+      "priceBox": 280,
       "boxCapacity": 20,
       "name": {
         "uz": "Asos devor qog'ozi yelimi 300g",
@@ -6050,8 +6050,8 @@
     "328": {
       "id": 328,
       "image": "",
-      "pricePiece": 2.3,
-      "priceBox": 23,
+      "pricePiece": 23.0,
+      "priceBox": 230,
       "boxCapacity": 10,
       "name": {
         "uz": "Asos devor qog'ozi yelimi 500g",
@@ -6067,8 +6067,8 @@
     "329": {
       "id": 329,
       "image": "",
-      "pricePiece": 4.5,
-      "priceBox": 45,
+      "pricePiece": 45.0,
+      "priceBox": 450,
       "boxCapacity": 10,
       "name": {
         "uz": "Asos devor qog'ozi yelimi 1000g",
@@ -6084,8 +6084,8 @@
     "330": {
       "id": 330,
       "image": "",
-      "pricePiece": 1.1,
-      "priceBox": 13.2,
+      "pricePiece": 11.0,
+      "priceBox": 132.0,
       "boxCapacity": 12,
       "name": {
         "uz": "Asos yuvuvchi (smivka)",
@@ -6101,8 +6101,8 @@
     "331": {
       "id": 331,
       "image": "",
-      "pricePiece": 1,
-      "priceBox": 28,
+      "pricePiece": 10,
+      "priceBox": 280,
       "boxCapacity": 28,
       "name": {
         "uz": "Asos butan gazi",
@@ -6118,8 +6118,8 @@
     "332": {
       "id": 332,
       "image": "",
-      "pricePiece": 1.65,
-      "priceBox": 19.8,
+      "pricePiece": 16.5,
+      "priceBox": 198.0,
       "boxCapacity": 12,
       "name": {
         "uz": "Asos WD-40",
