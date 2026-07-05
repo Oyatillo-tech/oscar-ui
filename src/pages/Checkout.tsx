@@ -945,9 +945,13 @@ export default function Checkout() {
   const { items, clearCart } = useCartStore();
   const t = useI18nStore((s) => s.t);
 
-  const { isLoaded } = useLoadScript({
+  const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY,
   });
+
+  if (loadError) {
+    console.error("❌ Google Maps yuklanmadi:", loadError);
+  }
 
   const USD_TO_UZS = useSettingsStore((s) => s.usdRate);
 
@@ -1611,7 +1615,13 @@ export default function Checkout() {
 
           {/* Map Container */}
           <div className="flex-1 relative bg-slate-100 overflow-hidden">
-            {isLoaded ? (
+          // YANGI:
+            {loadError ? (
+              <div className="w-full h-full flex flex-col items-center justify-center gap-2 p-6 text-center">
+                <p className="text-sm text-red-600 font-semibold">Xarita yuklanmadi</p>
+                <p className="text-xs text-slate-500 break-all">{loadError.message}</p>
+              </div>
+            ) : isLoaded ? (
               <GoogleMap
                 mapContainerStyle={{ width: "100%", height: "100%" }}
                 center={mapCenter}
