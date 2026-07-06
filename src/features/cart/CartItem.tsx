@@ -18,8 +18,9 @@ export function CartItem({ item }: CartItemProps) {
   const isBox = item.unit === 'box';
   const unitLabel = isBox ? (lang === 'uz' ? 'Karobka' : (lang === 'ru' ? 'Коробка' : 'Box')) : (lang === 'uz' ? 'Dona' : (lang === 'ru' ? 'Шт' : 'Item'));
   const itemsPerBox = item.itemsPerBox || 1;
-  
   const stockLimit = product ? 999999 : 0;
+
+  const USD_TO_UZS = useSettingsStore((s) => s.usdRate);
 
   return (
     <div className="flex gap-4 p-4 bg-white rounded-3xl shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-slate-100 items-center transition-all hover:shadow-[0_8px_30px_rgb(0,200,255,0.06)] relative touch-manipulation">
@@ -29,33 +30,33 @@ export function CartItem({ item }: CartItemProps) {
           src={item.image || undefined}
           alt={item.name}
           className="object-contain w-full h-full drop-shadow-sm"
-          onError={(e) => { e.currentTarget.style.display='none'; e.currentTarget.nextElementSibling?.classList.remove('hidden') }}
+          onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.nextElementSibling?.classList.remove('hidden') }}
         />
         <div className="hidden absolute inset-0 bg-slate-200"></div>
       </div>
-      
+
       {/* Details */}
       <div className="flex-1 min-w-0 pr-1 flex items-center justify-between gap-2">
         <div className="flex flex-col flex-1 min-w-0 py-1">
           <h4 className="font-semibold text-slate-800 text-[14px] mb-1.5 leading-snug line-clamp-2">
             {item.name}
           </h4>
-          
+
           <div className="flex flex-col gap-0.5">
-             <div className="text-slate-900 font-extrabold text-[15px] tracking-tight">
-               {item.unit === 'item' ? `$${item.price}` : `${formatUZS(item.price)} UZS`}
-             </div>
-             
-             <div className="flex items-center mt-1 flex-wrap gap-1.5">
-                <span className="text-[11px] font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-md uppercase tracking-wider">
-                  1 x {unitLabel} {isBox && `(${itemsPerBox} ${lang === 'uz' ? 'dona' : (lang === 'ru' ? 'шт' : 'items')})`}
+            <div className="text-slate-900 font-extrabold text-[15px] tracking-tight">
+              {formatUZS(Math.round(item.price * USD_TO_UZS))} so'm
+              <span className="text-xs font-medium text-slate-400 ml-1">≈ ${item.price}</span>
+            </div>
+            <div className="flex items-center mt-1 flex-wrap gap-1.5">
+              <span className="text-[11px] font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-md uppercase tracking-wider">
+                1 x {unitLabel} {isBox && `(${itemsPerBox} ${lang === 'uz' ? 'dona' : (lang === 'ru' ? 'шт' : 'items')})`}
+              </span>
+              {item.discount > 0 && (
+                <span className="text-[10px] font-bold text-red-500 bg-red-50 px-1.5 py-0.5 rounded-md uppercase tracking-wider">
+                  {t('cart.discount')}: {item.discount}%
                 </span>
-                {item.discount > 0 && (
-                  <span className="text-[10px] font-bold text-red-500 bg-red-50 px-1.5 py-0.5 rounded-md uppercase tracking-wider">
-                    {t('cart.discount')}: {item.discount}%
-                  </span>
-                )}
-             </div>
+              )}
+            </div>
           </div>
         </div>
 

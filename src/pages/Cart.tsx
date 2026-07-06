@@ -105,7 +105,7 @@ export function Cart() {
 
   const USD_TO_UZS = useSettingsStore((s) => s.usdRate);
   const totalUSD = items.reduce((acc, item) => {
-    const itemPriceUSD = item.unit === 'item' ? item.price : (item.price / USD_TO_UZS);
+    const itemPriceUSD = item.price;
     return acc + (itemPriceUSD * item.quantity);
   }, 0);
   const totalUZS = totalUSD * USD_TO_UZS;
