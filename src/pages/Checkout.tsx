@@ -956,7 +956,7 @@ export default function Checkout() {
   const USD_TO_UZS = useSettingsStore((s) => s.usdRate);
 
   const totalUSD = items.reduce((acc, item) => {
-    const itemPriceUSD = item.unit === 'item' ? item.price : (item.price / USD_TO_UZS);
+    const itemPriceUSD = item.price; // narx endi har doim USD, unit'ga bog'liq emas
     return acc + (itemPriceUSD * item.quantity);
   }, 0);
   const totalUZS = totalUSD * USD_TO_UZS;
@@ -1343,8 +1343,8 @@ export default function Checkout() {
                   {item.quantity} x {item.name} ({item.unit === 'box' ? t('checkout.box') : t('checkout.item')})
                 </span>
                 <span className="font-medium text-slate-800 whitespace-nowrap">
-                  {item.unit === 'item' ? `$${(item.quantity * item.price).toFixed(2)}` : `${formatUZS((item.quantity * item.price))} UZS`}
-                </span>
+                  {formatUZS(Math.round(item.quantity * item.price * USD_TO_UZS))} so'm
+                  <span className="text-xs text-slate-400 ml-1">≈ ${(item.quantity * item.price).toFixed(2)}</span>                </span>
               </div>
             ))}
           </div>
