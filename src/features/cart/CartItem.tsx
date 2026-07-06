@@ -3,6 +3,7 @@ import { Minus, Plus, Trash2 } from "lucide-react";
 import { type CartItem as CartItemType, useCartStore } from "@/store/cartStore";
 import { useProductStore } from "@/store/productStore";
 import { useI18nStore } from "@/store/i18nStore";
+import { useSettingsStore } from "@/store/settingsStore";
 
 interface CartItemProps {
   item: CartItemType;
