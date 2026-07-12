@@ -1236,7 +1236,7 @@ export default function Checkout() {
       const docRef = await addDoc(collection(db, "orders"), {
         ...baseOrderData,
         ...(isVip
-          ? { username: user?.username, isVip: true }
+          ? { username: user?.username, customerName: user?.username || "VIP mijoz", isVip: true }
           : { customerName: formData.fullName, customerPhone: formData.phone, isVip: false }
         ),
         paymentMethod: isVip ? "kelishamiz" : paymentMethod,
