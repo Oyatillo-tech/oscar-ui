@@ -53,7 +53,7 @@ async function main() {
   await deleteCollection("categories");
   await deleteCollection("products");
 
-  const raw = fs.readFileSync("./firestore_data.json", "utf8");
+  const raw = fs.readFileSync("./firestore_data_FINAL.json", "utf8");
   const data = JSON.parse(raw); // { categories: {...}, products: {...} }
 
   console.log("Yangi ma'lumotlar yozilmoqda...");
