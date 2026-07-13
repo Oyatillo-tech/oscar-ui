@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { collection, getDocs } from 'firebase/firestore';
+import { collection, onSnapshot } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 
 // Category translation mapping
@@ -57,6 +57,7 @@ interface ProductState {
   products: Product[];
   isLoading: boolean;
   error: string | null;
+  _unsubscribed?: boolean;   // ← QO'SHILDI
   fetchProducts: () => Promise<void>;
   remapForLang: (lang: string) => void;
 }
@@ -79,12 +80,12 @@ export const useProductStore = create<ProductState>((set, get) => ({
   isLoading: false,
   error: null,
   fetchProducts: async () => {
-    if (get().products.length > 0) return;
+    if (get().isLoading || get()._unsubscribed === false) return;
 
     set({ isLoading: true, error: null });
-    try {
-      const lang = (localStorage.getItem('oscar_lang') as string) || 'uz';
-      const querySnapshot = await getDocs(collection(db, "products"));
+    const lang = (localStorage.getItem('oscar_lang') as string) || 'uz';
+
+    onSnapshot(collection(db, "products"), (querySnapshot) => {
       const productsList: Product[] = [];
       querySnapshot.forEach((doc) => {
         const data = doc.data();
@@ -116,11 +117,10 @@ export const useProductStore = create<ProductState>((set, get) => ({
           itemsPerBox: typeof data.boxCapacity !== 'undefined' ? Number(data.boxCapacity) : (typeof data.itemsPerBox !== 'undefined' ? Number(data.itemsPerBox) : undefined),
         });
       });
-
-      set({ products: productsList, isLoading: false });
-    } catch (err: any) {
+      set({ products: productsList, isLoading: false, _unsubscribed: false });
+    }, (err) => {
       set({ error: err.message, isLoading: false });
-    }
+    });
   },
   remapForLang: (lang: string) => {
     set((state) => ({
