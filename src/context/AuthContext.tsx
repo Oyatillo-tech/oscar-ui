@@ -1,12 +1,6 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
-import {
-    signInWithEmailAndPassword,
-    signOut as firebaseSignOut,
-    onAuthStateChanged,
-    type User
-} from "firebase/auth";
-import { auth, db } from "@/lib/firebase";
-import { doc, getDoc } from "firebase/firestore";
+import { collection, doc, getDoc, getDocs, query, where } from "firebase/firestore";
+import { db } from "@/lib/firebase";
 
 interface AuthUser {
     uid: string;
@@ -26,138 +20,112 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
+const GUEST_USER: AuthUser = {
+    uid: "guest",
+    email: "",
+    login: "guest",
+    username: "Mehmon",
+    isVip: false,
+    isGuest: true,
+};
+
+const STORAGE_KEY = "oscar_vip_user";
+
 export function AuthProvider({ children }: { children: ReactNode }) {
     const [user, setUser] = useState<AuthUser | null>(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, async (firebaseUser: User | null) => {
-            if (firebaseUser) {
+        (async () => {
+            // 1) Avval saqlangan VIP sessiyani tekshiramiz (localStorage)
+            const saved = localStorage.getItem(STORAGE_KEY);
+            if (saved) {
                 try {
-                    // 🔥 Firestore dan VIP holatni tekshirish (uid bo'yicha)
-                    const userDoc = await getDoc(doc(db, "VIP_Clients", firebaseUser.uid));
+                    const parsedUser: AuthUser = JSON.parse(saved);
+                    // Hali ham VIP ekanini Firestore'dan tasdiqlaymiz (o'chirilgan bo'lishi mumkin)
+                    const vipDoc = await getDoc(doc(db, "VIP_Clients", parsedUser.uid));
+                    if (vipDoc.exists()) {
+                        setUser(parsedUser);
+                        setLoading(false);
+                        return;
+                    } else {
+                        localStorage.removeItem(STORAGE_KEY);
+                    }
+                } catch {
+                    localStorage.removeItem(STORAGE_KEY);
+                }
+            }
 
-                    if (userDoc.exists()) {
-                        const data = userDoc.data();
+            // 2) Telegram foydalanuvchisi VIP ro'yxatida bormi, tekshiramiz
+            const tg = (window as any).Telegram?.WebApp;
+            const tgUser = tg?.initDataUnsafe?.user;
+
+            if (tgUser) {
+                try {
+                    const vipDoc = await getDoc(doc(db, "VIP_Clients", String(tgUser.id)));
+                    if (vipDoc.exists()) {
+                        const data = vipDoc.data();
                         setUser({
-                            uid: firebaseUser.uid,
-                            email: firebaseUser.email || "",
+                            uid: String(tgUser.id),
+                            email: "",
                             login: data.login || "",
                             username: data.username || data.login || "VIP User",
                             isVip: true,
                             isGuest: false,
                         });
-                    } else {
-                        setUser({
-                            uid: "guest",
-                            email: "",
-                            login: "guest",
-                            username: "Mehmon",
-                            isVip: false,
-                            isGuest: true,
-                        });
+                        setLoading(false);
+                        return;
                     }
                 } catch (error) {
-                    console.error("User data error:", error);
-                    setUser({
-                        uid: "guest",
-                        email: "",
-                        login: "guest",
-                        username: "Mehmon",
-                        isVip: false,
-                        isGuest: true,
-                    });
-                }
-            } else {
-                // 🔥 Telegram foydalanuvchisini tekshirish (Firebase auth yo'q bo'lsa)
-                const tg = (window as any).Telegram?.WebApp;
-                const tgUser = tg?.initDataUnsafe?.user;
-
-                if (tgUser) {
-                    try {
-                        const userDoc = await getDoc(doc(db, "VIP_Clients", String(tgUser.id)));
-                        if (userDoc.exists()) {
-                            const data = userDoc.data();
-                            setUser({
-                                uid: String(tgUser.id),
-                                email: "",
-                                login: data.login || "",
-                                username: data.username || data.login || "VIP User",
-                                isVip: true,
-                                isGuest: false,
-                            });
-                        } else {
-                            setUser({
-                                uid: "guest",
-                                email: "",
-                                login: "guest",
-                                username: "Mehmon",
-                                isVip: false,
-                                isGuest: true,
-                            });
-                        }
-                    } catch (error) {
-                        setUser({
-                            uid: "guest",
-                            email: "",
-                            login: "guest",
-                            username: "Mehmon",
-                            isVip: false,
-                            isGuest: true,
-                        });
-                    }
-                } else {
-                    setUser({
-                        uid: "guest",
-                        email: "",
-                        login: "guest",
-                        username: "Mehmon",
-                        isVip: false,
-                        isGuest: true,
-                    });
+                    console.error("Telegram VIP tekshirishda xato:", error);
                 }
             }
-            setLoading(false);
-        });
 
-        return () => unsubscribe();
+            // 3) Hech biri topilmasa - mehmon
+            setUser(GUEST_USER);
+            setLoading(false);
+        })();
     }, []);
 
     const signIn = async (login: string, password: string) => {
-        // 🔥 Firebase Auth email + password bilan login qilish
-        // login -> email sifatida ishlatiladi (masalan: vip_1@gmail.com)
-        const email = login.includes("@") ? login : `${login}@oscar.uz`;
-        const userCredential = await signInWithEmailAndPassword(auth, email, password);
-        const firebaseUser = userCredential.user;
-
-        // Firestore dan VIP holatni tekshirish
-        const userDoc = await getDoc(doc(db, "VIP_Clients", firebaseUser.uid));
-
-        if (!userDoc.exists()) {
-            throw new Error("VIP user not found");
+        const trimmedLogin = login.trim();
+        if (!trimmedLogin || !password) {
+            throw new Error("Login va parolni kiriting");
         }
 
-        const data = userDoc.data();
-        setUser({
-            uid: firebaseUser.uid,
-            email: firebaseUser.email || "",
-            login: data.login || login,
+        const q = query(
+            collection(db, "VIP_Clients"),
+            where("login", "==", trimmedLogin)
+        );
+        const snap = await getDocs(q);
+
+        if (snap.empty) {
+            throw new Error("Login yoki parol noto'g'ri");
+        }
+
+        const vipDoc = snap.docs[0];
+        const data = vipDoc.data();
+
+        if (data.password !== password) {
+            throw new Error("Login yoki parol noto'g'ri");
+        }
+
+        const vipUser: AuthUser = {
+            uid: vipDoc.id,
+            email: "",
+            login: data.login || trimmedLogin,
             username: data.username || data.login || "VIP User",
             isVip: true,
             isGuest: false,
-        });
+        };
+
+        setUser(vipUser);
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(vipUser));
     };
 
     const signOut = async () => {
-        await firebaseSignOut(auth);
-        setUser({
-            uid: "guest",
-            email: "",
-            login: "guest",
-            username: "Mehmon",
-            isVip: false,
-            isGuest: true,
-        });
+        localStorage.removeItem(STORAGE_KEY);
+        setUser(GUEST_USER);
     };
 
     return (
