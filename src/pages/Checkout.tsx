@@ -989,6 +989,36 @@ export default function Checkout() {
     };
   });
 
+  // ⬅️ YANGI: Telegram user'ning bot orqali saqlangan ism/telefonini
+  // Firebase'dan olib, formani avtomatik to'ldiramiz.
+  // Klient qayta yozmaydi, lekin xohlasa o'zgartira oladi.
+  useEffect(() => {
+    const prefillFromTelegramUser = async () => {
+      try {
+        const tg = (window as any).Telegram?.WebApp;
+        const tgId = tg?.initDataUnsafe?.user?.id;
+        if (!tgId) return;
+
+        const { doc: firestoreDoc, getDoc } = await import("firebase/firestore");
+        const userDoc = await getDoc(firestoreDoc(db, "telegram_users", String(tgId)));
+        if (!userDoc.exists()) return;
+
+        const data = userDoc.data();
+        setFormData(prev => ({
+          ...prev,
+          // Faqat bo'sh bo'lsa to'ldiramiz — localStorage'dagi qiymat ustun
+          phone: (prev.phone && prev.phone.trim() !== "+998") ? prev.phone
+            : (data.phone ? formatPhoneNumber(data.phone) : prev.phone),
+          fullName: prev.fullName ? prev.fullName
+            : data.fullName || [data.firstName, data.lastName].filter(Boolean).join(" ") || prev.fullName,
+        }));
+      } catch (e) {
+        console.error("telegram_users prefill xato:", e);
+      }
+    };
+    prefillFromTelegramUser();
+  }, []);
+
   const [paymentMethod, setPaymentMethod] = useState<"cash" | "card">("cash");
   const [paymentProvider, setPaymentProvider] = useState<"payme" | "uzum" | null>(null);
 
@@ -1232,12 +1262,33 @@ export default function Checkout() {
 
     let orderId = "";
 
+    // ⬅️ YANGI: VIP uchun ham telefonni topamiz —
+    // avval formadan, bo'lmasa telegram_users'dan.
+    let vipPhone: string | null = null;
+    if (isVip) {
+      const formPhoneDigits = formData.phone.replace(/\D/g, "");
+      if (formPhoneDigits.length >= 12) {
+        vipPhone = formData.phone.replace(/\s/g, "");
+      } else if (telegramChatId) {
+        try {
+          const { doc: firestoreDoc, getDoc } = await import("firebase/firestore");
+          const uDoc = await getDoc(firestoreDoc(db, "telegram_users", String(telegramChatId)));
+          if (uDoc.exists() && uDoc.data().phone) vipPhone = uDoc.data().phone;
+        } catch (e) { console.error("VIP telefon lookup xato:", e); }
+      }
+    }
+
     try {
       const docRef = await addDoc(collection(db, "orders"), {
         ...baseOrderData,
         ...(isVip
-          ? { username: user?.username, customerName: user?.username || "VIP mijoz", isVip: true }
-          : { customerName: formData.fullName, customerPhone: formData.phone, isVip: false }
+          ? {
+            username: user?.login || user?.username,
+            customerName: user?.login || user?.username || "VIP mijoz",
+            customerPhone: vipPhone,
+            isVip: true,
+          }
+          : { customerName: formData.fullName, customerPhone: formData.phone.replace(/\s/g, ""), isVip: false }
         ),
         paymentMethod: isVip ? "kelishamiz" : paymentMethod,
         paymentProvider: isVip ? null : (paymentProvider || null),
@@ -1259,12 +1310,16 @@ export default function Checkout() {
       console.error("Order saqlashda xato:", error);
     }
 
-    if (telegramChatId && formData.phone) {
+    // ⬅️ YANGILANDI: telefon + ism telegram_users'ga saqlanadi,
+    // keyingi buyurtmada avtomatik to'ldirilishi uchun.
+    const phoneDigits = formData.phone.replace(/\D/g, "");
+    if (telegramChatId && phoneDigits.length >= 12) {
       try {
         const { doc: firestoreDoc, setDoc } = await import("firebase/firestore");
         await setDoc(firestoreDoc(db, "telegram_users", String(telegramChatId)), {
-          chatId: telegramChatId,
+          chatId: String(telegramChatId),
           phone: formData.phone.replace(/\s/g, ""),
+          ...(formData.fullName ? { fullName: formData.fullName } : {}),
         }, { merge: true });
       } catch (e) {
         console.error("telegram_users saqlashda xato:", e);
