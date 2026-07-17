@@ -1297,11 +1297,9 @@ export default function Checkout() {
 
       if (!isVip && paymentMethod === "card") {
         if (paymentProvider === "payme") {
+          // VAQTINCHALIK: Payme'ning statik (fallback) sahifasiga o'tkazamiz.
           const merchantId = import.meta.env.VITE_PAYME_MERCHANT_ID;
-          const amountTiyin = Math.round(finalTotalUZSWithDelivery * 100);
-          const params = `m=${merchantId};ac.order_id=${orderId};a=${amountTiyin}`;
-          const base64Params = btoa(params);
-          window.open(`https://checkout.paycom.uz/${base64Params}`, "_blank");
+          window.open(`https://payme.uz/fallback/merchant/?id=${merchantId}`, "_blank");
         } else if (paymentProvider === "uzum") {
           window.open("https://www.apelsin.uz/open-service?serviceId=498609633", "_blank");
         }
