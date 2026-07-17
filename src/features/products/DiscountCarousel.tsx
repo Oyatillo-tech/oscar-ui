@@ -1,4 +1,3 @@
-import { formatUZS } from "@/lib/utils";
 import { Link } from "react-router-dom";
 import { useEffect, useRef } from "react";
 import { useProductStore } from "@/store/productStore";
@@ -9,30 +8,29 @@ export function DiscountCarousel() {
   const products = useProductStore((state) => state.products);
   const discountProducts = products.filter(isDiscountActive);
   const t = useI18nStore((s) => s.t);
-  const lang = useI18nStore((s) => s.lang);
 
   const scrollerRef = useRef<HTMLDivElement>(null);
-  const pausedRef = useRef(false);
+  const indexRef = useRef(0);
 
   useEffect(() => {
     if (discountProducts.length <= 1) return;
-    const el = scrollerRef.current;
-    if (!el) return;
+    indexRef.current = 0;
 
     const interval = setInterval(() => {
-      if (pausedRef.current || !el) return;
-      const cardWidth = el.firstElementChild instanceof HTMLElement
-        ? el.firstElementChild.offsetWidth + 16 // gap-4 = 16px
-        : el.clientWidth;
+      const el = scrollerRef.current;
+      if (!el) return;
 
-      const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 10;
-      el.scrollTo({
-        left: atEnd ? 0 : el.scrollLeft + cardWidth,
-        behavior: "smooth",
-      });
+      indexRef.current = (indexRef.current + 1) % discountProducts.length;
+      const target = el.children[indexRef.current] as HTMLElement | undefined;
+      if (!target) return;
+
+      // Har doim ro'yxatning boshiga (index 0 ga) qaytganda ham xuddi shu tarzda
+      // silliq siljiydi — hech qachon "to'xtab qolmaydi".
+      el.scrollTo({ left: target.offsetLeft - el.offsetLeft, behavior: "smooth" });
     }, 3000);
 
     return () => clearInterval(interval);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [discountProducts.length]);
 
   if (discountProducts.length === 0) return null;
@@ -48,18 +46,10 @@ export function DiscountCarousel() {
 
       <div
         ref={scrollerRef}
-        onPointerDown={() => { pausedRef.current = true; }}
-        onPointerUp={() => { setTimeout(() => { pausedRef.current = false; }, 4000); }}
-        onMouseEnter={() => { pausedRef.current = true; }}
-        onMouseLeave={() => { pausedRef.current = false; }}
         className="flex w-full overflow-x-auto no-scrollbar snap-x snap-mandatory px-4 pb-6 gap-4"
       >
         {discountProducts.map((product) => {
-          const useBoxPrice = product.priceBox && product.priceBox > 0;
-          const originalPriceUzs = useBoxPrice ? product.priceBox : 0;
           const originalPriceUsd = product.pricePiece;
-
-          const discountedPriceUzs = useBoxPrice ? getEffectivePrice(product, originalPriceUzs) : 0;
           const discountedPriceUsd = parseFloat(getEffectivePrice(product, originalPriceUsd).toFixed(2));
 
           return (
@@ -90,16 +80,14 @@ export function DiscountCarousel() {
                 <div className="flex flex-col gap-0.5 pt-1">
                   <div className="flex items-center gap-2">
                     <p className="font-extrabold text-red-600 text-base md:text-lg tracking-tight leading-none">
-                      {useBoxPrice ? `${formatUZS(discountedPriceUzs)} ${lang === 'uz' ? "so'm" : (lang === 'ru' ? 'сум' : 'sum')}` : `$${discountedPriceUsd}`}
+                      ${discountedPriceUsd}
                     </p>
                     <p className="font-semibold text-slate-400 text-xs md:text-sm line-through leading-none">
-                      {useBoxPrice ? `${formatUZS(originalPriceUzs)} ${lang === 'uz' ? "so'm" : (lang === 'ru' ? 'сум' : 'sum')}` : `$${originalPriceUsd}`}
+                      ${originalPriceUsd}
                     </p>
                   </div>
                   <p className="font-semibold text-slate-400 text-[11px] leading-none tracking-wide mt-1">
-                    {useBoxPrice && originalPriceUsd > 0
-                      ? `≈ $${discountedPriceUsd} / ${t('discountCarousel.piece')}`
-                      : (useBoxPrice ? t('discountCarousel.box') : t('discountCarousel.piece'))}
+                    {t('discountCarousel.piece')}
                   </p>
                 </div>
               </div>
