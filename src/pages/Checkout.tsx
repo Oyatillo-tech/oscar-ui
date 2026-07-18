@@ -1299,7 +1299,7 @@ export default function Checkout() {
         if (paymentProvider === "payme") {
           // VAQTINCHALIK: Payme'ning statik (fallback) sahifasiga o'tkazamiz.
           const merchantId = import.meta.env.VITE_PAYME_MERCHANT_ID;
-          window.open(`https://payme.uz/fallback/merchant/?id=${merchantId}`, "_blank");
+          window.open(`https://payme.uz/fallback/merchant/?id=660d234690823bcdf98bebe5`, "_blank");
         } else if (paymentProvider === "uzum") {
           window.open("https://www.apelsin.uz/open-service?serviceId=498609633", "_blank");
         }
