@@ -1,73 +1,74 @@
-# React + TypeScript + Vite
+# 🛍️ OSCAR — Mini-App (oscar-ui)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Telegram Mini-App sifatida ishlaydigan onlayn do'kon interfeysi. **OSCAR** tizimining uchta repozitoriyasidan biri — mijozlar mahsulotlarni ko'rish, savatga qo'shish va buyurtma berish uchun shu ilovadan foydalanadi.
 
-Currently, two official plugins are available:
+> 🔗 Bog'liq repolar: [`oscar-admin-bot`](https://github.com/Oyatillo-tech/oscar-admin-bot) (boshqaruv paneli) · [`oscar-shop-bot`](https://github.com/Oyatillo-tech/oscar-shop-bot) (mijoz boti)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Texnologiyalar
 
-## React Compiler
+React + TypeScript + Vite, Zustand, Tailwind CSS, Firebase JS SDK, @react-google-maps/api
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Asosiy imkoniyatlar
 
-## Expanding the ESLint configuration
+- 🗂️ Mahsulotlar katalogi — kategoriyalar, karusellar (top/chegirmali mahsulotlar)
+- 🛒 To'liq funksional savat (Zustand orqali global holatda saqlanadi)
+- 📍 Checkout sahifasida Google Maps orqali yetkazib berish manzilini tanlash
+- 🔥 Firebase Firestore bilan real-vaqtli ma'lumotlar sinxronizatsiyasi (`onSnapshot`)
+- 💳 Payme to'lov tizimi integratsiyasi
+- 📱 Telegram Web App sifatida to'liq moslashgan interfeys
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📁 Loyiha strukturasi
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+├── main.tsx, App.tsx          # Kirish nuqtasi va routing
+├── lib/firebase.ts            # Firebase SDK konfiguratsiyasi
+├── pages/
+│   ├── Home.tsx                # Bosh sahifa
+│   ├── Categories.tsx
+│   ├── ProductDetail.tsx
+│   ├── Cart.tsx
+│   ├── Checkout.tsx            # Yetkazib berish + to'lov (eng murakkab sahifa)
+│   └── Profile.tsx
+├── features/
+│   ├── products/DiscountCarousel.tsx
+│   ├── products/FeaturedCarousel.tsx
+│   └── categories/CategoryCarousel.tsx
+├── store/                      # Zustand: savat, til, sozlamalar
+└── utils/discount.ts
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ O'rnatish
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/Oyatillo-tech/oscar-ui.git
+cd oscar-ui
+npm install
 ```
+
+## ⚙️ Muhit o'zgaruvchilari (.env)
+
+```
+VITE_FIREBASE_API_KEY=
+VITE_FIREBASE_AUTH_DOMAIN=
+VITE_FIREBASE_PROJECT_ID=
+VITE_FIREBASE_STORAGE_BUCKET=
+VITE_FIREBASE_MESSAGING_SENDER_ID=
+VITE_FIREBASE_APP_ID=
+VITE_GOOGLE_MAPS_API_KEY=
+VITE_PAYME_MERCHANT_ID=
+```
+
+> ⚠️ Bu qiymatlar hech qachon ochiq repoga qo'yilmasligi kerak.
+
+## ▶️ Ishga tushirish
+
+```bash
+npm run dev      # lokal test
+npm run build     # production build
+```
+
+## 👤 Muallif
+
+**Oyatillo Obloberdiev**
+[LinkedIn](https://www.linkedin.com/in/oyatillo-obloberdiev-14b645294/) | [GitHub](https://github.com/Oyatillo-tech)
