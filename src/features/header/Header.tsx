@@ -1,53 +1,3 @@
-// import { useState } from "react";
-// import { Bell, Search } from "lucide-react";
-// import { Link } from "react-router-dom";
-// import { useNotificationStore } from "@/store/notificationStore";
-// import { NotificationModal } from "@/features/notifications/NotificationModal";
-// import { SearchModal } from "@/features/search/SearchModal";
-
-// export function Header() {
-//   const unreadCount = useNotificationStore((state) => state.unreadCount());
-//   const [notificationOpen, setNotificationOpen] = useState(false);
-//   const [searchOpen, setSearchOpen] = useState(false);
-
-//   return (
-//     <>
-//       <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">
-//         <div className="container flex h-16 items-center justify-between px-4 max-w-2xl mx-auto">
-//           <Link to="/" className="flex items-center gap-2">
-//             <span className="text-xl font-bold uppercase tracking-wider text-primary">
-//               <img src="/image.png" alt="Oscar" className="w-full h-[35px]" />
-//             </span>
-//             {/* <span className="text-sm font-semibold tracking-wider text-muted-foreground hidden sm:inline-block">Store</span> */}
-//           </Link>
-//           <nav className="flex items-center gap-1">
-//             <button 
-//               onClick={() => setSearchOpen(true)}
-//               className="relative flex items-center justify-center p-2 rounded-full hover:bg-slate-100 transition-colors"
-//             >
-//               <Search className="h-6 w-6 text-slate-700" />
-//             </button>
-//             <button 
-//               onClick={() => setNotificationOpen(true)}
-//               className="relative flex items-center justify-center p-2 rounded-full hover:bg-slate-100 transition-colors"
-//             >
-//               <Bell className="h-6 w-6 text-slate-700" />
-//               {unreadCount > 0 && (
-//                 <span className="absolute top-1 right-1 inline-flex items-center justify-center w-4 h-4 text-[10px] font-bold text-white bg-primary rounded-full">
-//                   {unreadCount}
-//                 </span>
-//               )}
-//             </button>
-//           </nav>
-//         </div>
-//       </header>
-//       <NotificationModal open={notificationOpen} onOpenChange={setNotificationOpen} />
-//       <SearchModal open={searchOpen} onOpenChange={setSearchOpen} />
-//     </>
-//   );
-// }
-
-
 // src/features/header/Header.tsx
 import { useState } from "react";
 import { Bell, Search, LogOut, LogIn } from "lucide-react";
@@ -60,22 +10,49 @@ import { useAuth } from "@/context/AuthContext";  // ✅ to'g'ri import
 
 export function Header() {
   const navigate = useNavigate();
-  const { user, signOut } = useAuth();  // ✅ useAuth ishlatiladi
+  const { user, signOut } = useAuth();
   const unreadCount = useNotificationStore((state) => state.unreadCount());
   const [notificationOpen, setNotificationOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [showLogoutConfirm, setShowLogoutConfirm] = useState(false);
+  const [isLoggingOut, setIsLoggingOut] = useState(false);
   const { lang, setLang } = useI18nStore();
 
   const langs = ['uz', 'ru', 'en'] as const;
 
-  const handleAuthClick = async () => {
+  const logoutText = {
+    title: lang === 'uz' ? "VIP hisobdan chiqish" : (lang === 'ru' ? "Выход из VIP-аккаунта" : "Log out of VIP"),
+    message: lang === 'uz'
+      ? "Haqiqatan ham VIP hisobdan chiqmoqchimisiz? Barcha VIP imtiyozlaringizni yo'qotasiz."
+      : (lang === 'ru'
+        ? "Вы действительно хотите выйти из VIP-аккаунта? Вы потеряете все VIP-привилегии."
+        : "Are you sure you want to log out? You will lose all VIP privileges."),
+    confirm: lang === 'uz' ? "Ha, chiqish" : (lang === 'ru' ? "Да, выйти" : "Yes, log out"),
+    cancel: lang === 'uz' ? "Yo'q, qolish" : (lang === 'ru' ? "Нет, остаться" : "No, stay"),
+  };
+
+  const handleAuthClick = () => {
     if (user?.isVip) {
-      await signOut();
-      navigate("/");
+      setShowLogoutConfirm(true); // ⬅️ endi darhol chiqmaydi, tasdiqlash so'raydi
     } else {
-      navigate("/signin");  // ✅ SignIn sahifasiga yo'naltirish
+      navigate("/signin");
     }
   };
+
+  const confirmLogout = async () => {
+    if (isLoggingOut) return;
+    setIsLoggingOut(true);
+    try {
+      await signOut();
+      setShowLogoutConfirm(false);
+      navigate("/");
+    } catch (error) {
+      console.error("Chiqishda xato:", error);
+    } finally {
+      setIsLoggingOut(false);
+    }
+  };
+
   const isTelegram = !!(window as any).Telegram?.WebApp;
 
 
@@ -143,6 +120,36 @@ export function Header() {
         </div>
       </header>
       <NotificationModal open={notificationOpen} onOpenChange={setNotificationOpen} />
+      {showLogoutConfirm && (
+        <div
+          className="fixed inset-0 z-[999] flex items-center justify-center bg-black/50 p-4"
+          onClick={() => !isLoggingOut && setShowLogoutConfirm(false)}
+        >
+          <div
+            className="bg-white rounded-2xl shadow-xl max-w-sm w-full p-6"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h3 className="text-lg font-bold text-slate-900 mb-2">{logoutText.title}</h3>
+            <p className="text-slate-600 text-sm mb-6">{logoutText.message}</p>
+            <div className="flex gap-3">
+              <button
+                onClick={() => setShowLogoutConfirm(false)}
+                disabled={isLoggingOut}
+                className="flex-1 h-11 rounded-xl font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 disabled:opacity-60"
+              >
+                {logoutText.cancel}
+              </button>
+              <button
+                onClick={confirmLogout}
+                disabled={isLoggingOut}
+                className="flex-1 h-11 rounded-xl font-semibold bg-red-500 text-white hover:bg-red-600 disabled:opacity-60"
+              >
+                {logoutText.confirm}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
       <SearchModal open={searchOpen} onOpenChange={setSearchOpen} />
     </>
   );
