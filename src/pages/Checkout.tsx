@@ -831,7 +831,7 @@ import { useCartStore } from "@/store/cartStore";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import { GoogleMap, useLoadScript } from "@react-google-maps/api";
+import { APIProvider, Map, useMap, useMapsLibrary } from "@vis.gl/react-google-maps";
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "@/lib/firebase";
 import { STORE_LOCATION, estimateRoadDistance, calculateDeliveryFee } from "@/lib/delivery";
@@ -839,6 +839,41 @@ import { useSettingsStore } from "@/store/settingsStore";
 import { useI18nStore } from "@/store/i18nStore";
 import { useAuth } from "../context/AuthContext";
 
+
+function LocationMap({
+  mapCenter,
+  onIdle,
+  onMapLoad,
+}: {
+  mapCenter: { lat: number; lng: number };
+  onIdle: () => void;
+  onMapLoad: (map: any) => void;
+}) {
+  const map = useMap();
+
+  useEffect(() => {
+    if (map) {
+      onMapLoad(map);
+    }
+  }, [map, onMapLoad]);
+
+  useEffect(() => {
+    if (map) {
+      map.panTo(mapCenter);
+    }
+  }, [map, mapCenter]);
+
+  return (
+    <Map
+      defaultCenter={mapCenter}
+      defaultZoom={15}
+      style={{ width: "100%", height: "100%" }}
+      gestureHandling="greedy"
+      disableDefaultUI={true}
+      onIdle={onIdle}
+    />
+  );
+}
 // Phone formatter
 const formatPhoneNumber = (value: string) => {
   const digits = value.replace(/\D/g, "");
@@ -945,13 +980,13 @@ export default function Checkout() {
   const { items, clearCart } = useCartStore();
   const t = useI18nStore((s) => s.t);
 
-  const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY,
-  });
+  // const { isLoaded, loadError } = useLoadScript({
+  //   googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY,
+  // });
 
-  if (loadError) {
-    console.error("❌ Google Maps yuklanmadi:", loadError);
-  }
+  // if (loadError) {
+  //   console.error("❌ Google Maps yuklanmadi:", loadError);
+  // }
 
   const USD_TO_UZS = useSettingsStore((s) => s.usdRate);
 
@@ -1036,8 +1071,8 @@ export default function Checkout() {
   const [isGeocoding, setIsGeocoding] = useState(false);
   const [tempLocation, setTempLocation] = useState<LocationData>({ lat: null, lng: null, address: "" });
 
-  const mapRef = useRef<google.maps.Map | null>(null);
-  const geocoderRef = useRef<google.maps.Geocoder | null>(null);
+  const mapRef = useRef<any>(null);
+  const geocoderRef = useRef<any>(null);
   const geocodeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const lastFetchedCenterRef = useRef<{ lat: number; lng: number } | null>(null);
 
@@ -1066,11 +1101,13 @@ export default function Checkout() {
   }, [formData.location.lat, formData.location.lng, totalUSD, deliveryMethod]);
 
   // Initialize Geocoder
+  const geocodingLib = useMapsLibrary("geocoding");
+
   useEffect(() => {
-    if (isLoaded && !geocoderRef.current) {
-      geocoderRef.current = new window.google.maps.Geocoder();
+    if (geocodingLib && !geocoderRef.current) {
+      geocoderRef.current = new geocodingLib.Geocoder();
     }
-  }, [isLoaded]);
+  }, [geocodingLib]);
 
   // Update map center when region/district changes
   useEffect(() => {
@@ -1080,7 +1117,7 @@ export default function Checkout() {
       ? `${formData.region}, ${formData.district}`
       : formData.region;
 
-    geocoderRef.current.geocode({ address: query }, async (results, status) => {
+    geocoderRef.current.geocode({ address: query }, async (results: any, status: any) => {
       if (status === "OK" && results && results[0]) {
         const location = results[0].geometry.location;
         const coords = { lat: location.lat(), lng: location.lng() };
@@ -1118,7 +1155,7 @@ export default function Checkout() {
     if (!geocoderRef.current) return;
     setIsGeocoding(true);
 
-    geocoderRef.current.geocode({ location: { lat, lng } }, async (results, status) => {
+    geocoderRef.current.geocode({ location: { lat, lng } }, async (results: any, status: any) => {
       if (status === "OK" && results && results[0]) {
         const address = results[0].formatted_address;
         setTempLocation({ lat, lng, address });
@@ -1669,30 +1706,22 @@ export default function Checkout() {
           {/* Map Container */}
           <div className="flex-1 relative bg-slate-100 overflow-hidden">
           // YANGI:
-            {loadError ? (
-              <div className="w-full h-full flex flex-col items-center justify-center gap-2 p-6 text-center">
-                <p className="text-sm text-red-600 font-semibold">Xarita yuklanmadi</p>
-                <p className="text-xs text-slate-500 break-all">{loadError.message}</p>
-              </div>
-            ) : isLoaded ? (
-              <GoogleMap
-                mapContainerStyle={{ width: "100%", height: "100%" }}
-                center={mapCenter}
-                zoom={15}
-                options={{
-                  disableDefaultUI: true,
-                  gestureHandling: "greedy",
-                }}
-                onLoad={(map) => {
-                  mapRef.current = map;
-                }}
+            <APIProvider apiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}>
+              <Map
+                defaultCenter={mapCenter}
+                defaultZoom={15}
+                style={{ width: "100%", height: "100%" }}
+                gestureHandling="greedy"
+                disableDefaultUI={true}
                 onIdle={handleIdle}
+                onCameraChanged={(ev) => {
+                  // mapRef ni saqlab qo'yamiz
+                  if (ev.map) {
+                    mapRef.current = ev.map;
+                  }
+                }}
               />
-            ) : (
-              <div className="w-full h-full flex items-center justify-center">
-                <Loader2 className="w-8 h-8 animate-spin text-slate-400" />
-              </div>
-            )}
+            </APIProvider>
 
             {/* Center Pin Overlay */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[100%] pointer-events-none drop-shadow-xl z-10 pb-1">
