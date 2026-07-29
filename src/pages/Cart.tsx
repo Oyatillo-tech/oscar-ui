@@ -158,8 +158,7 @@ export function Cart() {
             <span className="text-slate-700 font-bold text-xl mt-1">{t('cart.total')} ({totalQuantity} {lang === 'uz' ? 'ta' : (lang === 'ru' ? 'шт' : 'items')}):</span>
             <div className="flex flex-col items-end gap-0.5">
               <span className="text-2xl font-extrabold text-slate-900 tracking-tight">
-                {formatUZS(totalUZS)} <span className="text-sm font-bold text-slate-500">{lang === 'uz' ? "so'm" : (lang === 'ru' ? 'сум' : 'sum')}</span>
-              </span>
+                {formatUZS(totalUZS)} <span className="text-sm font-bold text-slate-500">UZS</span>              </span>
               <span className="text-sm font-medium text-slate-500">
                 ≈ ${totalUSD.toFixed(2)}
               </span>

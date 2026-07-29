@@ -165,11 +165,9 @@ export function ProductDetail() {
             <div className="flex flex-col gap-1 mb-2">
               {hasDiscount && (
                 <div className="text-sm font-semibold text-slate-400 line-through">
-                  {unit === 'item' ? `${formatUZS((baseItemPrice * USD_TO_UZS))} ${lang === 'uz' ? "so'm" : (lang === 'ru' ? 'сум' : 'sum')}` : `${formatUZS((baseBoxPriceUSD * USD_TO_UZS))} ${lang === 'uz' ? "so'm" : (lang === 'ru' ? 'сум' : 'sum')}`}                </div>
-              )}
+                  {unit === 'item' ? `${formatUZS((baseItemPrice * USD_TO_UZS))} UZS` : `${formatUZS((baseBoxPriceUSD * USD_TO_UZS))} UZS`}                </div>)}
               <div className="text-3xl font-extrabold text-slate-900 tracking-tight">
-                {unit === 'item' ? `${formatUZS(itemPriceUZS)} ${lang === 'uz' ? "so'm" : (lang === 'ru' ? 'сум' : 'sum')}` : `${formatUZS(currentBoxPriceUZS)} ${lang === 'uz' ? "so'm" : (lang === 'ru' ? 'сум' : 'sum')}`}
-              </div>
+                {unit === 'item' ? `${formatUZS(itemPriceUZS)} UZS` : `${formatUZS(currentBoxPriceUZS)} UZS`}              </div>
               <div className="text-sm font-medium text-slate-500">
                 {unit === 'item'
                   ? `≈ $${currentItemPriceUSD}`
@@ -199,8 +197,7 @@ export function ProductDetail() {
                     <Package className={cn("w-4 h-4", unit === 'item' ? "text-primary" : "text-slate-500")} />
                     <span className={cn("font-semibold", unit === 'item' ? "text-slate-900" : "text-slate-600")}>{t('product.item')}</span>
                   </div>
-                  <span className="text-lg font-bold text-slate-900">{formatUZS(itemPriceUZS)} <span className="text-sm font-semibold">{lang === 'uz' ? "so'm" : (lang === 'ru' ? 'сум' : 'sum')}</span></span>
-                  <span className="text-xs font-medium text-slate-500 mt-0.5">≈ ${currentItemPriceUSD}</span>
+                  <span className="text-lg font-bold text-slate-900">{formatUZS(itemPriceUZS)} <span className="text-sm font-semibold">UZS</span></span>                  <span className="text-xs font-medium text-slate-500 mt-0.5">≈ ${currentItemPriceUSD}</span>
                 </button>
 
                 <button

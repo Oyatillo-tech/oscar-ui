@@ -15,7 +15,7 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
   const [query, setQuery] = useState("");
   const products = useProductStore((state) => state.products);
 
-  const results = query.trim().length > 1 
+  const results = query.trim().length > 1
     ? products.filter(p => p.name.toLowerCase().includes(query.toLowerCase()))
     : [];
 
@@ -33,15 +33,15 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
         <div className="px-4 pb-4 bg-white border-b border-slate-100 flex items-center gap-3">
           <div className="relative flex-1">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
-            <Input 
+            <Input
               autoFocus
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Mahsulot qidirish..." 
+              placeholder="Mahsulot qidirish..."
               className="pl-10 h-12 bg-slate-50 border-transparent rounded-xl text-base focus-visible:ring-primary/20 focus-visible:bg-white focus-visible:border-primary/30"
             />
             {query && (
-              <button 
+              <button
                 onClick={() => setQuery("")}
                 className="absolute right-3 top-1/2 -translate-y-1/2 p-1 text-slate-400 hover:text-slate-600 rounded-full"
               >
@@ -70,17 +70,17 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
                   className="flex items-center gap-3 p-3 bg-white rounded-2xl shadow-sm border border-slate-100 hover:border-primary/20 active:scale-[0.98] transition-all"
                 >
                   <div className="w-14 h-14 bg-slate-50 rounded-xl flex items-center justify-center p-1.5 flex-shrink-0">
-                    <img 
-                      src={product.image} 
+                    <img
+                      src={product.image}
                       alt={product.name}
                       className="w-full h-full object-contain"
-                      onError={(e) => { e.currentTarget.style.display='none'; }}
+                      onError={(e) => { e.currentTarget.style.display = 'none'; }}
                     />
                   </div>
                   <div className="flex-1 min-w-0 py-1">
                     <h4 className="font-semibold text-slate-800 text-sm truncate">{product.name}</h4>
                     <p className="font-bold text-primary text-sm mt-0.5">
-                      {product.priceBox > 0 ? `${formatUZS(product.priceBox)} so'm` : `$${product.pricePiece}`}
+                      {product.priceBox > 0 ? `${formatUZS(product.priceBox)} UZS` : `$${product.pricePiece}`}
                     </p>
                   </div>
                 </Link>
