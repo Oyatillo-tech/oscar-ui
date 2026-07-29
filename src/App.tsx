@@ -12,7 +12,7 @@ import { useEffect, useState } from "react";
 import { useSettingsStore } from "@/store/settingsStore";
 import Checkout from "./pages/Checkout";
 import { SignIn } from "./features/auth/SignIn";
-
+import { CategoryDetail } from "@/pages/CategoryDetail";
 
 function App() {
   const fetchProducts = useProductStore(state => state.fetchProducts);
@@ -66,6 +66,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/categories" element={<Categories />} />
+        <Route path="/category/:categoryKey" element={<CategoryDetail />} />
         <Route path="/product/:id" element={<ProductDetail />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
