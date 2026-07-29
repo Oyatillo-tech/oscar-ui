@@ -1,6 +1,6 @@
 // src/features/header/Header.tsx
 import { useState } from "react";
-import { Bell, Search, LogOut, LogIn } from "lucide-react";
+import { Bell, Search, LogOut, LogIn, Phone, Copy, Check } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { useNotificationStore } from "@/store/notificationStore";
 import { NotificationModal } from "@/features/notifications/NotificationModal";
@@ -16,10 +16,26 @@ export function Header() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [showLogoutConfirm, setShowLogoutConfirm] = useState(false);
   const [isLoggingOut, setIsLoggingOut] = useState(false);
+  const [showCallCenter, setShowCallCenter] = useState(false);
+  const [copied, setCopied] = useState(false);
   const { lang, setLang } = useI18nStore();
 
   const langs = ['uz', 'ru', 'en'] as const;
+  const callCenterText = {
+    label: lang === 'uz' ? "Call Center" : (lang === 'ru' ? "Колл-центр" : "Call Center"),
+    copyBtn: lang === 'uz' ? "Nusxa olish" : (lang === 'ru' ? "Скопировать" : "Copy"),
+    copiedBtn: lang === 'uz' ? "Nusxa olindi!" : (lang === 'ru' ? "Скопировано!" : "Copied!"),
+  };
 
+  const handleCopyPhone = async () => {
+    try {
+      await navigator.clipboard.writeText("+998555111166");
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    } catch (error) {
+      console.error("Nusxa olishda xato:", error);
+    }
+  };
   const logoutText = {
     title: lang === 'uz' ? "VIP hisobdan chiqish" : (lang === 'ru' ? "Выход из VIP-аккаунта" : "Log out of VIP"),
     message: lang === 'uz'
@@ -98,7 +114,13 @@ export function Header() {
                 </span>
               )}
             </button>
-
+            <button
+              onClick={() => setShowCallCenter(true)}
+              className="p-2 rounded-full hover:bg-slate-100"
+              title="Call Center"
+            >
+              <Phone className="h-5 w-5 text-slate-700" />
+            </button>
             <button
               onClick={handleAuthClick}
               className={`flex items-center justify-center p-2 rounded-full ${user?.isVip
@@ -147,6 +169,39 @@ export function Header() {
                 {logoutText.confirm}
               </button>
             </div>
+          </div>
+        </div>
+      )}
+      {showCallCenter && (
+        <div
+          className="fixed inset-0 z-[999] flex items-center justify-center bg-black/50 p-4"
+          onClick={() => setShowCallCenter(false)}
+        >
+          <div
+            className="bg-white rounded-2xl shadow-xl max-w-xs w-full p-6 text-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="w-14 h-14 mx-auto mb-3 rounded-full bg-primary/10 flex items-center justify-center">
+              <Phone className="w-7 h-7 text-primary" />
+            </div>
+            <h3 className="text-sm font-semibold text-slate-500 mb-1">{callCenterText.label}</h3>
+            <p className="text-2xl font-bold text-slate-900 mb-4 tracking-wide">+998 55 511 11 66</p>
+            <button
+              onClick={handleCopyPhone}
+              className="w-full h-11 rounded-xl font-semibold bg-primary/10 text-primary hover:bg-primary/20 flex items-center justify-center gap-2 transition-colors"
+            >
+              {copied ? (
+                <>
+                  <Check className="w-4 h-4" />
+                  {callCenterText.copiedBtn}
+                </>
+              ) : (
+                <>
+                  <Copy className="w-4 h-4" />
+                  {callCenterText.copyBtn}
+                </>
+              )}
+            </button>
           </div>
         </div>
       )}
