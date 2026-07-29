@@ -116,7 +116,12 @@ const translations: Record<Lang, Record<string, string>> = {
     // Profile
     'profile.title': 'Shaxsiy profil',
     'profile.coming_soon': 'Bu sahifa tez orada Antigravity UI uslubida to\'liq ishga tushiriladi!',
-
+    'profile.logout_title': 'VIP hisobdan chiqish',
+    'profile.logout_message': "Haqiqatan ham VIP hisobdan chiqmoqchimisiz? Barcha VIP imtiyozlaringizni yo'qotasiz.",
+    'profile.logout_confirm': 'Ha, chiqish',
+    'profile.logout_cancel': "Yo'q, qolish",
+    'profile.logout_button': 'VIP hisobdan chiqish',
+    'profile.logout_loading': 'Chiqilmoqda...',
     // Categories
     'home.no_products': 'Bu kategoriyada hozircha mahsulotlar mavjud emas.',
 
@@ -255,6 +260,12 @@ const translations: Record<Lang, Record<string, string>> = {
 
     'profile.title': 'Профиль',
     'profile.coming_soon': 'Этот раздел будет полностью готов на днях в стиле Antigravity UI!',
+    'profile.logout_title': 'Выход из VIP-аккаунта',
+    'profile.logout_message': 'Вы действительно хотите выйти из VIP-аккаунта? Вы потеряете все VIP-привилегии.',
+    'profile.logout_confirm': 'Да, выйти',
+    'profile.logout_cancel': 'Нет, остаться',
+    'profile.logout_button': 'Выйти из VIP-аккаунта',
+    'profile.logout_loading': 'Выход...',
 
     'home.no_products': 'В этой категории пока нет товаров.',
 
@@ -393,6 +404,12 @@ const translations: Record<Lang, Record<string, string>> = {
 
     'profile.title': 'Profile',
     'profile.coming_soon': 'This section will be fully ready in the coming days in the style of Antigravity UI!',
+    'profile.logout_title': 'Log out of VIP account',
+    'profile.logout_message': 'Are you sure you want to log out of your VIP account? You will lose all VIP privileges.',
+    'profile.logout_confirm': 'Yes, log out',
+    'profile.logout_cancel': 'No, stay',
+    'profile.logout_button': 'Log out of VIP account',
+    'profile.logout_loading': 'Logging out...',
 
     'home.no_products': 'No products in this category.',
 
