@@ -46,7 +46,7 @@ export function CartItem({ item }: CartItemProps) {
           <div className="flex flex-col gap-0.5">
             <div className="text-slate-900 font-extrabold text-[15px] tracking-tight">
               {formatUZS(Math.round(item.price * USD_TO_UZS))} UZS
-              <span className="text-xs font-medium text-slate-400 ml-1">≈ ${item.price}</span>
+              <span className="text-xs font-medium text-slate-400 ml-1">≈ {item.price}</span>
             </div>
             <div className="flex items-center mt-1 flex-wrap gap-1.5">
               <span className="text-[11px] font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-md uppercase tracking-wider">

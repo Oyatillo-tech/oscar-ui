@@ -80,10 +80,10 @@ export function DiscountCarousel() {
                 <div className="flex flex-col gap-0.5 pt-1">
                   <div className="flex items-center gap-2">
                     <p className="font-extrabold text-red-600 text-base md:text-lg tracking-tight leading-none">
-                      ${discountedPriceUsd}
+                      {discountedPriceUsd}
                     </p>
                     <p className="font-semibold text-slate-400 text-xs md:text-sm line-through leading-none">
-                      ${originalPriceUsd}
+                      {originalPriceUsd}
                     </p>
                   </div>
                   <p className="font-semibold text-slate-400 text-[11px] leading-none tracking-wide mt-1">

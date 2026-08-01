@@ -160,7 +160,7 @@ export function Cart() {
               <span className="text-2xl font-extrabold text-slate-900 tracking-tight">
                 {formatUZS(totalUZS)} <span className="text-sm font-bold text-slate-500">UZS</span>              </span>
               <span className="text-sm font-medium text-slate-500">
-                ≈ ${totalUSD.toFixed(2)}
+                ≈ {totalUSD.toFixed(2)}
               </span>
             </div>
           </div>

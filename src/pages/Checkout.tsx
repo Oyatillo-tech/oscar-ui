@@ -1435,14 +1435,14 @@ export default function Checkout() {
                 </span>
                 <span className="font-medium text-slate-800 whitespace-nowrap">
                   {formatUZS(Math.round(item.quantity * item.price * USD_TO_UZS))}UZS
-                  <span className="text-xs text-slate-400 ml-1">≈ ${(item.quantity * item.price).toFixed(2)}</span>                </span>
+                  <span className="text-xs text-slate-400 ml-1">≈ {(item.quantity * item.price).toFixed(2)}</span>                </span>
               </div>
             ))}
           </div>
           <div className="pt-4 border-t flex flex-col gap-2 font-bold text-sm">
             <div className="flex justify-between items-center text-slate-600 font-medium">
               <span>{t('checkout.products')}:</span>
-              <span>{formatUZS(totalUZS)} UZS ≈ ${totalUSD.toFixed(2)}</span>
+              <span>{formatUZS(totalUZS)} UZS ≈ {totalUSD.toFixed(2)}</span>
             </div>
 
             <div className="flex justify-between items-start text-slate-600 font-medium pb-2 border-b border-dashed border-slate-200">
@@ -1458,7 +1458,7 @@ export default function Checkout() {
                       </span>
                       {deliveryFeeData.distanceKm !== null && (
                         <span className="text-xs text-slate-400 line-through mt-0.5 font-normal">
-                          ~~{formatUZS(calculateDeliveryFee(deliveryFeeData.distanceKm, 0).fee)} UZS ≈ ${(calculateDeliveryFee(deliveryFeeData.distanceKm, 0).fee / USD_TO_UZS).toFixed(2)}~~
+                          ~~{formatUZS(calculateDeliveryFee(deliveryFeeData.distanceKm, 0).fee)} UZS ≈ {(calculateDeliveryFee(deliveryFeeData.distanceKm, 0).fee / USD_TO_UZS).toFixed(2)}~~
                         </span>
                       )}
                     </>
@@ -1468,7 +1468,7 @@ export default function Checkout() {
                     ) : (
                       <>
                         <span className="text-slate-800">
-                          {formatUZS(deliveryFeeData.fee)} UZS ≈ ${parseFloat((deliveryFeeData.fee / USD_TO_UZS).toFixed(2))}
+                          {formatUZS(deliveryFeeData.fee)} UZS ≈ {parseFloat((deliveryFeeData.fee / USD_TO_UZS).toFixed(2))}
                         </span>
                         <span className="text-xs text-slate-500 font-normal mt-0.5">
                           {t('checkout.distance')}: ~{deliveryFeeData.distanceKm.toFixed(1)} km
@@ -1484,7 +1484,7 @@ export default function Checkout() {
               <span>{t('checkout.total')}:</span>
               <div className="flex flex-col items-end">
                 <span className="text-primary text-xl font-black">{formatUZS(finalTotalUZSWithDelivery)} UZS</span>
-                <span className="text-xs text-slate-500 font-semibold uppercase tracking-wider mt-0.5">≈ ${finalTotalUSDWithDelivery.toFixed(2)}</span>
+                <span className="text-xs text-slate-500 font-semibold uppercase tracking-wider mt-0.5">≈ {finalTotalUSDWithDelivery.toFixed(2)}</span>
               </div>
             </div>
           </div>
