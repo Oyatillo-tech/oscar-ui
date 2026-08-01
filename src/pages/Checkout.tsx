@@ -1278,6 +1278,7 @@ export default function Checkout() {
         discount: item.discount,
         quantity: item.quantity,
         unit: item.unit,
+        itemsPerBox: item.itemsPerBox || 0,
       })),
       totalUSD: finalTotalUSDWithDelivery,
       totalUZS: finalTotalUZSWithDelivery,
