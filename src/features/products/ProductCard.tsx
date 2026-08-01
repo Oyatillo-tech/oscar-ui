@@ -101,7 +101,7 @@ export function ProductCard({ product }: ProductCardProps) {
           <div className="mt-auto flex items-end justify-between pr-12 pb-1">
             <p className="font-semibold text-slate-400 text-[11px] sm:text-[12px] leading-none tracking-wide">
               {product.priceBox > 0 && product.pricePiece > 0
-                ? `≈ $${getEffectivePrice(product, product.pricePiece).toFixed(2)} / ${lang === 'uz' ? 'dona' : (lang === 'ru' ? 'шт' : 'item')}`
+                ? `≈ ${getEffectivePrice(product, product.pricePiece).toFixed(2)} / ${lang === 'uz' ? 'dona' : (lang === 'ru' ? 'шт' : 'item')}`
                 : (product.priceBox > 0 ? (lang === 'uz' ? 'karobka' : (lang === 'ru' ? 'коробка' : 'box')) : (lang === 'uz' ? 'dona' : (lang === 'ru' ? 'шт' : 'item')))}
             </p>
           </div>

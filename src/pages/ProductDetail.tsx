@@ -170,8 +170,8 @@ export function ProductDetail() {
                 {unit === 'item' ? `${formatUZS(itemPriceUZS)} UZS` : `${formatUZS(currentBoxPriceUZS)} UZS`}              </div>
               <div className="text-sm font-medium text-slate-500">
                 {unit === 'item'
-                  ? `≈ $${currentItemPriceUSD}`
-                  : `≈ $${currentBoxPriceUSD}`}
+                  ? `≈ ${currentItemPriceUSD}`
+                  : `≈ ${currentBoxPriceUSD}`}
               </div>
             </div>
             {hasBox && unit === 'box' && (
@@ -197,7 +197,10 @@ export function ProductDetail() {
                     <Package className={cn("w-4 h-4", unit === 'item' ? "text-primary" : "text-slate-500")} />
                     <span className={cn("font-semibold", unit === 'item' ? "text-slate-900" : "text-slate-600")}>{t('product.item')}</span>
                   </div>
-                  <span className="text-lg font-bold text-slate-900">{formatUZS(itemPriceUZS)} <span className="text-sm font-semibold">UZS</span></span>                  <span className="text-xs font-medium text-slate-500 mt-0.5">≈ ${currentItemPriceUSD}</span>
+                  <span className="text-lg font-bold text-slate-900">{formatUZS(itemPriceUZS)}
+                    <span className="text-sm font-semibold">UZS</span>
+                  </span>
+                  <span className="text-xs font-medium text-slate-500 mt-0.5">≈ {currentItemPriceUSD}</span>
                 </button>
 
                 <button
@@ -214,7 +217,7 @@ export function ProductDetail() {
                     </div>
                   </div>
                   <span className="text-lg font-bold text-slate-900">{formatUZS(currentBoxPriceUZS)} <span className="text-sm font-semibold">UZS</span></span>
-                  <span className="text-xs font-medium text-slate-500 mt-0.5">≈ ${currentBoxPriceUSD}</span>
+                  <span className="text-xs font-medium text-slate-500 mt-0.5">≈ {currentBoxPriceUSD}</span>
                 </button>
               </div>
             </div>
@@ -275,7 +278,7 @@ export function ProductDetail() {
               {`${formatUZS((totalPrice * USD_TO_UZS))} ${lang === 'uz' ? "so'm" : (lang === 'ru' ? 'сум' : 'sum')}`}
             </p>
             <p className="text-xs font-medium text-slate-500 mt-0.5">
-              {`≈ $${totalPrice}`}
+              {`≈ ${totalPrice}`}
             </p>
           </div>
           <Button
