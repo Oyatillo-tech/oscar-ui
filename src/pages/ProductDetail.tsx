@@ -275,7 +275,7 @@ export function ProductDetail() {
           <div className="flex-1 min-w-0">
             <p className="text-xs font-semibold text-slate-500 mb-0.5">{t('cart.total')} ({quantity} {unit === 'item' ? t('product.item') : t('product.box')})</p>
             <p className="text-xl font-extrabold text-slate-900 truncate">
-              {`${formatUZS((totalPrice * USD_TO_UZS))} ${lang === 'uz' ? "so'm" : (lang === 'ru' ? 'сум' : 'sum')}`}
+              {`${formatUZS((totalPrice * USD_TO_UZS))} ${lang === 'uz' ? "UZS" : (lang === 'ru' ? 'сум' : 'sum')}`}
             </p>
             <p className="text-xs font-medium text-slate-500 mt-0.5">
               {`≈ ${totalPrice}`}
