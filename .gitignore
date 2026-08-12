@@ -41,6 +41,7 @@ payme-*.key
 payme-*.pem
 merchant-*.json
 *oscar-d85af-firebase-adminsdk-fbsvc-4f2f71944c.json
+oscar-d85af-firebase-adminsdk-fbsvc-7a6fa6798f.json
 
 # 📦 Package lock (MUHIM: Vercel uchun kerak!)
 # package-lock.json  ← BU YERNI O'CHIRING! (yoki # qo'ying)

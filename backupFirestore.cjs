@@ -16,7 +16,7 @@ const { initializeApp } = require("firebase-admin/app");
 const { cert } = require("firebase-admin/app");
 const { getFirestore } = require("firebase-admin/firestore");
 const { backups } = require("firestore-export-import");
-const serviceAccount = require("./oscar-d85af-firebase-adminsdk-fbsvc-4f2f71944c.json");
+const serviceAccount = require("./oscar-d85af-firebase-adminsdk-fbsvc-7a6fa6798f.json");
 const fs = require("fs");
 
 initializeApp({
